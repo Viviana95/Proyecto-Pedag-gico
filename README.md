@@ -1,3 +1,5 @@
+![Inicio](./public/assets/GIF.png)
+
 ## Tabla de Contenidos:
 1. [Logo](#store-f5)
 2. [Introducción](#introducción)
@@ -16,7 +18,7 @@
 
 ## 🛠️ Prototipo del proyecto:
     
-![Prototype]()
+![Prototype](./public/assets/GIF.png)
 ![Prototype]()
 ![Prototype]()
 ![Prototype]()
@@ -51,9 +53,7 @@
             <p>📂 Para poder actualizar los cambios en css, usar:</p>
                 <p>npm run watch</p>
             <p>📂 Para activar el storage:</p>
-                <p>php artisan</p>
-        <li>Para correr los test usamos el comando:</li>
-            <p>npm run test</p>
+                <p>php artisan link : storage</p>
 </ul>    
 
 

@@ -29,6 +29,7 @@ class DatabaseSeeder extends Seeder
         if ($useradmin) {
             $useradmin->delete();
         }
+        
         $useradmin= User::create([
             'name'      => 'admin',
             'email'     => 'admin@admin.com',
