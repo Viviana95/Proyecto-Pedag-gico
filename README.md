@@ -18,7 +18,7 @@
 
 ## 🛠️ Prototipo del proyecto:
     
-![Prototype](./public/assets/GIF.png)
+![Prototype]()
 ![Prototype]()
 ![Prototype]()
 ![Prototype]()
