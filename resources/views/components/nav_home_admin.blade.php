@@ -29,7 +29,7 @@
               </li>
             </ul>
             <form class="d-flex" role="search">
-            <button class="btn btn-outline-success" type="submit"></button>
+            <button class="btn btn-outline-transparent" type="submit"><img class="lupa"src="https://cdn-icons-png.flaticon.com/128/709/709592.png" alt=""></button>
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             </form>
           </div>
