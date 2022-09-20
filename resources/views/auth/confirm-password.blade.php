@@ -30,6 +30,7 @@
                 <x-button>
                     {{ __('Confirm') }}
                 </x-button>
+                
             </div>
         </form>
     </x-auth-card>
