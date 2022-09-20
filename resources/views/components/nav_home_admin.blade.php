@@ -9,7 +9,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto  mb-lg-0 ">
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-white mt-5 ms-5 me-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle text-white mt-5 ms-5 " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   LENGUAJES
                 </a>
                 <ul class="dropdown-menu">
@@ -19,18 +19,22 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white mt-5 me-5" href="#">AÑADIR RECURSOS</a>
+                <a class="nav-link text-white mt-5 ms-5" href="#">AÑADIR RECURSOS</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white mt-5 me-5" href="#">FORO</a>
+                <a class="nav-link text-white mt-5 ms-5" href="#">FORO</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white mt-5" href="#">ADMIN</a>
+                <a class="nav-link text-white mt-5 ms-5" href="#">ADMIN</a>
               </li>
             </ul>
             <form class="d-flex" role="search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+             {{--  <button class="btn" type="submit"></button>
+              <input class="form-control me-2 rounded-3 mt-5" type="search"  aria-label="Search"> --}}
+              <div class="input-group mb-3">
+                <button class="mt-5 me-3" type="submit" id="button-addon1"><i class="bi bi-search"></i></button>
+                <input type="search" class="rounded-3 mt-5  border-light"  aria-label="Example text with button addon" aria-describedby="button-addon1">
+              </div>
             </form>
           </div>
         </div>
