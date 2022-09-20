@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Mean;
 use Illuminate\Http\Request;
 
-class MeanController extends Controller
+class CreateMeanController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,12 +14,7 @@ class MeanController extends Controller
      */
     public function index()
     {
-<<<<<<< HEAD
         //
-=======
-        $means = Mean::latest()->paginate(2);
-        return view('mean.index', compact('means'));
->>>>>>> 332f1c78096414085ebeb747b2b8ce8d9ab34316
     }
 
     /**
@@ -29,7 +24,7 @@ class MeanController extends Controller
      */
     public function create()
     {
-        //
+        return view('mean.create');
     }
 
     /**
@@ -40,20 +35,21 @@ class MeanController extends Controller
      */
     public function store(Request $request)
     {
-<<<<<<< HEAD
-        //
-=======
-       //
->>>>>>> 332f1c78096414085ebeb747b2b8ce8d9ab34316
+        $request->validate([
+            'title' => 'required','image' => 'required', 'lenguage' => 'required','format' =>'required', 'file' =>'required',
+        ]);
+        $mean = $request->all();
+        Mean::create($mean);
+        return redirect()->route('means.index');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Mean  $mean
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Mean $mean)
+    public function show($id)
     {
         //
     }
@@ -61,10 +57,10 @@ class MeanController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Mean  $mean
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Mean $mean)
+    public function edit($id)
     {
         //
     }
@@ -73,10 +69,10 @@ class MeanController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Mean  $mean
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Mean $mean)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -84,10 +80,10 @@ class MeanController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Mean  $mean
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Mean $mean)
+    public function destroy($id)
     {
         //
     }
