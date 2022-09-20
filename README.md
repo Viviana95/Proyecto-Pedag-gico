@@ -8,7 +8,7 @@
 
 ## 💻 Store F5:
 
-![Logo]()
+![Logo](./public/assets/logo_factoria_white.png)
     
 ## 💠 Introducción:
 
@@ -50,8 +50,8 @@
                 <p>php artisan server</p>
             <p>📂 Para poder actualizar los cambios en css, usar:</p>
                 <p>npm run watch</p>
-            <p>📂 Para poder :</p>
-                <p>npm run watch</p>
+            <p>📂 Para activar el storage:</p>
+                <p>php artisan link:storage</p>
         <li>Para correr los test usamos el comando:</li>
             <p>npm run test</p>
 </ul>    
