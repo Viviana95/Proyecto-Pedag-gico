@@ -29,7 +29,7 @@
               </li>
             </ul>
             <form class="d-flex" role="search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
+            <button class="btn btn-outline-success" type="submit"></button>
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             </form>
           </div>

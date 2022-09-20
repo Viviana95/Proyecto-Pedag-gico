@@ -41,6 +41,15 @@
 button.btn {
     background-color: chocolate;
 }
+.home_admin_container{
+    text-align: center;
+}
+.masRecientes{
+    margin-top: 2vh;
+    font-size: xx-large;
+    color: black;
+    font-family: "Audiowide", cursive;
+}
 .form-login {
     display: flex;
     flex-direction: column;

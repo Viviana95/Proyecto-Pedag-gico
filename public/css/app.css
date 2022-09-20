@@ -722,6 +722,9 @@ select {
 .ml-6 {
   margin-left: 1.5rem;
 }
+.mt-5 {
+  margin-top: 1.25rem;
+}
 .ml-1 {
   margin-left: 0.25rem;
 }
@@ -751,9 +754,6 @@ select {
 }
 .mt-3 {
   margin-top: 0.75rem;
-}
-.mt-5 {
-  margin-top: 1.25rem;
 }
 .block {
   display: block;
@@ -1106,6 +1106,10 @@ select {
   --tw-text-opacity: 1;
   color: rgb(22 163 74 / var(--tw-text-opacity));
 }
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
 .text-gray-200 {
   --tw-text-opacity: 1;
   color: rgb(229 231 235 / var(--tw-text-opacity));
@@ -1129,10 +1133,6 @@ select {
 .text-red-600 {
   --tw-text-opacity: 1;
   color: rgb(220 38 38 / var(--tw-text-opacity));
-}
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 .text-orange-50 {
   --tw-text-opacity: 1;
@@ -1254,6 +1254,15 @@ select {
 }
 button.btn {
     background-color: chocolate;
+}
+.home_admin_container{
+    text-align: center;
+}
+.masRecientes{
+    margin-top: 2vh;
+    font-size: xx-large;
+    color: black;
+    font-family: "Audiowide", cursive;
 }
 .form-login {
     display: flex;
