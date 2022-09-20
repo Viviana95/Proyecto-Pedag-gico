@@ -51,7 +51,7 @@
             <p>📂 Para poder actualizar los cambios en css, usar:</p>
                 <p>npm run watch</p>
             <p>📂 Para activar el storage:</p>
-                <p>php artisan link:storage</p>
+                <p>php artisan</p>
         <li>Para correr los test usamos el comando:</li>
             <p>npm run test</p>
 </ul>    
