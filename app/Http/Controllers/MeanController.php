@@ -56,9 +56,10 @@ class MeanController extends Controller
      * @param  \App\Models\Mean  $mean
      * @return \Illuminate\Http\Response
      */
-    public function edit(Mean $mean)
+    public function edit($id,Mean $mean)
     {
-        //
+       $mean = Mean::find($id);
+        return view('mean.edit', ['mean' =>$mean]);
     }
 
     /**
@@ -68,9 +69,19 @@ class MeanController extends Controller
      * @param  \App\Models\Mean  $mean
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Mean $mean)
+    public function update($id,Request $request, Mean $mean)
     {
-        //
+        Mean::find($id);
+        $mean->title = $request->title;
+        $mean->image = $request->image;
+        $mean->lenguage = $request->lenguage;
+        $mean->format = $request->format;
+        $mean->file = $request->file;
+       
+        $mean->update();
+        return redirect()->route('means.index');
+
+
     }
 
     /**
@@ -79,8 +90,9 @@ class MeanController extends Controller
      * @param  \App\Models\Mean  $mean
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Mean $mean)
+    public function destroy($id,Mean $mean)
     {
-        //
+      Mean::destroy($id);
+      return redirect()->route('means.index');
     }
 }
