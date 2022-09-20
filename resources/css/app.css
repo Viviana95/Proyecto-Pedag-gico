@@ -42,11 +42,13 @@ button.btn {
     background-color: chocolate;
 }
 .form-login {
+    display: flex;
+    flex-direction: column;
+    display: inline-block;
     padding: 6vh;
     width: 30vw;
-    height: 37vh;
+    height: auto;
     min-width: 400px;
     background-image: url(https://trello.com/1/cards/63218e5381220f006137b952/attachments/63218e751af52500dfc50b44/download/fondo.png);
-    margin-top: 10vh;
     background-size: contain;
 }
