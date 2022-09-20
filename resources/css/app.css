@@ -50,3 +50,7 @@ button.btn {
     margin-top: 10vh;
     background-size: contain;
 }
+
+.fondo{
+    background-color: chocolate;
+}
