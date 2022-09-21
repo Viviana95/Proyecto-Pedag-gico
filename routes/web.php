@@ -17,11 +17,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/nav_home_admin', function () {
-    return view('nav_home_admin');
+Route::get('/home_admin', function () {
+    return view('home_admin');
 });
 Route::get('/lenguaje_view', function () {
     return view('lenguaje_view');
+});
+Route::get('/info_admin', function () {
+    return view('info_admin');
 });
 
 Route::get('/dashboard', function () {

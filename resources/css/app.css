@@ -41,10 +41,10 @@
 button.btn {
     background-color: chocolate;
 }
-.home_admin_container{
+.home_admin_container {
     text-align: center;
 }
-.masRecientes{
+.masRecientes {
     margin-top: 2vh;
     font-size: xx-large;
     color: black;
@@ -62,10 +62,27 @@ button.btn {
     background-size: contain;
 }
 
-.nav_color{
+.nav_color {
     background-color: chocolate;
 }
 
-img.lupa{
-   width: 2vw;
+img.lupa {
+    width: 2vw;
 }
+.img_admin{
+    width:7vw;
+    height: 15vh;
+    border-radius: 100px;
+    background-image: url(https://trello.com/1/cards/63218e5381220f006137b952/attachments/6321f8b716a664034740dc68/download/defecto.png);
+    background-size: contain;
+    background-position: center;
+    margin: 4rem;
+    min-width:150px ;
+}
+.container_img_admin{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+}
+
