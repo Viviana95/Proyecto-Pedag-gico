@@ -19,7 +19,7 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white mt-5 ms-5" href="#">AÑADIR RECURSOS</a>
+                <a class="nav-link text-white mt-5 ms-5" href="{{route('means.create')}}">AÑADIR RECURSOS</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link text-white mt-5 ms-5" href="#">FORO</a>
