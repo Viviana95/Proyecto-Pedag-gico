@@ -18,10 +18,7 @@
 
 ## 🛠️ Prototipo del proyecto:
     
-![Prototype]()
-![Prototype]()
-![Prototype]()
-![Prototype]()
+
 
 ## ⚙️ Tecnologías utilizadas en el proyecto:
 
