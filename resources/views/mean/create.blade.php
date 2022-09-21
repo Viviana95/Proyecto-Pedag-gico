@@ -11,7 +11,13 @@
                         <label for="floatingInput">TITLE</label>
                      </div>
                      <div class="form-floating mb-3">
-                        <input type="text" name="lenguage" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <select name="lenguage" class="form-select" aria-label="Default select example">
+                            
+                            <option selected>Open this select menu </option>
+                            <option value="Java">Java</option>
+                            <option value="Php">Php</option>
+                            <option value="Javascript">Javascript</option>
+                          </select>
                         <label for="floatingInput">LENGUAGE</label>
                      </div>
                      <div class="form-floating mb-3">
@@ -19,8 +25,15 @@
                         <label for="floatingInput">IMAGE</label>
                      </div>
                      <div class="form-floating mb-3">
-                        <input type="text" name="format" class="form-control" id="floatingInput" placeholder="name@example.com">
-                        <label for="floatingInput">FORMAT</label>
+                        <select name="format" class="form-select" aria-label="Default select example">
+                            
+                            <option selected>Open this select menu </option>
+                            <option value="Pdf">Pdf</option>
+                            <option value="Video">Video</option>
+                            <option value="Enlace">Enlace</option>
+                          </select>
+                          <label for="floatingInput">FORMAT</label>
+            
                      </div>
                      <div class="form-floating mb-3">
                         <input type="text" name="file" class="form-control" id="floatingInput" placeholder="name@example.com">

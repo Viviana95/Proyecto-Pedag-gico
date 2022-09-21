@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Mean;
 use Illuminate\Http\Request;
 
-class CreateMeanController extends Controller
+class EditMeanController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -24,7 +24,7 @@ class CreateMeanController extends Controller
      */
     public function create()
     {
-        return view('mean.create');
+        //
     }
 
     /**
@@ -35,22 +35,7 @@ class CreateMeanController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'title' => 'required',
-            'image' => 'required',
-            'lenguage' => 'required',
-            'format' =>'required',
-            'file' =>'required',
-        ]);
-        $mean = Mean::create([
-            'title'=>$request->title,
-            'image'=>$request->image,
-            'lenguage'=>$request->lenguage,
-            'format'=>$request->format,
-            'file'=>$request->file
-        ]);
-        $mean->save();
-        return redirect()->route('means.index');
+        //
     }
 
     /**
@@ -70,9 +55,10 @@ class CreateMeanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id, Mean $mean)
     {
-        //
+        $mean = Mean::find($id);
+        return view('mean.edit', ['mean' =>$mean]);
     }
 
     /**
@@ -82,9 +68,19 @@ class CreateMeanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $id, Mean $mean)
     {
-        //
+        $mean = Mean::find($id);
+        $mean->title = $request->title;
+        $mean->image = $request->image;
+        $mean->lenguage = $request->lenguage;
+        $mean->format = $request->format;
+        $mean->file = $request->file;
+       
+        $mean->update();
+        return redirect()->route('means.index');
+
+
     }
 
     /**

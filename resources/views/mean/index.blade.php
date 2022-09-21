@@ -29,11 +29,16 @@
                           <td>{{$mean->file}}</td>
                           <td>
                           {{-- <a type="button" class="btn btn-warning" href="{{route('means.edit', $mean->id)}}">Editar</a> --}}
-                          {{-- <form action="{{route('means.destroy', $mean->id)}}" method="Post" class="formDelete">
+                          <form action="{{ route('means.edit', $mean->id) }}" method="post">
+                            @csrf
+                            @method('GET')
+                            <button class="tag-blue mt-3">Editar</button>
+                        </form> 
+                          <form action="{{route('means.destroy', $mean->id)}}" method="Post" class="formDelete">
                            @csrf
                            @method('DELETE')
                            <button type="submit" class="btn btn-danger">Eliminar</button>
-                          </form> --}}
+                          </form>
                         </tr>
                       </tbody>
                     @endforeach 

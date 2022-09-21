@@ -17,7 +17,8 @@
 <p>Store F5 es una plataforma interna que tiene como finalidad almacenar los recursos de los formadores en un mismo lugar.</p>
 
 ## 🛠️ Prototipo del proyecto:
-    
+![Prototype]()
+![Prototype]()
 ![Prototype]()
 ![Prototype]()
 ![Prototype]()
