@@ -28,6 +28,6 @@ class CreateMeanUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mean_users');
+        Schema::dropIfExists('mean_user');
     }
 }

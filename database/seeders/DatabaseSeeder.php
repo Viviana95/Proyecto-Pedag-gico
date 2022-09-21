@@ -2,9 +2,9 @@
 
 namespace Database\Seeders;
 
+use Illuminate\Database\Seeder;
 use App\Models\Role;
 use App\Models\User;
-use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
 
@@ -29,28 +29,67 @@ class DatabaseSeeder extends Seeder
         if ($useradmin) {
             $useradmin->delete();
         }
-        
         $useradmin= User::create([
             'name'      => 'admin',
             'email'     => 'admin@admin.com',
             'password'  => Hash::make('admin'),
-            'image' => 'no',
-            'score' => '100',
         ]);
 
         //rol admin
-        $roladmin=Role::create([
-            'roles' => 'Admin',
+        $roladmin= Role::create([
+            'name' => 'Admin',
+            'slug' => 'admin',
+            'description' => 'Administrator',
+            'full-access' => 'yes'
     
         ]);
 
-         //rol User
-         $roluser=Role::create([
-            'roles' => 'User',
+         //rol Registered User
+         $roluser= Role::create([
+            'name' => 'Registered User',
+            'slug' => 'registereduser',
+            'description' => 'Registered User',
+            'full-access' => 'no'
     
         ]);
         
         //table role_user
         $useradmin->roles()->sync([ $roladmin->id ]);
+        /* Role::create([
+            'name' => 'Admin',
+            'slug' => 'admin',
+            'description' => 'Administrador',
+            'full-access' => 'yes',
+            
+        ]);
+            
+        Role::create([
+            'name' => 'User',
+            'slug' => 'user',
+            'description' => 'Usuario',
+            'full-access' => 'no',
+        ]);
+
+        User::create([
+            'name' => 'Admin',
+            'email' => 'admin@admin.com',
+            'password' => '12345678',
+        ]); */
+        
+        /* User::factory(50)->create();
+        $roles = ['user', 'admin'];
+        foreach ($roles as $role){
+            Role::create(['role' => $role]);
+        }
+
+            foreach (User::all() as $user){
+                $roles = Role::take(1)->pluck('id');
+                $user->roles()->attach($roles);
+            }
+            
+        $events = [];
+        foreach ($events as $event){
+            Event::create(['event' => $event]);
+        } */
     }
 }
