@@ -54,3 +54,7 @@ button.btn {
 .nav_color{
     background-color: chocolate;
 }
+
+.search_input{
+    height: 2px;
+}

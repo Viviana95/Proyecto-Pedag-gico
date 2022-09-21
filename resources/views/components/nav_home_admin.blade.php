@@ -28,14 +28,21 @@
                 <a class="nav-link text-white mt-5 ms-5" href="#">ADMIN</a>
               </li>
             </ul>
-            <form class="d-flex" role="search">
-             {{--  <button class="btn" type="submit"></button>
-              <input class="form-control me-2 rounded-3 mt-5" type="search"  aria-label="Search"> --}}
-              <div class="input-group mb-3">
-                <button class="mt-5 me-3" type="submit" id="button-addon1"><i class="bi bi-search"></i></button>
-                <input type="search" class="rounded-3 mt-5  border-light"  aria-label="Example text with button addon" aria-describedby="button-addon1">
+            <div>
+              <div class="d-flex ms-3 mb-2">
+                <a class="mt-2" href="#"><img class="rounded-circle ms-5" src="{{ asset('./assets/perfil.png')}}"></a>
+                <a class="nav-link text-white mt-3 ms-3" href="#">Admin</a><i class="bi bi-caret-down-fill mt-3 ms-2"></i>
+                
               </div>
-            </form>
+              <form class="d-flex" role="search">
+              {{--  <button class="btn" type="submit"></button>
+                <input class="form-control me-2 rounded-3 mt-5" type="search"  aria-label="Search"> --}}
+                <div class="input-group">
+                  <button class="me-3" type="submit" id="button-addon1"><i class="bi bi-search"></i></button>
+                  <input type="search" class="form-control rounded-3  border-light" style="height: 5px;" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </nav>
