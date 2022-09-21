@@ -28,12 +28,11 @@
                 <a class="nav-link text-white mt-5 ms-5" href="#">ADMIN</a>
               </li>
             </ul>
-<<<<<<< HEAD
             <div>
               <div class="d-flex ms-3 mb-2">
                 <a class="mt-2" href="#"><img class="rounded-circle ms-5" src="{{ asset('./assets/perfil.png')}}"></a>
-                <a class="nav-link text-white mt-3 ms-3" href="#">Admin</a><i class="bi bi-caret-down-fill mt-3 ms-2"></i>
-                
+                {{-- <a class="nav-link text-white mt-3 ms-3" href="#">Admin</a><i class="bi bi-caret-down-fill mt-3 ms-2"></i>
+                 --}}
               </div>
               <form class="d-flex" role="search">
               {{--  <button class="btn" type="submit"></button>
@@ -44,12 +43,6 @@
                 </div>
               </form>
             </div>
-=======
-            <form class="d-flex" role="search">
-            <button class="btn btn-outline-transparent" type="submit"><img class="lupa"src="https://cdn-icons-png.flaticon.com/128/709/709592.png" alt=""></button>
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            </form>
->>>>>>> tania2
           </div>
         </div>
       </nav>
