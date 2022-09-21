@@ -8,7 +8,7 @@
         @if (Route::has('login'))
         <div class="px-6 py-4 sm:block">
             @auth
-            <a href="{{ url('/dashboard') }}" class="text-m text-gray-700 dark:text-gray-500">Home</a>
+            <a href="{{ url('/info_admin') }}" class="text-m text-gray-700 dark:text-gray-500">Home</a>
             @else
             <a href="{{ route('login') }}" class="ml-6 text-sl
                              text-white-900 font-bold text_login">LOGIN</a>
