@@ -1,5 +1,4 @@
 @include('layouts.layout')
-
 <x-nav_home_admin></x-nav_home_admin>
 <div class="container_view_lenguaje text-center">
 
