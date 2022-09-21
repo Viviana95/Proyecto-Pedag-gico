@@ -14,12 +14,8 @@ class MeanController extends Controller
      */
     public function index()
     {
-<<<<<<< HEAD
-        //
-=======
         $means = Mean::latest()->paginate(2);
         return view('mean.index', compact('means'));
->>>>>>> 332f1c78096414085ebeb747b2b8ce8d9ab34316
     }
 
     /**
@@ -40,11 +36,7 @@ class MeanController extends Controller
      */
     public function store(Request $request)
     {
-<<<<<<< HEAD
-        //
-=======
        //
->>>>>>> 332f1c78096414085ebeb747b2b8ce8d9ab34316
     }
 
     /**
