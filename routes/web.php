@@ -20,6 +20,9 @@ Route::get('/', function () {
 Route::get('/nav_home_admin', function () {
     return view('nav_home_admin');
 });
+Route::get('/lenguaje_view', function () {
+    return view('lenguaje_view');
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
