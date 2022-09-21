@@ -3,6 +3,7 @@
 @tailwind utilities;
 @import "form_create.css";
 @import "auth-card.css";
+@import"card.css";
 .text_login {
     color: rgb(255, 255, 255);
     font-family: "Audiowide", cursive;
