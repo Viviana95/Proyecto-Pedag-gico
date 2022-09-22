@@ -3,21 +3,19 @@
     background-image: url(https://trello.com/1/cards/63218e5381220f006137b952/attachments/63218e751af52500dfc50b44/download/fondo.png);
     background-size: contain;
     border-radius: 10px;
-
 }
 
 .btn_container {
- display:flex;
- justify-content: space-evenly;
-
+    display: flex;
+    justify-content: space-evenly;
 }
-a.btn_orange{
+
+a.btn_orange {
     background-color: chocolate;
     text-decoration: none;
     width: 5vw;
     color: aliceblue;
 }
-
 .form-login {
     display: flex;
     flex-direction: column;
@@ -31,10 +29,45 @@ a.btn_orange{
 }
 
 
-.card-content{
-  background-color: aquamarine;
+.card_border {
+    margin-top: 2vh;
 }
-
+.img-default {
+    border-radius: 10px;
+}
+.card-title {
+    font-family: "Audiowide", cursive;
+}
+.copiright {
+    padding-top: 2vh;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-color: chocolate;
+    justify-content: center;
+    align-items: center;
+    font-family: "Audiowide", cursive;
+    width: 100%;
+    height: 9vh;
+    position: fixed;
+    bottom: 0;
+}
+div.home_admin_container {
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   
+}
+.masRecientes {
+    margin-top: 2vh;
+    font-size: xx-large;
+    color: black;
+    font-family: "Audiowide", cursive;
+}
+.cards-container{
+display: flex;
+justify-content: center;
+align-items: center;
+}
 /*
 ! tailwindcss v3.1.8 | MIT License | https://tailwindcss.com
 *//*
@@ -1246,53 +1279,37 @@ select {
 .ease-in {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
+
 .text_login {
     color: rgb(255, 255, 255);
     font-family: "Audiowide", cursive;
     text-decoration: none;
 }
+
 .navbar {
     background-color: chocolate;
     color: rgb(255, 255, 255);
     font-family: "Audiowide", cursive;
 }
+
 .logo_factoria {
     width: 9rem;
     margin-left: 2rem;
 }
+
 .container-video {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .video-box {
     width: 100%;
     min-width: 1534px;
 }
-.copiright {
-    padding-top: 2vh;
-    text-align: center;
-    color: rgb(255, 255, 255);
-    background-color: chocolate;
-    justify-content: center;
-    align-items: center;
-    font-family: "Audiowide", cursive;
-    width: 100%;
-    height: 9vh;
-    position: fixed;
-    bottom: 0;
-}
+
 button.btn {
     background-color: chocolate;
-}
-.home_admin_container {
-    text-align: center;
-}
-.masRecientes {
-    margin-top: 2vh;
-    font-size: xx-large;
-    color: black;
-    font-family: "Audiowide", cursive;
 }
 
 .nav_color {
@@ -1302,136 +1319,167 @@ button.btn {
 img.lupa {
     width: 2vw;
 }
+
 .img_admin {
-    width: 7vw;
-    height: 15vh;
+    width: 150px;
+    height: 150px;
     border-radius: 100px;
     background-image: url(https://trello.com/1/cards/63218e5381220f006137b952/attachments/6321f8b716a664034740dc68/download/defecto.png);
     background-size: contain;
     background-position: center;
-    margin: 4rem;
     min-width: 150px;
 }
+
 .container_img_admin {
     display: flex;
     flex-direction: column;
     text-align: center;
     padding: 2rem;
 }
+
 .hover\:border-gray-300:hover {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
 }
+
 .hover\:bg-gray-100:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
+
 .hover\:bg-gray-50:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
+
 .hover\:text-gray-500:hover {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
 }
+
 .hover\:text-gray-400:hover {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
 }
+
 .hover\:text-orange-50:hover {
   --tw-text-opacity: 1;
   color: rgb(255 247 237 / var(--tw-text-opacity));
 }
+
 .hover\:text-gray-700:hover {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
 }
+
 .hover\:text-gray-900:hover {
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
 }
+
 .hover\:text-gray-800:hover {
   --tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity));
 }
+
 .focus\:z-10:focus {
   z-index: 10;
 }
+
 .focus\:border-blue-300:focus {
   --tw-border-opacity: 1;
   border-color: rgb(147 197 253 / var(--tw-border-opacity));
 }
+
 .focus\:border-indigo-300:focus {
   --tw-border-opacity: 1;
   border-color: rgb(165 180 252 / var(--tw-border-opacity));
 }
+
 .focus\:border-gray-300:focus {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
 }
+
 .focus\:border-indigo-700:focus {
   --tw-border-opacity: 1;
   border-color: rgb(67 56 202 / var(--tw-border-opacity));
 }
+
 .focus\:bg-gray-100:focus {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
+
 .focus\:bg-indigo-100:focus {
   --tw-bg-opacity: 1;
   background-color: rgb(224 231 255 / var(--tw-bg-opacity));
 }
+
 .focus\:bg-gray-50:focus {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
+
 .focus\:text-gray-700:focus {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
 }
+
 .focus\:text-indigo-800:focus {
   --tw-text-opacity: 1;
   color: rgb(55 48 163 / var(--tw-text-opacity));
 }
+
 .focus\:text-gray-800:focus {
   --tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity));
 }
+
 .focus\:text-gray-500:focus {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
 }
+
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
+
 .focus\:ring:focus {
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
+
 .focus\:ring-indigo-200:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(199 210 254 / var(--tw-ring-opacity));
 }
+
 .focus\:ring-opacity-50:focus {
   --tw-ring-opacity: 0.5;
 }
+
 .active\:bg-gray-100:active {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
+
 .active\:text-gray-700:active {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
 }
+
 .active\:text-gray-500:active {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
 }
+
 .disabled\:opacity-25:disabled {
   opacity: 0.25;
 }
+
 @media (prefers-color-scheme: dark) {
 
   .dark\:bg-gray-900 {
@@ -1444,6 +1492,7 @@ img.lupa {
     color: rgb(107 114 128 / var(--tw-text-opacity));
   }
 }
+
 @media (min-width: 640px) {
 
   .sm\:-my-px {
@@ -1504,6 +1553,7 @@ img.lupa {
     padding-top: 0px;
   }
 }
+
 @media (min-width: 1024px) {
 
   .lg\:px-8 {
@@ -1511,4 +1561,3 @@ img.lupa {
     padding-right: 2rem;
   }
 }
-

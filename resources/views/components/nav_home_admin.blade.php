@@ -7,9 +7,9 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto  mb-lg-0 ">
+            <ul class="navbar-nav  mb-lg-0 ">
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-white mt-5 ms-5 " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle text-white mt-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   LENGUAJES
                 </a>
                 <ul class="dropdown-menu">

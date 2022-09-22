@@ -49,9 +49,9 @@
 
                     <div class="btn_container">
 
-                        <a class="btn btn_orange" type="submit"
-                                href="{{route('means.index')}}">Añadir</a>
-                        <a class="btn btn_orange" href="{{route('means.index')}}">Cancelar</a>
+                        <button class="btn btn_orange" type="submit"
+                                href="{{route('means.index')}}">Añadir</button>
+                        <button class="btn btn_orange" href="{{route('means.index')}}">Cancelar</button>
 
                     </div>
                 </div>

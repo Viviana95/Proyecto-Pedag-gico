@@ -1,3 +1,9 @@
-.card-content{
- border-radius: 10px;
+.card_border {
+    margin-top: 2vh;
+}
+.img-default {
+    border-radius: 10px;
+}
+.card-title {
+    font-family: "Audiowide", cursive;
 }
