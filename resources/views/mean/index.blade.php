@@ -23,7 +23,7 @@
                           
                           <td>{{$mean->id}}</td>
                           <td>{{$mean->title}}</td>
-                          <td>{{$mean->image}}</td>
+                          <td><img src="{{ asset('storage/'.$mean->image)}}" alt="..."></td>
                           <td>{{$mean->lenguage}}</td>
                           <td>{{$mean->format}}</td>
                           <td>{{$mean->file}}</td>

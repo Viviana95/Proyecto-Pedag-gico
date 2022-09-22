@@ -7,7 +7,7 @@
                     
                     <div>
                      <div class="form-floating mb-3">
-                        <input type="text" name="title" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <input type="text" name="title" class="form-control" id="floatingInput" placeholder="Añade Título">
                         <label for="floatingInput">TITLE</label>
                      </div>
                      <div class="form-floating mb-3">
@@ -21,7 +21,7 @@
                         <label for="floatingInput">LENGUAGE</label>
                      </div>
                      <div class="form-floating mb-3">
-                        <input type="text" name="image" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <input type="file" name="image" class="form-control" id="floatingInput" placeholder="Añadir Imagen">
                         <label for="floatingInput">IMAGE</label>
                      </div>
                      <div class="form-floating mb-3">
@@ -36,7 +36,7 @@
             
                      </div>
                      <div class="form-floating mb-3">
-                        <input type="text" name="file" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <input type="text" name="file" class="form-control" id="floatingInput" placeholder="Añadir Enlace">
                         <label for="floatingInput">FILE</label>
                      </div>
                    

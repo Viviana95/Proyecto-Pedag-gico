@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Mean;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class CreateMeanController extends Controller
 {
@@ -36,15 +37,18 @@ class CreateMeanController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+            'file' => 'required|mimes:jpg,png|max:2048',
             'title' => 'required',
-            'image' => 'required',
             'lenguage' => 'required',
             'format' =>'required',
             'file' =>'required',
         ]);
+
+        $request->file('image')->store('./images/');
+
         $mean = Mean::create([
             'title'=>$request->title,
-            'image'=>$request->image,
+            'image'=>$request->file('image')->getClientOriginalName(),
             'lenguage'=>$request->lenguage,
             'format'=>$request->format,
             'file'=>$request->file
