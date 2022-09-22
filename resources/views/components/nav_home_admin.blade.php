@@ -31,13 +31,8 @@
             <div>
               <div class="d-flex ms-3 mb-2">
                 <a class="mt-2" href="#"><img class="rounded-circle ms-5" src="{{ asset('./assets/perfil.png')}}"></a>
-<<<<<<< HEAD
-                {{-- <a class="nav-link text-white mt-3 ms-3" href="#">Admin</a><i class="bi bi-caret-down-fill mt-3 ms-2"></i>
-                 --}}
-=======
                 <a class="nav-link text-white mt-3 ms-3" href="#">Admin</a><i class="bi bi-caret-down-fill mt-3 ms-2"></i>
 
->>>>>>> tania2
               </div>
               <form class="d-flex" role="search">
               {{--  <button class="btn" type="submit"></button>

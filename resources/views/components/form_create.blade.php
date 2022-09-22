@@ -48,9 +48,8 @@
                     </div>
 
                     <div class="btn_container">
-
-                        <a class="btn btn_orange" type="submit"
-                                href="{{route('homeadmin')}}">Añadir</a>
+             <button><a class="btn btn_orange" type="submit">Añadir</a></button>
+                        
                         <a class="btn btn_orange" href="{{route('means.index')}}">Cancelar</a>
 
                     </div>

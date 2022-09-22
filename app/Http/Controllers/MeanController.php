@@ -15,7 +15,7 @@ class MeanController extends Controller
     public function index()
     {
         $means = Mean::latest()->paginate(2);
-        return view('homeadmin', compact('means'));
+        return view('mean.index', compact('means'));
     }
 
     /**

@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\AdminHomeController;
 use App\Http\Controllers\CreateMeanController;
 use App\Http\Controllers\EditMeanController;
 use App\Http\Controllers\MeanController;
+use App\Http\Controllers\UserHomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,7 +23,7 @@ Route::get('/', function () {
 });
 
 Route::get('/home_admin', function () {
-    return view('home_admin')->name('homeadmin');
+    return view('home_admin');
 });
 
 Route::get('/panel_admin', function () {
@@ -53,5 +55,8 @@ Route::name('means')->group(function(){
     Route::get('/means{id}/edit', [EditMeanController::class,'edit'])->name('.edit');
     Route::put('/means{id}', [EditMeanController::class, 'update'])->name('.update');
         
-    
-    });
+});
+
+Route::get('/home', [UserHomeController::class,'index']);
+
+Route::get('/home_admin', [AdminHomeController::class,'index'])->middleware(['auth', 'admin']);
