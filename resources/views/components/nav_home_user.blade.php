@@ -24,14 +24,11 @@
               <li class="nav-item">
                 <a class="nav-link text-white mt-5 ms-5" href="#">FORO</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link text-white mt-5 ms-5" href="#">ADMIN</a>
-              </li>
             </ul>
             <div>
               <div class="d-flex ms-3 mb-2">
                 <a class="mt-2" href="#"><img class="rounded-circle ms-5" src="{{ asset('./assets/perfil.png')}}"></a>
-                {{-- <a class="nav-link text-white mt-3 ms-3" href="#">Admin</a><i class="bi bi-caret-down-fill mt-3 ms-2"></i> --}}
+                {{-- <a class="nav-link text-white mt-3 ms-3" href="#"></a><i class="bi bi-caret-down-fill mt-3 ms-2"></i> --}}
 
               </div>
               <form class="d-flex" role="search">

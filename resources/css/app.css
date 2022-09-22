@@ -4,6 +4,8 @@
 @import "form_create.css";
 @import "auth-card.css";
 @import"card.css";
+@import "div_panel_admin";
+
 .text_login {
     color: rgb(255, 255, 255);
     font-family: "Audiowide", cursive;
