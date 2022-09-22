@@ -21,7 +21,7 @@ Route::get('/', function () {
 });
 
 Route::get('/home_admin', function () {
-    return view('home_admin');
+    return view('home_admin')->name('homeadmin');
 });
 
 Route::get('/panel_admin', function () {
@@ -30,6 +30,12 @@ Route::get('/panel_admin', function () {
 
 Route::get('/lenguaje_view', function () {
     return view('lenguaje_view');
+});
+Route::get('/info_admin', function () {
+    return view('info_admin');
+});
+Route::get('/add_resource', function () {
+    return view('add_resource');
 });
 
 Route::get('/dashboard', function () {
