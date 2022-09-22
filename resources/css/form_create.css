@@ -1,0 +1,19 @@
+.form_create {
+    width: 30vw;
+    background-image: url(https://trello.com/1/cards/63218e5381220f006137b952/attachments/63218e751af52500dfc50b44/download/fondo.png);
+    background-size: contain;
+    border-radius: 10px;
+
+}
+
+.btn_container {
+ display:flex;
+ justify-content: space-evenly;
+
+}
+a.btn_orange{
+    background-color: chocolate;
+    text-decoration: none;
+    width: 5vw;
+    color: aliceblue;
+}
