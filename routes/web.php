@@ -21,7 +21,7 @@ Route::get('/', function () {
 });
 
 Route::get('/home_admin', function () {
-    return view('home_admin');
+    return view('home_admin')->name('homeadmin');
 });
 Route::get('/lenguaje_view', function () {
     return view('lenguaje_view');

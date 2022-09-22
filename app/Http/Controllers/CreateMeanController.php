@@ -50,7 +50,7 @@ class CreateMeanController extends Controller
             'file'=>$request->file
         ]);
         $mean->save();
-        return redirect()->route('means.index');
+        return redirect()->route('homeadmin');
     }
 
     /**
