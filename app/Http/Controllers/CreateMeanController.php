@@ -36,7 +36,11 @@ class CreateMeanController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required','image' => 'required', 'lenguage' => 'required','format' =>'required', 'file' =>'required',
+            'title' => 'required',
+            'image' => 'required',
+            'lenguage' => 'required',
+            'format' =>'required',
+            'file' =>'required',
         ]);
         $mean = Mean::create([
             'title'=>$request->title,
