@@ -41,12 +41,34 @@
 button.btn {
     background-color: chocolate;
 }
+.home_admin_container{
+    text-align: center;
+}
+.masRecientes{
+    margin-top: 2vh;
+    font-size: xx-large;
+    color: black;
+    font-family: "Audiowide", cursive;
+}
 .form-login {
+    display: flex;
+    flex-direction: column;
+    display: inline-block;
     padding: 6vh;
     width: 30vw;
-    height: 37vh;
+    height: auto;
     min-width: 400px;
     background-image: url(https://trello.com/1/cards/63218e5381220f006137b952/attachments/63218e751af52500dfc50b44/download/fondo.png);
-    margin-top: 10vh;
     background-size: contain;
+}
+
+.nav_color{
+    background-color: chocolate;
+}
+
+
+
+.img_panel{
+    width: 20%;
+    height: 20%;
 }

@@ -20,6 +20,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/home_admin', function () {
+    return view('home_admin');
+});
+
+Route::get('/panel_admin', function () {
+    return view('panel_admin');
+});
+
+Route::get('/lenguaje_view', function () {
+    return view('lenguaje_view');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
