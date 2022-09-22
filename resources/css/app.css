@@ -66,11 +66,9 @@ button.btn {
     background-color: chocolate;
 }
 
-<<<<<<< HEAD
-.search_input{
-    height: 2px;
-=======
-img.lupa{
-   width: 2vw;
->>>>>>> tania2
+
+
+.img_panel{
+    width: 20%;
+    height: 20%;
 }

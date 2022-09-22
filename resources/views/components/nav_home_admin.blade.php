@@ -13,9 +13,9 @@
                   LENGUAJES
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item mt-5" href="#">Java</a></li>
-                  <li><a class="dropdown-item mt-5" href="#">JavaScript</a></li>
-                  <li><a class="dropdown-item mt-5" href="#">Php</a></li>
+                  <li><a class="dropdown-item" href="#">Java</a></li>
+                  <li><a class="dropdown-item" href="#">JavaScript</a></li>
+                  <li><a class="dropdown-item" href="#">Php</a></li>
                 </ul>
               </li>
               <li class="nav-item">
