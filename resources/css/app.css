@@ -6,6 +6,7 @@
 @import"card.css";
 @import"footer.css";
 @import"home-admin";
+@import"info-admin";
 
 .text_login {
     color: rgb(255, 255, 255);
