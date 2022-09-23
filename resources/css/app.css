@@ -18,8 +18,14 @@
     background-color: chocolate;
     color: rgb(255, 255, 255);
     font-family: "Audiowide", cursive;
+    display:flex;
+    width: 100%;
 }
 
+.admin-img{
+    display: flex;
+    flex-direction: column;
+}
 .logo_factoria {
     width: 9rem;
     margin-left: 2rem;
@@ -40,9 +46,6 @@ button.btn {
     background-color: chocolate;
 }
 
-.nav_color {
-    background-color: chocolate;
-}
 
 img.lupa {
     width: 2vw;

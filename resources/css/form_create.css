@@ -16,3 +16,11 @@ a.btn_orange {
     width: 5vw;
     color: aliceblue;
 }
+
+.form_edit{
+    padding: 2vh;
+    width: 30vw;
+    background-image: url(https://trello.com/1/cards/63218e5381220f006137b952/attachments/63218e751af52500dfc50b44/download/fondo.png);
+    background-size: contain;
+    border-radius: 10px;
+}
