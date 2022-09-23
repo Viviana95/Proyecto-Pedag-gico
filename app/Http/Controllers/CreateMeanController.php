@@ -44,11 +44,11 @@ class CreateMeanController extends Controller
             'file' =>'required',
         ]);
 
-        $request->file('image')->store('./images/');
+        $path = $request->file('image')->storeAs('public/images', $request->file('image')->getClientOriginalName());
 
         $mean = Mean::create([
             'title'=>$request->title,
-            'image'=>$request->file('image')->getClientOriginalName(),
+            'image'=>$path,
             'lenguage'=>$request->lenguage,
             'format'=>$request->format,
             'file'=>$request->file
