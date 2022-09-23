@@ -26,7 +26,7 @@
                         <label for="floatingInput">LENGUAGE</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="text" name="image" class="form-control" id="floatingInput"
+                        <input type="file" name="image" class="form-control" id="floatingInput"
                             placeholder="name@example.com">
                         <label for="floatingInput">IMAGE</label>
                     </div>

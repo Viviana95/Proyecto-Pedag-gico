@@ -1,7 +1,8 @@
 @include('layouts.layout')
-<x-nav_home_admin></x-nav_home_admin>
-<div class="py-12">
-    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+
+<div class="">
+  <x-nav_home_admin></x-nav_home_admin>
+      <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
 
             <div class="p-6 bg-white border-b border-gray-200">
 
@@ -25,7 +26,7 @@
 
                           <td>{{$mean->id}}</td>
                           <td>{{$mean->title}}</td>
-                          <td>{{$mean->image}}</td>
+                          <td><img src="{{ asset('storage/'.$mean->image)}}" alt="..."></td>
                           <td>{{$mean->lenguage}}</td>
                           <td>{{$mean->format}}</td>
                           <td>{{$mean->file}}</td>
@@ -34,7 +35,7 @@
                           <form action="{{ route('means.edit', $mean->id) }}" method="post">
                             @csrf
                             @method('GET')
-                            <button class="tag-blue mt-3">Editar</button>
+                            <button type="submit" class="btn btn-primary">Editar</button>
                         </form>
                           <form action="{{route('means.destroy', $mean->id)}}" method="Post" class="formDelete">
                            @csrf
