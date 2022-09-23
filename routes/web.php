@@ -33,6 +33,14 @@ Route::get('/add_resource', function () {
     return view('add_resource');
 });
 
+Route::get('/panel_admin', function () {
+    return view('panel_admin');
+});
+
+Route::get('/home_user', function () {
+    return view('home_user');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
