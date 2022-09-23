@@ -1,31 +1,31 @@
-h1{
+.title {
+    font-size: 3rem;
     text-align: center;
     font-family: "Audiowide", cursive;
-    margin-top: 8%;
-    
+    margin-top: 5vh;
 }
-
-h3{
-    color:chocolate;
-    font-family: "Audiowide", cursive;
-    
-}
-
-
-.panel_item{
+.container_cards{
     display: flex;
-    justify-content: space-around;
-    margin-top: 8%;
-    
+    flex-direction: column;
+    justify-content: center;
+
+}
+h3 {
+    color: chocolate;
+    font-family: "Audiowide", cursive;
 }
 
+.panel_item {
+    display: flex;
+    justify-content:space-around;
+    margin-top: 4vh;
 
-.imagen_panel{
-    width: 60%;
-    height: 60%;
 }
-
-.card_border{
-    border: none;
-    text-align: center;
+.card_content {
+  width: 25%;
+}
+.card-img {
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
 }
