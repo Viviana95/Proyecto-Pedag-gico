@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\AdminHomeController;
 use App\Http\Controllers\CreateMeanController;
 use App\Http\Controllers\EditMeanController;
 use App\Http\Controllers\MeanController;
+use App\Http\Controllers\UserHomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,6 +33,12 @@ Route::get('/panel_admin', function () {
 Route::get('/lenguaje_view', function () {
     return view('lenguaje_view');
 });
+Route::get('/info_admin', function () {
+    return view('info_admin');
+});
+Route::get('/add_resource', function () {
+    return view('add_resource');
+});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -38,7 +46,7 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
-Route::name('means')->group(function(){
+Route::name('means')->middleware(['auth','admin'])->group(function(){
 
     Route::get('/means', [MeanController::class, 'index'])->name('.index');
     Route::get('/means/create', [CreateMeanController::class, 'create'])->name('.create');
@@ -47,5 +55,7 @@ Route::name('means')->group(function(){
     Route::get('/means{id}/edit', [EditMeanController::class,'edit'])->name('.edit');
     Route::put('/means{id}', [EditMeanController::class, 'update'])->name('.update');
         
-    
-    });
+});
+
+Route::get('/home', [UserHomeController::class,'index']);
+Route::get('/home/admin', [AdminHomeController::class,'index']);

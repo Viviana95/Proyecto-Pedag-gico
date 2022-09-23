@@ -1,7 +1,10 @@
-<div class="py-12">
-    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-        <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-            <div class="p-6 bg-white border-b border-gray-200">                
+@include('layouts.layout')
+
+<div class="">
+  <x-nav_home_admin></x-nav_home_admin>
+      <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+ 
+            <div class="p-6 bg-white border-b border-gray-200">
 
                 <a type="button" class="btn btn-warning" href="{{route('means.create')}}">Añadir</a>
 
@@ -20,7 +23,7 @@
                       <tbody>
                        @foreach ($means as $mean)
                          <tr>
-                          
+
                           <td>{{$mean->id}}</td>
                           <td>{{$mean->title}}</td>
                           <td><img src="{{ asset('storage/'.$mean->image)}}" alt="..."></td>
@@ -32,8 +35,8 @@
                           <form action="{{ route('means.edit', $mean->id) }}" method="post">
                             @csrf
                             @method('GET')
-                            <button class="tag-blue mt-3">Editar</button>
-                        </form> 
+                            <button type="submit" class="btn btn-primary">Editar</button>
+                        </form>
                           <form action="{{route('means.destroy', $mean->id)}}" method="Post" class="formDelete">
                            @csrf
                            @method('DELETE')
@@ -41,7 +44,7 @@
                           </form>
                         </tr>
                       </tbody>
-                    @endforeach 
+                    @endforeach
                   </table>
                   <div>{{ $means->links() }}</div>
             </div>

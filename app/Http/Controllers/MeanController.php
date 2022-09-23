@@ -25,7 +25,7 @@ class MeanController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
