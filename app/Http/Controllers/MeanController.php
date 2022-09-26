@@ -25,7 +25,7 @@ class MeanController extends Controller
      */
     public function create()
     {
-        
+        return view('mean.create');
     }
 
     /**
@@ -36,7 +36,26 @@ class MeanController extends Controller
      */
     public function store(Request $request)
     {
-       //
+        $request->validate([
+            'file' => 'required|mimes:jpg,png|max:2048',
+            'title' => 'required',
+            'lenguage' => 'required',
+            'format' =>'required',
+            'file' =>'required',
+        ]);
+
+       $request->file('image')->storeAs('public/images', $request->file('image')->getClientOriginalName());
+       $request->file('file')->storeAs('public/images', $request->file('file')->getClientOriginalName());
+
+        $mean = Mean::create([
+            'title'=>$request->title,
+            'image'=>"images/".$request->file('image')->getClientOriginalName(),
+            'lenguage'=>$request->lenguage,
+            'format'=>$request->format,
+            'file'=>"file/".$request->file('file')->getClientOriginalName(),
+        ]);
+        $mean->save();
+        return redirect()->route('means.index');
     }
 
     /**
@@ -80,8 +99,6 @@ class MeanController extends Controller
        
         $mean->update();
         return redirect()->route('means.index');
-
-
     }
 
     /**
