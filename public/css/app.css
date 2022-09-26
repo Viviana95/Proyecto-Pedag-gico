@@ -1,21 +1,28 @@
 .form_create {
-    width: 30vw;
+    width: 40vw;
     background-image: url(https://trello.com/1/cards/63218e5381220f006137b952/attachments/63218e751af52500dfc50b44/download/fondo.png);
     background-size: contain;
     border-radius: 10px;
-
+    min-width:359px;
 }
-
+.text-form{
+    color:white;
+    font-family:"Audiowide", cursive;
+    letter-spacing:0.2vw;
+}
 .btn_container {
- display:flex;
- justify-content: space-evenly;
-
+    display: flex;
+    justify-content: space-evenly;
+    margin-top:5vh;
 }
-a.btn_orange{
-    background-color: chocolate;
+
+button.btn_orange {
+    background-color:#F4540F;
     text-decoration: none;
-    width: 5vw;
+    width: 12vw;
+    height:4vh;
     color: aliceblue;
+    border-radius:20px;
 }
 
 .form-login {
@@ -23,16 +30,128 @@ a.btn_orange{
     flex-direction: column;
     display: inline-block;
     padding: 6vh;
+    border-radius: 12px;
     width: 30vw;
-    height: auto;
+    height: 50vh;
     min-width: 400px;
     background-image: url(https://trello.com/1/cards/63218e5381220f006137b952/attachments/63218e751af52500dfc50b44/download/fondo.png);
     background-size: contain;
 }
+.text-login {
+    color: white;
+    color: rgb(255, 255, 255);
+    font-family: "Audiowide", cursive;
+    text-decoration: none;
+}
+a.text-forgot {
+    color: white;
+}
+.buttons {
+    margin-top: 5vh;
+}
 
 
-.card-content{
-  background-color: aquamarine;
+
+.title_panel_admin{
+    text-align:center;
+}
+.panel_admin {
+    align-items: center;
+    margin-top: 4rem;
+    text-align: center;
+    display: flex;
+}
+
+@media only screen and (max-width: 600px) {
+    .panel_admin {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.title_panel_admin {
+    color: black;
+    padding-top: 2vh;
+    font-size: 2rem;
+    font-family: "Audiowide", cursive;
+}
+.option-admin {
+    padding: 2rem;
+    width: 30%;
+    min-width: 280px;
+}
+
+.home_admin_container {
+    text-align: center;
+}
+.masRecientes {
+    margin-top: 2vh;
+    font-size: xx-large;
+    color: black;
+    font-family: "Audiowide", cursive;
+}
+
+.navbar {
+    background-color: #F4540F;
+    color: rgb(255, 255, 255);
+    font-family: "Audiowide", cursive;
+}
+.logo_factoria {
+    width: 9rem;
+    margin-left: 2rem;
+}
+
+.copiright {
+    padding-top: 2vh;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-color: #F4540F;
+    justify-content: center;
+    align-items: center;
+    font-family: "Audiowide", cursive;
+    width: 100%;
+    height: 8vh;
+    position: fixed;
+    bottom: 0;
+}
+
+.img_admin {
+    width: 7vw;
+    height: 15vh;
+    border-radius: 100px;
+    background-image: url(https://trello.com/1/cards/63218e5381220f006137b952/attachments/6321f8b716a664034740dc68/download/defecto.png);
+    background-size: contain;
+    background-position: center;
+    margin: 4rem;
+    min-width: 150px;
+}
+.container_img_admin {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+}
+
+.container-video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.video-box {
+    width: 100%;
+    min-width: 1534px;
+}
+
+button.btn {
+    background-color: #F4540F;
+}
+
+.nav_color {
+    background-color: #F4540F;
+}
+
+img.lupa {
+    width: 2vw;
 }
 
 /*
@@ -737,6 +856,9 @@ select {
 .m-9 {
   margin: 2.25rem;
 }
+.m-2 {
+  margin: 0.5rem;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -1246,78 +1368,6 @@ select {
 .ease-in {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
-.text_login {
-    color: rgb(255, 255, 255);
-    font-family: "Audiowide", cursive;
-    text-decoration: none;
-}
-.navbar {
-    background-color: chocolate;
-    color: rgb(255, 255, 255);
-    font-family: "Audiowide", cursive;
-}
-.logo_factoria {
-    width: 9rem;
-    margin-left: 2rem;
-}
-.container-video {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.video-box {
-    width: 100%;
-    min-width: 1534px;
-}
-.copiright {
-    padding-top: 2vh;
-    text-align: center;
-    color: rgb(255, 255, 255);
-    background-color: chocolate;
-    justify-content: center;
-    align-items: center;
-    font-family: "Audiowide", cursive;
-    width: 100%;
-    height: 9vh;
-    position: fixed;
-    bottom: 0;
-}
-button.btn {
-    background-color: chocolate;
-}
-.home_admin_container {
-    text-align: center;
-}
-.masRecientes {
-    margin-top: 2vh;
-    font-size: xx-large;
-    color: black;
-    font-family: "Audiowide", cursive;
-}
-
-.nav_color {
-    background-color: chocolate;
-}
-
-img.lupa {
-    width: 2vw;
-}
-.img_admin {
-    width: 7vw;
-    height: 15vh;
-    border-radius: 100px;
-    background-image: url(https://trello.com/1/cards/63218e5381220f006137b952/attachments/6321f8b716a664034740dc68/download/defecto.png);
-    background-size: contain;
-    background-position: center;
-    margin: 4rem;
-    min-width: 150px;
-}
-.container_img_admin {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 2rem;
-}
 .hover\:border-gray-300:hover {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
@@ -1511,4 +1561,5 @@ img.lupa {
     padding-right: 2rem;
   }
 }
+
 

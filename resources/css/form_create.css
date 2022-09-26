@@ -1,19 +1,26 @@
 .form_create {
-    width: 30vw;
+    width: 40vw;
     background-image: url(https://trello.com/1/cards/63218e5381220f006137b952/attachments/63218e751af52500dfc50b44/download/fondo.png);
     background-size: contain;
     border-radius: 10px;
-
+    min-width:359px;
 }
-
+.text-form{
+    color:white;
+    font-family:"Audiowide", cursive;
+    letter-spacing:0.2vw;
+}
 .btn_container {
- display:flex;
- justify-content: space-evenly;
-
+    display: flex;
+    justify-content: space-evenly;
+    margin-top:5vh;
 }
-a.btn_orange{
-    background-color: chocolate;
+
+button.btn_orange {
+    background-color:#F4540F;
     text-decoration: none;
-    width: 5vw;
+    width: 12vw;
+    height:4vh;
     color: aliceblue;
+    border-radius:20px;
 }

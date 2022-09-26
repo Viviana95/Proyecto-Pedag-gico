@@ -10,6 +10,6 @@
             </div>
         </div>
     </div>
+    <x-footer></x-footer>
     </x-slot>
-
 </x-app-layout>

@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Mean;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
-class MeanController extends Controller
+class CreateMeanController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +15,7 @@ class MeanController extends Controller
      */
     public function index()
     {
-        $means = Mean::latest()->paginate(2);
-        return view('mean.index', compact('means'));
+        //
     }
 
     /**
@@ -44,12 +44,11 @@ class MeanController extends Controller
             'file' =>'required',
         ]);
 
-       $request->file('image')->storeAs('public/images', $request->file('image')->getClientOriginalName());
-       
+        $path = $request->file('image')->storeAs('public/images', $request->file('image')->getClientOriginalName());
 
         $mean = Mean::create([
             'title'=>$request->title,
-            'image'=>"images/".$request->file('image')->getClientOriginalName(),
+            'image'=>$path,
             'lenguage'=>$request->lenguage,
             'format'=>$request->format,
             'file'=>$request->file
@@ -61,10 +60,10 @@ class MeanController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Mean  $mean
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Mean $mean)
+    public function show($id)
     {
         //
     }
@@ -72,44 +71,34 @@ class MeanController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Mean  $mean
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id,Mean $mean)
+    public function edit($id)
     {
-       $mean = Mean::find($id);
-        return view('mean.edit', ['mean' =>$mean]);
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Mean  $mean
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update($id,Request $request, Mean $mean)
+    public function update(Request $request, $id)
     {
-        Mean::find($id);
-        $mean->title = $request->title;
-        $mean->image = $request->image;
-        $mean->lenguage = $request->lenguage;
-        $mean->format = $request->format;
-        $mean->file = $request->file;
-       
-        $mean->update();
-        return redirect()->route('means.index');
+        //
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Mean  $mean
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id,Mean $mean)
+    public function destroy($id)
     {
-      Mean::destroy($id);
-      return redirect()->route('means.index');
+        //
     }
 }

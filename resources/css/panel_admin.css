@@ -1,8 +1,29 @@
-.imagen_panel{
-    width: 202px;
-    height: 200px;
+.title_panel_admin{
+    text-align:center;
+}
+.panel_admin {
+    display: flex;
+    align-items: center;
+    margin-top: 4rem;
+    text-align: center;
+    display: flex;
 }
 
-h1{
-    background-color: aqua;
+@media only screen and (max-width: 600px) {
+    .panel_admin {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.title_panel_admin {
+    color: black;
+    padding-top: 2vh;
+    font-size: 2rem;
+    font-family: "Audiowide", cursive;
+}
+.option-admin {
+    padding: 2rem;
+    width: 30%;
+    min-width: 280px;
 }
