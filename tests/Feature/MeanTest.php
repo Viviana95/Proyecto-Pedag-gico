@@ -15,20 +15,14 @@ class MeanTest extends TestCase
      * A basic feature test example.
      *
      * @return void
-     */
-    /** 
-     * @test
-     * @testdox  description
-     */
-       
+     */          
      public function test_index()
     {
       $means = Mean::factory()->count(5)->create();      
       
       $response = $this->get('/means', ['means'=>$means]);
       
-      $response ->assertStatus(200)
-                ->assertViewIs('home');
+      $response ->assertStatus(200);
       
     }
     

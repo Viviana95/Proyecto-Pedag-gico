@@ -14,7 +14,7 @@ class MeanController extends Controller
      */
     public function index()
     {
-        $means = Mean::latest()->paginate(2);
+        $means = Mean::latest()->paginate(5);
         return view('mean.index', compact('means'));
     }
 
@@ -44,7 +44,7 @@ class MeanController extends Controller
             'file' =>'required',
         ]);
 
-        $path = $request->file('image')->storeAs('public/images', $request->file('image')->getClientOriginalName());
+       $path = $request->file('image')->storeAs('public/images',$request->file('image')->getClientOriginalName());
 
         $mean = Mean::create([
             'title'=>$request->title,
