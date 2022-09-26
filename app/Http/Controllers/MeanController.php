@@ -25,7 +25,7 @@ class MeanController extends Controller
      */
     public function create()
     {
-        
+        return view('mean.create');
     }
 
     /**
@@ -36,9 +36,26 @@ class MeanController extends Controller
      */
     public function store(Request $request)
     {
-       //
-    }
+        $request->validate([
+            'image' => 'required',
+            'title' => 'required',
+            'lenguage' => 'required',
+            'format' =>'required',
+            'file' =>'required',
+        ]);
 
+        $path = $request->file('image')->storeAs('public/images', $request->file('image')->getClientOriginalName());
+
+        $mean = Mean::create([
+            'title'=>$request->title,
+            'image'=>$path,
+            'lenguage'=>$request->lenguage,
+            'format'=>$request->format,
+            'file'=>$request->file,
+        ]);
+        $mean->save();
+        return redirect()->route('means.index');
+    }
     /**
      * Display the specified resource.
      *
@@ -50,15 +67,16 @@ class MeanController extends Controller
         //
     }
 
+
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Mean  $mean
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id,Mean $mean)
+    public function edit($id, Mean $mean)
     {
-       $mean = Mean::find($id);
+        $mean = Mean::find($id);
         return view('mean.edit', ['mean' =>$mean]);
     }
 
@@ -66,12 +84,12 @@ class MeanController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Mean  $mean
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update($id,Request $request, Mean $mean)
+    public function update(Request $request, $id, Mean $mean)
     {
-        Mean::find($id);
+        $mean = Mean::find($id);
         $mean->title = $request->title;
         $mean->image = $request->image;
         $mean->lenguage = $request->lenguage;

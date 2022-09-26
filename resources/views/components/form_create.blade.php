@@ -42,8 +42,8 @@
 
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="text" name="file" class="form-control" id="floatingInput"
-                            placeholder="name@example.com">
+                        <input type="file" name="file" class="form-control" id="floatingInput"
+                            placeholder="">
                         <label for="floatingInput">FILE</label>
                     </div>
 
