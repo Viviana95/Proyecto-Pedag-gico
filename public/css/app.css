@@ -1,20 +1,28 @@
 .form_create {
-    width: 30vw;
+    width: 40vw;
     background-image: url(https://trello.com/1/cards/63218e5381220f006137b952/attachments/63218e751af52500dfc50b44/download/fondo.png);
     background-size: contain;
     border-radius: 10px;
-
+    min-width:359px;
 }
-
+.text-form{
+    color:white;
+    font-family:"Audiowide", cursive;
+    letter-spacing:0.2vw;
+}
 .btn_container {
- display:flex;
- justify-content: space-evenly;
-
+    display: flex;
+    justify-content: space-evenly;
+    margin-top:5vh;
 }
-a.btn_orange{
-    background-color: chocolate;
+
+button.btn_orange {
+    background-color:#F4540F;
     text-decoration: none;
-    width: 5vw;
+    width: 12vw;
+    height:4vh;
+    color: aliceblue;
+    border-radius:20px;
 }
 
 .form-login {
@@ -44,14 +52,35 @@ a.text-forgot {
 
 
 
-.imagen_panel{
-    width: 202px;
-    height: 200px;
+.title_panel_admin{
+    text-align:center;
+}
+.panel_admin {
+    align-items: center;
+    margin-top: 4rem;
+    text-align: center;
+    display: flex;
 }
 
-h1{
-    background-color: aqua;
+@media only screen and (max-width: 600px) {
+    .panel_admin {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
+
+.title_panel_admin {
+    color: black;
+    padding-top: 2vh;
+    font-size: 2rem;
+    font-family: "Audiowide", cursive;
+}
+.option-admin {
+    padding: 2rem;
+    width: 30%;
+    min-width: 280px;
+}
+
 .home_admin_container {
     text-align: center;
 }
@@ -63,7 +92,7 @@ h1{
 }
 
 .navbar {
-    background-color: chocolate;
+    background-color: #F4540F;
     color: rgb(255, 255, 255);
     font-family: "Audiowide", cursive;
 }
@@ -76,12 +105,12 @@ h1{
     padding-top: 2vh;
     text-align: center;
     color: rgb(255, 255, 255);
-    background-color: chocolate;
+    background-color: #F4540F;
     justify-content: center;
     align-items: center;
     font-family: "Audiowide", cursive;
     width: 100%;
-    height: 9vh;
+    height: 8vh;
     position: fixed;
     bottom: 0;
 }
@@ -114,11 +143,11 @@ h1{
 }
 
 button.btn {
-    background-color: chocolate;
+    background-color: #F4540F;
 }
 
 .nav_color {
-    background-color: chocolate;
+    background-color: #F4540F;
 }
 
 img.lupa {
@@ -827,6 +856,9 @@ select {
 .m-9 {
   margin: 2.25rem;
 }
+.m-2 {
+  margin: 0.5rem;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -861,9 +893,6 @@ select {
 .mt-2 {
   margin-top: 0.5rem;
 }
-.mt-3 {
-  margin-top: 0.75rem;
-}
 .ml-1 {
   margin-left: 0.25rem;
 }
@@ -884,6 +913,9 @@ select {
 }
 .-mt-px {
   margin-top: -1px;
+}
+.mt-3 {
+  margin-top: 0.75rem;
 }
 .-mr-2 {
   margin-right: -0.5rem;
@@ -1520,4 +1552,5 @@ select {
     padding-right: 2rem;
   }
 }
+
 
