@@ -1,9 +1,8 @@
 <?php
 
 use App\Http\Controllers\AdminHomeController;
-use App\Http\Controllers\CreateMeanController;
-use App\Http\Controllers\EditMeanController;
 use App\Http\Controllers\MeanController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\UserHomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -20,10 +19,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
-
-Route::get('/home_admin', function () {
-    return view('home_admin');
 });
 
 Route::get('/panel_admin', function () {
@@ -54,8 +49,15 @@ Route::name('means')->middleware(['auth','admin'])->group(function(){
     Route::delete('/means{id}', [MeanController::class, 'destroy'])->name('.destroy');
     Route::get('/means{id}/edit', [MeanController::class,'edit'])->name('.edit');
     Route::put('/means{id}', [MeanController::class, 'update'])->name('.update');
-        
+    Route::get('/home_admin', [MeanController::class, 'show'])->name('.show'); 
+});
+
+Route::name('users')->middleware(['auth','admin'])->group(function(){
+
+    Route::get('/users', [UserController::class, 'index'])->name('.users');
+    Route::delete('/users/{id}', [UserController::class, 'destroy'])->name('.destroy');
+    Route::get('/users/{id}/edit', [UserController::class,'edit'])->name('.edit');
+    Route::put('/users/{id}', [UserController::class, 'update'])->name('.update');
 });
 
 Route::get('/home', [UserHomeController::class,'index']);
-Route::get('/home/admin', [AdminHomeController::class,'index']);
