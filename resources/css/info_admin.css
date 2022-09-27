@@ -1,16 +1,34 @@
 .img_admin {
-    width: 7vw;
-    height: 15vh;
+    width:150px;
+    height:150px;
     border-radius: 100px;
     background-image: url(https://trello.com/1/cards/63218e5381220f006137b952/attachments/6321f8b716a664034740dc68/download/defecto.png);
     background-size: contain;
     background-position: center;
     margin: 4rem;
-    min-width: 150px;
+   
 }
 .container_img_admin {
     display: flex;
     flex-direction: column;
     text-align: center;
     padding: 2rem;
+}
+.btn_select_file{
+  
+    text-decoration: none;
+  
+   
+}
+button.btn.btn-editar
+{
+    background-color: rgb(1, 153, 170);
+    border-radius: 15px;
+    width: 5rem;
+  
+}
+button.btn.btn-eliminar{
+    background-color: rgb(170, 1, 1);
+    border-radius: 15px;
+    width: 5rem;
 }

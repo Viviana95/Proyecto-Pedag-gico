@@ -1,6 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap);
 .form_create {
     width: 40vw;
+    height: auto;
     background-image: url(https://trello.com/1/cards/63218e5381220f006137b952/attachments/63218e751af52500dfc50b44/download/fondo.png);
     background-size: contain;
     border-radius: 10px;
@@ -52,110 +52,6 @@ a.text-forgot {
 }
 
 
-<<<<<<< HEAD
-* {
-  padding: 0;
-  margin: 0;
-}
-
-html {
-  font-family: "Roboto", sans-serif;
-  font-size: 12px;
-}
-
-body {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-  background: #1488cc;
-  background: linear-gradient(to right, #2b32b2, #1488cc);
-}
-
-.blog_post {
-  background: #fff;
-  max-width: 500px;
-  border-radius: 10px;
-  box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
-  position: relative;
-}
-
-
-.container_copy {
-  padding: 6rem 4rem 5rem 4rem;
-}
-
-.img_pod {
-  height: 110px;
-  width: 110px;
-  background: linear-gradient(90deg, #ff9966, #ff5e62);
-  z-index: 10;
-  box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
-  border-radius: 100%;
-  position: absolute;
-  left: -10%;
-  top: -13%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-img {
-  height: 8.3rem;
-  width: 8.3rem;
-  position: relative;
-  border-radius: 100%;
-  box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
-  z-index: 1;
-}
-
-h3 {
-  margin: 0 0 0.5rem 0;
-  color: #999;
-  font-size: 1.25rem;
-}
-
-h1 {
-  margin: 0 0 1rem 0;
-  font-size: 2.5rem;
-  letter-spacing: 0.5px;
-  color: #333;
-}
-
-p {
-  margin: 0 0 4.5rem 0;
-  font-size: 1.5rem;
-  line-height: 1.45;
-  color: #333;
-}
-
-.btn_primary {
-  border: none;
-  outline: none;
-  background: linear-gradient(90deg, #ff9966, #ff5e62);
-  padding: 1.5rem 2rem;
-  border-radius: 50px;
-  color: white;
-  font-size: 1.2rem;
-  box-shadow: 1px 10px 2rem rgba(255, 94, 98, 0.5);
-  transition: all 0.2s ease-in;
-  text-decoration: none;
-}
-
-.btn_primary:hover {
-  box-shadow: 0px 5px 1rem rgba(255, 94, 98, 0.5);
-}
-
-@media only screen and (max-width: 650px) {
-  body {
-    background-color: black;
-  }
-
-  .img_pod {
-
-  }
-=======
 
 .title_panel_admin{
     text-align:center;
@@ -221,14 +117,14 @@ p {
 }
 
 .img_admin {
-    width: 7vw;
-    height: 15vh;
+    width:150px;
+    height:150px;
     border-radius: 100px;
     background-image: url(https://trello.com/1/cards/63218e5381220f006137b952/attachments/6321f8b716a664034740dc68/download/defecto.png);
     background-size: contain;
     background-position: center;
     margin: 4rem;
-    min-width: 150px;
+   
 }
 .container_img_admin {
     display: flex;
@@ -236,7 +132,24 @@ p {
     text-align: center;
     padding: 2rem;
 }
-
+.btn_select_file{
+  
+    text-decoration: none;
+  
+   
+}
+button.btn.btn-editar
+{
+    background-color: rgb(1, 153, 170);
+    border-radius: 15px;
+    width: 5rem;
+  
+}
+button.btn.btn-eliminar{
+    background-color: rgb(170, 1, 1);
+    border-radius: 15px;
+    width: 5rem;
+}
 .container-video {
     display: flex;
     justify-content: center;
@@ -257,7 +170,6 @@ button.btn {
 
 img.lupa {
     width: 2vw;
->>>>>>> 88935ec55252c0ed0fdaa609bbf225216cf65836
 }
 
 /*
@@ -959,11 +871,11 @@ select {
 .z-50 {
   z-index: 50;
 }
-.m-9 {
-  margin: 2.25rem;
-}
 .m-2 {
   margin: 0.5rem;
+}
+.m-9 {
+  margin: 2.25rem;
 }
 .mx-auto {
   margin-left: auto;
@@ -975,31 +887,8 @@ select {
 .-ml-px {
   margin-left: -1px;
 }
-<<<<<<< HEAD
 .ml-1 {
   margin-left: 0.25rem;
-=======
-.mb-4 {
-  margin-bottom: 1rem;
-}
-.mt-1 {
-  margin-top: 0.25rem;
-}
-.mt-4 {
-  margin-top: 1rem;
-}
-.ml-6 {
-  margin-left: 1.5rem;
-}
-.mb-3 {
-  margin-bottom: 0.75rem;
-}
-.mt-5 {
-  margin-top: 1.25rem;
-}
-.mb-2 {
-  margin-bottom: 0.5rem;
->>>>>>> 88935ec55252c0ed0fdaa609bbf225216cf65836
 }
 .mt-2 {
   margin-top: 0.5rem;
@@ -1025,7 +914,6 @@ select {
 .-mt-px {
   margin-top: -1px;
 }
-<<<<<<< HEAD
 .mb-4 {
   margin-bottom: 1rem;
 }
@@ -1047,11 +935,6 @@ select {
 .mb-3 {
   margin-bottom: 0.75rem;
 }
-=======
-.mt-3 {
-  margin-top: 0.75rem;
-}
->>>>>>> 88935ec55252c0ed0fdaa609bbf225216cf65836
 .-mr-2 {
   margin-right: -0.5rem;
 }
@@ -1305,6 +1188,10 @@ select {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
 }
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
 .pt-8 {
   padding-top: 2rem;
 }
@@ -1403,14 +1290,9 @@ select {
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
 }
-<<<<<<< HEAD
-.text-orange-50 {
+.text-white {
   --tw-text-opacity: 1;
-  color: rgb(255 247 237 / var(--tw-text-opacity));
-}
-.text-indigo-600 {
-  --tw-text-opacity: 1;
-  color: rgb(79 70 229 / var(--tw-text-opacity));
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 .text-red-600 {
   --tw-text-opacity: 1;
@@ -1420,23 +1302,16 @@ select {
   --tw-text-opacity: 1;
   color: rgb(22 163 74 / var(--tw-text-opacity));
 }
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
 .text-indigo-700 {
   --tw-text-opacity: 1;
   color: rgb(67 56 202 / var(--tw-text-opacity));
 }
-=======
->>>>>>> 88935ec55252c0ed0fdaa609bbf225216cf65836
 .text-gray-800 {
   --tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity));
 }
 .underline {
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
+  text-decoration-line: underline;
 }
 .antialiased {
   -webkit-font-smoothing: antialiased;
@@ -1480,9 +1355,9 @@ select {
   --tw-ring-opacity: 0.05;
 }
 .transition {
-  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -1504,6 +1379,10 @@ select {
 .ease-in {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
+.container-edit-delete {
+    display: flex;
+    justify-content: space-between;
+}
 .hover\:border-gray-300:hover {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
@@ -1523,10 +1402,6 @@ select {
 .hover\:text-gray-400:hover {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
-}
-.hover\:text-orange-50:hover {
-  --tw-text-opacity: 1;
-  color: rgb(255 247 237 / var(--tw-text-opacity));
 }
 .hover\:text-gray-700:hover {
   --tw-text-opacity: 1;
@@ -1686,11 +1561,6 @@ select {
     padding-right: 1.5rem;
   }
 
-  .sm\:px-8 {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
   .sm\:pt-0 {
     padding-top: 0px;
   }
@@ -1702,5 +1572,4 @@ select {
     padding-right: 2rem;
   }
 }
-
 

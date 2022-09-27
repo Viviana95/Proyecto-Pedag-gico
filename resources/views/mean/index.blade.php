@@ -1,4 +1,4 @@
-@include('layouts.layout')
+
 <x-app-layout>
     <x-slot name="header">
 <div class="">
@@ -7,7 +7,7 @@
 
             <div class="p-6 bg-white border-b border-gray-200">
 
-                <a type="button" class="btn btn-warning" href="{{route('means.create')}}">Añadir</a>
+                {{-- <a type="button" class="btn btn-warning" href="{{route('means.create')}}">Añadir</a> --}}
 
                 <table class="table table-hover">
                     <thead>
@@ -36,12 +36,15 @@
                           <form action="{{ route('means.edit', $mean->id) }}" method="post">
                             @csrf
                             @method('GET')
-                            <button type="submit" class="btn btn-primary">Editar</button>
+
+                            <div class="container-edit-delete">
+                            <button type="submit" class="btn btn-editar btn-primary">Editar</button>
                         </form>
                           <form action="{{route('means.destroy', $mean->id)}}" method="Post" class="formDelete">
                            @csrf
                            @method('DELETE')
-                           <button type="submit" class="btn btn-danger">Eliminar</button>
+                           <button type="submit" class="btn btn-eliminar btn-danger">Eliminar</button>
+                          </div>
                           </form>
                         </tr>
                       </tbody>
@@ -52,5 +55,6 @@
         </div>
     </div>
 </div>
+<x-footer></x-footer>
     </x-slot>
 </x-app-layout>

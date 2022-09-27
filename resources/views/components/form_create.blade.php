@@ -1,8 +1,6 @@
-@Include('layouts.layout')
-
-<div class="py-12 flex">
+<div class="flex">
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-        <div class="p-6 form_create">
+        <div class="p-6 form_create mt-2">
             <form action="{{route('means.store')}}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div>
