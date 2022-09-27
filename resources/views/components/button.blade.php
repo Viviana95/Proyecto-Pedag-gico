@@ -1,7 +1,7 @@
-<div class="flex items-center justify-evenly">
+<div class="flex items-center justify-evenly buttons">
     <button
-        class='btn inline-flex items-center px-4 rounded-md font-semibold text-xs text-white uppercase tracking-widest  transition ease-in-out duration-150'><a
-            href="{{ url('/') }}">Cancel</a>
+        class='btn inline-flex items-center px-4 rounded-md font-semibold text-xs uppercase tracking-widest  transition ease-in-out duratio btn-cancel'><a
+            href="{{ url('/') }}" class="btn-cancel">Cancel</a>
     </button>
 
 

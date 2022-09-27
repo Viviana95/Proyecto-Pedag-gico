@@ -1,0 +1,21 @@
+.container-video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.video-box {
+    width: 100%;
+    min-width: 1534px;
+}
+
+button.btn {
+    background-color: #F4540F;
+}
+
+.nav_color {
+    background-color: #F4540F;
+}
+
+img.lupa {
+    width: 2vw;
+}
