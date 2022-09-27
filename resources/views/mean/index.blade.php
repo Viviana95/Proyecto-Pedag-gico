@@ -12,9 +12,8 @@
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                          <th scope="col">#</th>
                           <th scope="col">Title</th>
-                          <th scope="col">Image</th>
+                          {{-- <th scope="col">Image</th> --}}
                           <th scope="col">Language</th>
                           <th scope="col">Format</th>
                           <th scope="col">File</th>
@@ -24,10 +23,8 @@
                       <tbody>
                        @foreach ($means as $mean)
                          <tr>
-
-                          <td>{{$mean->id}}</td>
                           <td>{{$mean->title}}</td>
-                          <td><img src="{{ asset('storage/'.$mean->image)}}" alt="..."></td>
+                          {{-- <td><img src="{{ asset('storage/'.$mean->image)}}" alt="..."></td> --}}
                           <td>{{$mean->lenguage}}</td>
                           <td>{{$mean->format}}</td>
                           <td>{{$mean->file}}</td>

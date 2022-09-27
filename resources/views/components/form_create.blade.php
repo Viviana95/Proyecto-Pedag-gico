@@ -19,11 +19,11 @@
                         </select>
                         <label for="floatingInput"></label>
                     </div>
-                    <p class="text-form">Selecciona imagen</p>
+                    {{-- <p class="text-form">Selecciona imagen</p>
                     <div class="form-floating mb-3">
                         <input type="file" name="image" class="form-control" id="floatingInput">
                         <label for="floatingInput"></label>
-                    </div>
+                    </div> --}}
                     <p class="text-form">Selecciona formato</p>
                     <div class="form-floating mb-3">
                         <select name="format" class="form-select" aria-label="Default select example">
@@ -36,8 +36,9 @@
                     </div>
                     <p class="text-form">Selecciona un archivo</p>
                     <div class="form-floating mb-3">
-                        <input type="text" name="file" class="form-control" id="floatingInput">
-                        <label for="floatingInput"></label>
+                        <input type="file" name="file" class="form-control" id="floatingInput"
+                            placeholder="">
+                        <label for="floatingInput">FILE</label>
                     </div>
                     <div class="btn_container">
                         <button class="btn btn_orange" type="submit" href="{{route('means.index')}}">Añadir</button>

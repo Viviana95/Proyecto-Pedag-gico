@@ -22,7 +22,7 @@
                             <label for="floatingInput">LENGUAGE</label>
                          </div>
                          <div class="form-floating mb-3">
-                            <input type="text" name="image" value="{{$mean->image ?? old('image')}}" class="form-control" id="floatingInput" placeholder="name@example.com">
+                            <input type="file" name="image" value="{{$mean->image ?? old('image')}}" class="form-control" id="floatingInput" placeholder="name@example.com">
                             <label for="floatingInput">IMAGE</label>
                          </div>
                          <div class="form-floating mb-3">
@@ -37,7 +37,7 @@
 
                          </div>
                          <div class="form-floating mb-3">
-                            <input type="text" name="file" value="{{$mean->file ?? old('file')}}" class="form-control" id="floatingInput" placeholder="name@example.com">
+                            <input type="file" name="file" value="{{$mean->file ?? old('file')}}" class="form-control" id="floatingInput" placeholder="name@example.com">
                             <label for="floatingInput">FILE</label>
                          </div>
 
