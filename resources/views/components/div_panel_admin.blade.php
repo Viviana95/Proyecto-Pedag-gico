@@ -5,15 +5,15 @@
     <div class="d-flex justify-content-center panel_admin">
         <div class="option-admin">
              <h3 class="title-option-admin">Recursos subidos</h3>
-            <img class="imagen_panel" src="{{ asset('./assets/archivo.png')}}">
+             <a href="{{ route('means.index') }}"><img class="imagen_panel" src="{{ asset('./assets/archivo.png')}}"></a>
         </div>
         <div class="option-admin">
             <h3 class="title-option-admin">Usuarios</h3>
-            <img class="imagen_panel" src="{{ asset('./assets/grupo.png')}}">
+            <a href="{{ route('users.users') }}"><img class="imagen_panel" src="{{ asset('./assets/grupo.png')}}"></a>
         </div>
-        <div class="option-admin">
+        <div class="option-admin" href="">
             <h3 class="title-option-admin">Registrar nuevo usuario</h3>
-            <img class="imagen_panel" src="{{ asset('./assets/usuario.png')}}">
+            <a href="{{ route('register') }}" class="ml-6 text-sl font-bold text_login"><img class="imagen_panel" src="{{ asset('./assets/usuario.png')}}"></a>
         </div>
     </div>
 </div>

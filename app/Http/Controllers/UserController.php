@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -25,7 +26,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        
+        return view('register_users');
     }
 
     /**
@@ -36,7 +37,20 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-       
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'password' => ['required', 'confirmed'],
+        ]);
+        
+        $mean = User::create([
+            'name'=>$request->name,
+            'email'=>$request->email,
+            'password'=>Hash::make($request->password),
+        ]);
+
+        $mean->save();
+        return redirect()->route('panel_admin');
     }
 
     /**
@@ -84,7 +98,7 @@ class UserController extends Controller
         $user->email = $request->email;
        
         $user->update();
-        return redirect()->route('users.users');
+        return redirect()->route('user.users');
 
     }
 

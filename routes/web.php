@@ -22,8 +22,7 @@ Route::get('/', function () {
 });
 
 Route::get('/panel_admin', function () {
-    return view('panel_admin');
-});
+    return view('panel_admin');})->middleware(['auth','admin'])->name('admin');
 
 Route::get('/lenguaje_view', function () {
     return view('lenguaje_view');
@@ -39,9 +38,11 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+Route::get('/home_admin', [MeanController::class, 'show'])->name('means.show'); 
+
 require __DIR__.'/auth.php';
 
-Route::name('means')->middleware(['auth','admin'])->group(function(){
+Route::name('means')->middleware(['auth'])->group(function(){
 
     Route::get('/means', [MeanController::class, 'index'])->name('.index');
     Route::get('/means/create', [MeanController::class, 'create'])->name('.create');
@@ -49,7 +50,6 @@ Route::name('means')->middleware(['auth','admin'])->group(function(){
     Route::delete('/means{id}', [MeanController::class, 'destroy'])->name('.destroy');
     Route::get('/means{id}/edit', [MeanController::class,'edit'])->name('.edit');
     Route::put('/means{id}', [MeanController::class, 'update'])->name('.update');
-    Route::get('/home_admin', [MeanController::class, 'show'])->name('.show'); 
 });
 
 Route::name('users')->middleware(['auth','admin'])->group(function(){
@@ -61,3 +61,4 @@ Route::name('users')->middleware(['auth','admin'])->group(function(){
 });
 
 Route::get('/home', [UserHomeController::class,'index']);
+
