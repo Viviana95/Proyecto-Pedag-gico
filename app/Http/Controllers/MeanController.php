@@ -36,15 +36,15 @@ class MeanController extends Controller
      */
     public function store(Request $request)
     {
-        $pathfile = $request->file('file')->storeAs('public/files', $request->file('file')->getClientOriginalName());
-        $path = $request->file('image')->storeAs('public/images', $request->file('image')->getClientOriginalName());
+        $pathfile = $request->file('file')->storeAs('files', $request->file('file')->getClientOriginalName());
+        $path = $request->file('image')->storeAs('images', $request->file('image')->getClientOriginalName());
 
         $request->validate([
-            'image' => 'required|mimes:jpg,png|max:2048',
+            'image' => 'mimes:jpg,png|max:2048',
             'title' => 'required',
             'lenguage' => 'required',
             'format' =>'required',
-            'file' =>'required|mimes:ppt,pdf,docx|max:2048',
+            'file' =>'mimes:ppt,pdf,docx|max:2048',
         ]);
         
         $mean = Mean::create([
@@ -68,7 +68,7 @@ class MeanController extends Controller
     public function show(Mean $mean)
     {
         $means = Mean::latest()->paginate(12);
-        return view('home_admin' , compact('means'));
+        return view('home' , compact('means'));
     }
 
 
@@ -103,7 +103,7 @@ class MeanController extends Controller
             'file' =>'required|mimes:ppt,pdf,docx|max:2048',
         ]);
 
-        $path = $request->file('image')->storeAs('public/images', $request->file('image')->getClientOriginalName());
+        $path = $request->file('image')->storeAs('images', $request->file('image')->getClientOriginalName());
 
         $mean = Mean::find($id);
         $mean->title = $request->title;

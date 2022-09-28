@@ -38,7 +38,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::get('/home_admin', [MeanController::class, 'show'])->name('means.show'); 
+Route::get('/home', [MeanController::class, 'show'])->name('means.show'); 
 
 require __DIR__.'/auth.php';
 
@@ -60,5 +60,4 @@ Route::name('users')->middleware(['auth','admin'])->group(function(){
     Route::put('/users/{id}', [UserController::class, 'update'])->name('.update');
 });
 
-Route::get('/home', [UserHomeController::class,'index']);
 
