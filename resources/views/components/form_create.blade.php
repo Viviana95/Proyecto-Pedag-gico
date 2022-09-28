@@ -36,7 +36,7 @@
                         </select>
                         <label for="floatingInput"></label>
                     </div>
-                    <p class="text-form">Selecciona un archivo</p>
+                    <p class="text-form">Añade Archivo o Enlace</p>
                     <div class="form-floating mb-3">
                         <input type="file" name="file" class="form-control" id="floatingInput"
                             placeholder="">

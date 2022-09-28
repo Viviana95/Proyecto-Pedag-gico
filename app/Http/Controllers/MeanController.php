@@ -52,7 +52,7 @@ class MeanController extends Controller
             'image'=>$path,
             'lenguage'=>$request->lenguage,
             'format'=>$request->format,
-            'file'=>$pathfile,
+            'file'=>$pathfile
         ]);
 
         $mean->save();

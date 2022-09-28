@@ -3,8 +3,9 @@
 use App\Http\Controllers\AdminHomeController;
 use App\Http\Controllers\MeanController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\UserHomeController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
