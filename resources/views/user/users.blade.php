@@ -9,6 +9,7 @@
                     <table class="table table-hover">
                         <thead>
                             <tr>
+                              <th scope="col">Photo</th>
                               <th scope="col">Name</th>
                               <th scope="col">E-mail</th>
                             </tr>
@@ -16,7 +17,7 @@
                           <tbody>
                            @foreach ($users as $user)
                              <tr>
-    
+                              <td><img src="{{ asset($user->profile)}}" ></td>
                               <td>{{$user->name}}</td>
                               <td>{{$user->email}}</td>
                               <td>

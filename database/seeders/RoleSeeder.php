@@ -29,6 +29,7 @@ class RoleSeeder extends Seeder
             'name'      => 'admin',
             'email'     => 'admin@admin.com',
             'password'  => Hash::make('admin'),
+            'profile'  => '/public/storage/images/defecto.png',
         ]);
 
         $useradmin->roles()->sync([ $role->id = '1']);

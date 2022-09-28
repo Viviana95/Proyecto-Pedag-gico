@@ -19,6 +19,15 @@ class UserController extends Controller
         return view('user.users', compact('users'));
     }
 
+    protected function profileImagePath() {
+        $pathprofile = '/storage/public/images/defecto.png';
+        if(request()->hasfile('profile') && request()->file('profile')->isValid()){
+            $pathprofile = request()->profile->store('profile');
+        }
+
+        return $pathprofile;
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -47,6 +56,7 @@ class UserController extends Controller
             'name'=>$request->name,
             'email'=>$request->email,
             'password'=>Hash::make($request->password),
+            'profile'=>$this->profileImagePath(),
         ]);
 
         $mean->save();
@@ -59,9 +69,10 @@ class UserController extends Controller
      * @param  \App\Models\User  $mean
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user)
+    public function show($id, User $user)
     {
-        
+        $user = User::find($id);
+        return view('info', ['user' =>$user]);
     }
 
 
@@ -91,11 +102,13 @@ class UserController extends Controller
         $request->validate([
             'name' => 'required',
             'email' => 'required',
+            'profile' => 'required|mimes:jpg,png|max:2048',
         ]);
 
         $user = User::find($id);
         $user->name = $request->name;
         $user->email = $request->email;
+        $user->profile = $request->profile;
        
         $user->update();
         return redirect()->route('user.users');
