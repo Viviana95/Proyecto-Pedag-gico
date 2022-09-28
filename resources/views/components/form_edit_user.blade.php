@@ -16,8 +16,8 @@
                             <label for="floatingInput">E-MAIL</label>
                          </div>
                          <div class="btn_container">
-                            <button type="submit" class="btn btn_modificar">Modificar</button>
-                            <button class="btn btn_modificar"><a  href="{{route('users.users')}}">Cancelar</a></button>
+                            <button type="submit" class="btn btn-modificar">Modificar</button>
+                            <button class="btn btn-cancelar"><a  href="{{route('users.users')}}">Cancelar</a></button>
                          </div>
 
                         </div>

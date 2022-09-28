@@ -36,13 +36,13 @@
             <div class="block mt-4">
                 <label for="remember_me" class="inline-flex items-center ">
                     <input id="remember_me" type="checkbox" class="" name="remember">
-                    <span class="ml-2 text-sm text-login">{{ __('Remember me') }}</span>
+                    <span class="ml-2 text-sm text-white">{{ __('Remember me') }}</span>
                 </label>
             </div>
 
             <div class="flex items-center">
                 @if (Route::has('password.request'))
-                    <a class="text-sm text-forgot" href="{{ route('password.request') }}">
+                    <a class="text-sm text-forgot mb-3" href="{{ route('password.request') }}">
                         {{ __('Forgot your password?') }}
                     </a>
                 @endif
