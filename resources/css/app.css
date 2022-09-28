@@ -12,3 +12,9 @@
 @import "welcome.css";
 @import "means.css";
 @import "form-register";
+
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}

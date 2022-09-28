@@ -1,5 +1,9 @@
-.title_panel_admin{
+.title{
     text-align:center;
+    color: black;
+    padding-top: 2vh;
+    font-size: 2rem;
+    font-family: "Audiowide", cursive;
 }
 .panel_admin {
     display: flex;
@@ -8,7 +12,7 @@
     text-align: center;
     display: flex;
 }
-.title-option-admin{
+.subtitle{
     font-size: 1.5rem;
     margin-bottom: 1rem;
     font-family: "Audiowide", cursive;
@@ -20,12 +24,6 @@
     }
 }
 
-.title_panel_admin {
-    color: black;
-    padding-top: 2vh;
-    font-size: 2rem;
-    font-family: "Audiowide", cursive;
-}
 .option-admin {
     padding: 2rem;
     width: 30%;
