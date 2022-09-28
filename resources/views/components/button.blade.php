@@ -1,12 +1,11 @@
-<div class="flex items-center justify-evenly buttons">
+<div class="buttons-container">
     <button
-        class='btn inline-flex items-center px-4 rounded-md font-semibold text-xs uppercase tracking-widest  transition ease-in-out duratio btn-cancel'><a
-            href="{{ url('/') }}" class="btn-cancel">Cancel</a>
+        class='btn btn_orange'
+        href="{{ url('/') }}">Cancel</button>
     </button>
 
-
     <button
-        class="btn inline-flex items-center px-4 py-2   rounded-md font-semibold text-xs text-white uppercase tracking-widest   focus:ring disabled:opacity-25 transition ease-in-out duration-150"
+        class="btn btn_orange "
         {{ $attributes->merge(['type' => 'submit']) }}>
         {{ $slot }}
     </button>

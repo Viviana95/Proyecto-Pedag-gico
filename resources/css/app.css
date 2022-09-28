@@ -11,7 +11,4 @@
 @import "info_admin";
 @import "welcome.css";
 @import "means.css";
-.container-edit-delete {
-    display: flex;
-    justify-content: space-between;
-}
+@import "form-register";

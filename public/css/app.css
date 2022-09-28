@@ -8,8 +8,6 @@
 }
 .text-form{
     color:white;
-    font-family:"Audiowide", cursive;
-    letter-spacing:0.2vw;
 }
 .btn_container {
     display: flex;
@@ -20,7 +18,7 @@
 button.btn_orange {
     background-color:#F4540F;
     text-decoration: none;
-    width: 12vw;
+    width: 10vw;
     height:4vh;
     color: aliceblue;
     border-radius:20px;
@@ -105,6 +103,10 @@ a.text-forgot {
     width: 9rem;
     margin-left: 2rem;
 }
+.text_login{
+    color:white;
+    text-decoration:none;
+}
 
 .copiright {
     padding-top: 2vh;
@@ -148,6 +150,10 @@ button.btn.btn-eliminar {
     border-radius: 15px;
     width: 5rem;
 }
+.container-edit-delete {
+    display: flex;
+    justify-content: space-between;
+}
 
 .container-video {
     display: flex;
@@ -176,6 +182,16 @@ img.lupa {
     margin-bottom: 1rem;
     font-family: "Audiowide", cursive;
 }
+
+.form-login{
+    height:auto;
+}
+.buttons-container{
+  display:flex;
+  justify-content:space-evenly;
+}
+
+
 
 /*
 ! tailwindcss v3.1.8 | MIT License | https://tailwindcss.com
@@ -1073,9 +1089,6 @@ select {
 .justify-between {
   justify-content: space-between;
 }
-.justify-evenly {
-  justify-content: space-evenly;
-}
 .space-x-8 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(2rem * var(--tw-space-x-reverse));
@@ -1381,10 +1394,6 @@ select {
 .ease-in {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
-.container-edit-delete {
-    display: flex;
-    justify-content: space-between;
-}
 .hover\:border-gray-300:hover {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
@@ -1409,13 +1418,13 @@ select {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
 }
-.hover\:text-gray-900:hover {
-  --tw-text-opacity: 1;
-  color: rgb(17 24 39 / var(--tw-text-opacity));
-}
 .hover\:text-gray-800:hover {
   --tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity));
+}
+.hover\:text-gray-900:hover {
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity));
 }
 .focus\:z-10:focus {
   z-index: 10;

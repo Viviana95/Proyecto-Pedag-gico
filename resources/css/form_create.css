@@ -8,8 +8,6 @@
 }
 .text-form{
     color:white;
-    font-family:"Audiowide", cursive;
-    letter-spacing:0.2vw;
 }
 .btn_container {
     display: flex;
@@ -20,7 +18,7 @@
 button.btn_orange {
     background-color:#F4540F;
     text-decoration: none;
-    width: 12vw;
+    width: 10vw;
     height:4vh;
     color: aliceblue;
     border-radius:20px;

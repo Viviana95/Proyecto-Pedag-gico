@@ -26,3 +26,7 @@ button.btn.btn-eliminar {
     border-radius: 15px;
     width: 5rem;
 }
+.container-edit-delete {
+    display: flex;
+    justify-content: space-between;
+}
