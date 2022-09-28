@@ -61,7 +61,7 @@ a.text-forgot {
     display: flex;
 }
 .title-option-admin{
-    font-size: 1rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
     font-family: "Audiowide", cursive;
 }
@@ -106,6 +106,13 @@ a.text-forgot {
 .text_login{
     color:white;
     text-decoration:none;
+}
+.img-user{
+    width:50px;
+    height:50px;
+    border-radius:50px;
+    margin-right:1vw;
+
 }
 
 .copiright {
@@ -1244,10 +1251,6 @@ select {
   font-size: 1.125rem;
   line-height: 1.75rem;
 }
-.text-xs {
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -1272,9 +1275,6 @@ select {
 }
 .tracking-wider {
   letter-spacing: 0.05em;
-}
-.tracking-widest {
-  letter-spacing: 0.1em;
 }
 .text-gray-500 {
   --tw-text-opacity: 1;
@@ -1501,19 +1501,11 @@ select {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
 }
-.disabled\:opacity-25:disabled {
-  opacity: 0.25;
-}
 @media (prefers-color-scheme: dark) {
 
   .dark\:bg-gray-900 {
     --tw-bg-opacity: 1;
     background-color: rgb(17 24 39 / var(--tw-bg-opacity));
-  }
-
-  .dark\:text-gray-500 {
-    --tw-text-opacity: 1;
-    color: rgb(107 114 128 / var(--tw-text-opacity));
   }
 }
 @media (min-width: 640px) {

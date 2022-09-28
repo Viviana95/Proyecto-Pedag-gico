@@ -25,12 +25,12 @@
                 <a class="nav-link text-white mt-5 ms-5" href="#">FORO</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white mt-5 ms-5"  href="{{route('admin')}}">ADMIN</a>
+                <a class="nav-link text-white mt-5 ms-5" href="{{route('admin')}}">ADMIN</a>
               </li>
             </ul>
             <div>
               <div class="d-flex ms-5 mb-2 ">
-                <a class="mt-2" href="#"><img class="rounded-circle ms-5 m-2" src="{{ asset('./assets/perfil.png')}}"></a>
+                <a class="mt-2" href="#"><input class="img-user"></a>
                 <div class="hidden sm:flex sm:items-center sm:mr-6">
                     <x-dropdown align="right" width="48">
                         <x-slot name="trigger">
