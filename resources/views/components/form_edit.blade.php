@@ -42,8 +42,8 @@
                          </div>
 
                          <div class="btn_container">
-                            <button type="submit" class="btn btn_modificar">Modificar</button>
-                            <button class="btn btn_modificar"><a  href="{{route('means.index')}}">Cancelar</a></button>
+                            <button type="submit" class="btn btn-modificar">Modificar</button>
+                            <button class="btn btn-cancelar"><a  href="{{route('means.index')}}">Cancelar</a></button>
                          </div>
 
                         </div>
