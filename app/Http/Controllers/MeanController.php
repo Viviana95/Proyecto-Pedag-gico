@@ -114,8 +114,6 @@ class MeanController extends Controller
        
         $mean->update();
         return redirect()->route('means.index');
-
-
     }
 
     /**
