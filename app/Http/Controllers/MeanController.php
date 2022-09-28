@@ -14,7 +14,7 @@ class MeanController extends Controller
      */
     public function index()
     {
-        $means = Mean::latest()->paginate(5);
+        $means = Mean::latest()->paginate(12);
         return view('mean.index', compact('means'));
     }
 
@@ -36,23 +36,25 @@ class MeanController extends Controller
      */
     public function store(Request $request)
     {
+        $pathfile = $request->file('file')->storeAs('public/files', $request->file('file')->getClientOriginalName());
+        $path = $request->file('image')->storeAs('public/images', $request->file('image')->getClientOriginalName());
+
         $request->validate([
-            'file' => 'required|mimes:jpg,png|max:2048',
+            'image' => 'required|mimes:jpg,png|max:2048',
             'title' => 'required',
             'lenguage' => 'required',
             'format' =>'required',
-            'file' =>'required',
+            'file' =>'required|mimes:ppt,pdf,docx|max:2048',
         ]);
-
-       $path = $request->file('image')->storeAs('public/images',$request->file('image')->getClientOriginalName());
-
+        
         $mean = Mean::create([
             'title'=>$request->title,
             'image'=>$path,
             'lenguage'=>$request->lenguage,
             'format'=>$request->format,
-            'file'=>$request->file
+            'file'=>$pathfile,
         ]);
+
         $mean->save();
         return redirect()->route('means.index');
     }
@@ -65,18 +67,20 @@ class MeanController extends Controller
      */
     public function show(Mean $mean)
     {
-        //
+        $means = Mean::latest()->paginate(12);
+        return view('home_admin' , compact('means'));
     }
+
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Mean  $mean
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id,Mean $mean)
+    public function edit($id, Mean $mean)
     {
-       $mean = Mean::find($id);
+        $mean = Mean::find($id);
         return view('mean.edit', ['mean' =>$mean]);
     }
 
@@ -84,14 +88,26 @@ class MeanController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Mean  $mean
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update($id,Request $request, Mean $mean)
+    
+
+    public function update(Request $request, $id, Mean $mean)
     {
-        Mean::find($id);
+        $request->validate([
+            'image' => 'required|mimes:jpg,png|max:2048',
+            'title' => 'required',
+            'lenguage' => 'required',
+            'format' =>'required',
+            'file' =>'required|mimes:ppt,pdf,docx|max:2048',
+        ]);
+
+        $path = $request->file('image')->storeAs('public/images', $request->file('image')->getClientOriginalName());
+
+        $mean = Mean::find($id);
         $mean->title = $request->title;
-        $mean->image = $request->image;
+        $mean->image = $path;
         $mean->lenguage = $request->lenguage;
         $mean->format = $request->format;
         $mean->file = $request->file;

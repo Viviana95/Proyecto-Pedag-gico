@@ -9,8 +9,8 @@ class AdminHomeController extends Controller
 {
     public function index()
     {
-        $means = Mean::latest()->paginate(2);
-        return view('home_admin', compact('means'));
+        // $means = Mean::latest()->paginate(2);
+        // return view('home_admin' , compact('means'));
         
     }
 }
