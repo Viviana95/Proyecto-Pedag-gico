@@ -20,7 +20,7 @@ class MeanTest extends TestCase
     {
       $means = Mean::factory()->count(5)->create();      
       
-      $response = $this->get('/means', ['means'=>$means]);
+      $response = $this->get('/means');
       
       $response ->assertStatus(200);
       
