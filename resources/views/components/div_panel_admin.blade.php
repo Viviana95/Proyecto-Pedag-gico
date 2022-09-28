@@ -13,7 +13,9 @@
         </div>
         <div class="option-admin" href="">
             <h3 class="title-option-admin">Registrar nuevo usuario</h3>
-            <a href="{{ route('register') }}"><img class="imagen_panel" src="{{ asset('./assets/usuario.png')}}"></a>
+         @if (Route::has('register'))
+            <a href="{{ route('register') }}" class="ml-6 text-sl font-bold text_login"><img class="imagen_panel" src="{{ asset('./assets/usuario.png')}}"></a>
+        @endif
         </div>
     </div>
 </div>

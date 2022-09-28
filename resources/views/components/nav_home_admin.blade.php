@@ -24,9 +24,11 @@
               <li class="nav-item">
                 <a class="nav-link text-white mt-5 ms-5" href="#">FORO</a>
               </li>
+              @if(Auth::user()->id == 1)
               <li class="nav-item">
                 <a class="nav-link text-white mt-5 ms-5" href="{{route('admin')}}">ADMIN</a>
               </li>
+              @endif
             </ul>
             <div>
               <div class="d-flex ms-5 mb-2 ">
