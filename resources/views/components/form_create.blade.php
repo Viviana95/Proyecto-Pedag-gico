@@ -1,4 +1,4 @@
-<div class="flex">
+<div class="flex mt-5">
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="p-6 form_create mt-2">
             <form action="{{route('means.store')}}" method="POST" enctype="multipart/form-data">

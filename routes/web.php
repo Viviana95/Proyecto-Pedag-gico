@@ -34,12 +34,14 @@ Route::get('/info', function () {
 Route::get('/add_resource', function () {
     return view('add_resource');
 });
-
+Route::get('/format_view', function () {
+    return view('format_view');
+});
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::get('/home', [MeanController::class, 'show'])->name('means.show'); 
+Route::get('/home', [MeanController::class, 'show'])->name('means.show');
 
 require __DIR__.'/auth.php';
 

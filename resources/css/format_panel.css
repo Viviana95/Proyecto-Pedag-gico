@@ -1,0 +1,31 @@
+.title {
+    text-align: center;
+    color: black;
+    padding-top: 2vh;
+    font-size: 2rem;
+    font-family: "Audiowide", cursive;
+}
+.panel_admin {
+    display: flex;
+    align-items: center;
+    margin-top: 4rem;
+    text-align: center;
+    display: flex;
+}
+.subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-family: "Audiowide", cursive;
+}
+@media only screen and (max-width: 600px) {
+    .panel_admin {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.option-admin {
+    padding: 2rem;
+    width: 30%;
+    min-width: 280px;
+}
