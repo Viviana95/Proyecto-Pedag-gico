@@ -3,7 +3,7 @@
         <x-nav_home_admin></x-nav_home_admin>
         <div class="container_view_lenguaje text-center">
 
-            <h1 class="masRecientes">LENGUAJE</h1>
+            <h1 class="title">LENGUAJE</h1>
             <div class="nav-item dropdown">
                 <a class="dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown">
                     FORMATO
