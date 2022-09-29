@@ -1,11 +1,13 @@
 .form_create {
-    width: 40vw;
+    border:2px solid #F4540F;
+    width: 30vw;
     height: auto;
     background-image: url(https://trello.com/1/cards/63218e5381220f006137b952/attachments/63218e751af52500dfc50b44/download/fondo.png);
     background-size: contain;
     border-radius: 10px;
     min-width:359px;
 }
+
 .text-form{
     color:white;
 }
@@ -20,6 +22,7 @@ button.btn_orange {
     text-decoration: none;
     width: 10vw;
     height:4vh;
+    min-width:80px;
     color: aliceblue;
     border-radius:20px;
 }
@@ -70,8 +73,12 @@ a.text-forgot {
     border-radius: 10px;
 }
 
-.title_panel_admin{
+.title{
     text-align:center;
+    color: black;
+    padding-top: 2vh;
+    font-size: 2rem;
+    font-family: "Audiowide", cursive;
 }
 .panel_admin {
     align-items: center;
@@ -79,7 +86,7 @@ a.text-forgot {
     text-align: center;
     display: flex;
 }
-.title-option-admin{
+.subtitle{
     font-size: 1.5rem;
     margin-bottom: 1rem;
     font-family: "Audiowide", cursive;
@@ -91,12 +98,6 @@ a.text-forgot {
     }
 }
 
-.title_panel_admin {
-    color: black;
-    padding-top: 2vh;
-    font-size: 2rem;
-    font-family: "Audiowide", cursive;
-}
 .option-admin {
     padding: 2rem;
     width: 30%;
@@ -135,16 +136,15 @@ a.text-forgot {
 }
 
 .copiright {
+    width: 100%;
+    height: 8vh;
     padding-top: 2vh;
     text-align: center;
     color: rgb(255, 255, 255);
-    background-color: #F4540F;
+    background-color: #f4540f;
     justify-content: center;
-    align-items: center;
-    font-family: "Audiowide", cursive;
-    width: 100%;
-    height: 8vh;
-    position: fixed;
+    font-family: "Audiowide";
+    position: absolute;
     bottom: 0;
 }
 
@@ -181,26 +181,9 @@ button.btn.btn-eliminar {
     justify-content: space-between;
 }
 
-.container-video {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.video-box {
-    width: 100%;
-    min-width: 1534px;
-}
-
-button.btn {
-    background-color: #F4540F;
-}
-
-.nav_color {
-    background-color: #F4540F;
-}
-
-img.lupa {
-    width: 2vw;
+.container-video{
+    
+    border:5px solid red;
 }
 
 .title-add-resources {
@@ -218,6 +201,37 @@ img.lupa {
 }
 
 
+
+.title {
+    text-align: center;
+    color: black;
+    padding-top: 2vh;
+    font-size: 2rem;
+    font-family: "Audiowide", cursive;
+}
+.panel_admin {
+    align-items: center;
+    margin-top: 4rem;
+    text-align: center;
+    display: flex;
+}
+.subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-family: "Audiowide", cursive;
+}
+@media only screen and (max-width: 600px) {
+    .panel_admin {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.option-admin {
+    padding: 2rem;
+    width: 30%;
+    min-width: 280px;
+}
 
 /*
 ! tailwindcss v3.1.8 | MIT License | https://tailwindcss.com
@@ -1425,116 +1439,151 @@ select {
 .ease-in {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
+
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
 .hover\:border-gray-300:hover {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
 }
+
 .hover\:bg-gray-100:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
+
 .hover\:bg-gray-50:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
+
 .hover\:text-gray-500:hover {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
 }
+
 .hover\:text-gray-400:hover {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
 }
+
 .hover\:text-gray-800:hover {
   --tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity));
 }
+
 .hover\:text-gray-900:hover {
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
 }
+
 .hover\:text-gray-700:hover {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
 }
+
 .focus\:z-10:focus {
   z-index: 10;
 }
+
 .focus\:border-blue-300:focus {
   --tw-border-opacity: 1;
   border-color: rgb(147 197 253 / var(--tw-border-opacity));
 }
+
 .focus\:border-indigo-300:focus {
   --tw-border-opacity: 1;
   border-color: rgb(165 180 252 / var(--tw-border-opacity));
 }
+
 .focus\:border-indigo-700:focus {
   --tw-border-opacity: 1;
   border-color: rgb(67 56 202 / var(--tw-border-opacity));
 }
+
 .focus\:border-gray-300:focus {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
 }
+
 .focus\:bg-gray-100:focus {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
+
 .focus\:bg-indigo-100:focus {
   --tw-bg-opacity: 1;
   background-color: rgb(224 231 255 / var(--tw-bg-opacity));
 }
+
 .focus\:bg-gray-50:focus {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
+
 .focus\:text-indigo-800:focus {
   --tw-text-opacity: 1;
   color: rgb(55 48 163 / var(--tw-text-opacity));
 }
+
 .focus\:text-gray-800:focus {
   --tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity));
 }
+
 .focus\:text-gray-700:focus {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
 }
+
 .focus\:text-gray-500:focus {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
 }
+
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
+
 .focus\:ring:focus {
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
+
 .focus\:ring-indigo-200:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(199 210 254 / var(--tw-ring-opacity));
 }
+
 .focus\:ring-opacity-50:focus {
   --tw-ring-opacity: 0.5;
 }
+
 .active\:bg-gray-100:active {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
+
 .active\:text-gray-700:active {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
 }
+
 .active\:text-gray-500:active {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
 }
+
 .disabled\:opacity-25:disabled {
   opacity: 0.25;
 }
+
 @media (prefers-color-scheme: dark) {
 
   .dark\:bg-gray-900 {
@@ -1547,6 +1596,7 @@ select {
     color: rgb(107 114 128 / var(--tw-text-opacity));
   }
 }
+
 @media (min-width: 640px) {
 
   .sm\:-my-px {
@@ -1607,6 +1657,7 @@ select {
     padding-top: 0px;
   }
 }
+
 @media (min-width: 1024px) {
 
   .lg\:px-8 {
