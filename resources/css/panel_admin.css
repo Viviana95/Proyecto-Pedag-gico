@@ -8,7 +8,11 @@
     text-align: center;
     display: flex;
 }
-
+.title-option-admin{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-family: "Audiowide", cursive;
+}
 @media only screen and (max-width: 600px) {
     .panel_admin {
         display: flex;

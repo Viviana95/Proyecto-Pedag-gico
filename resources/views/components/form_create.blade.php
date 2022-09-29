@@ -1,8 +1,6 @@
-@Include('layouts.layout')
-
-<div class="py-12 flex">
+<div class="flex">
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-        <div class="p-6 form_create">
+        <div class="p-6 form_create mt-2">
             <form action="{{route('means.store')}}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div>
@@ -21,11 +19,11 @@
                         </select>
                         <label for="floatingInput"></label>
                     </div>
-                    {{-- <p class="text-form">Selecciona imagen</p>
+                    <p class="text-form">Selecciona imagen</p>
                     <div class="form-floating mb-3">
                         <input type="file" name="image" class="form-control" id="floatingInput">
                         <label for="floatingInput"></label>
-                    </div> --}}
+                    </div>
                     <p class="text-form">Selecciona formato</p>
                     <div class="form-floating mb-3">
                         <select name="format" class="form-select" aria-label="Default select example">
@@ -36,7 +34,7 @@
                         </select>
                         <label for="floatingInput"></label>
                     </div>
-                    <p class="text-form">Selecciona un archivo</p>
+                    <p class="text-form">Añade Archivo o Enlace</p>
                     <div class="form-floating mb-3">
                         <input type="file" name="file" class="form-control" id="floatingInput"
                             placeholder="">

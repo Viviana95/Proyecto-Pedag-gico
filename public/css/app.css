@@ -1,5 +1,6 @@
 .form_create {
     width: 40vw;
+    height: auto;
     background-image: url(https://trello.com/1/cards/63218e5381220f006137b952/attachments/63218e751af52500dfc50b44/download/fondo.png);
     background-size: contain;
     border-radius: 10px;
@@ -7,8 +8,6 @@
 }
 .text-form{
     color:white;
-    font-family:"Audiowide", cursive;
-    letter-spacing:0.2vw;
 }
 .btn_container {
     display: flex;
@@ -19,7 +18,7 @@
 button.btn_orange {
     background-color:#F4540F;
     text-decoration: none;
-    width: 12vw;
+    width: 10vw;
     height:4vh;
     color: aliceblue;
     border-radius:20px;
@@ -50,7 +49,26 @@ a.text-forgot {
     margin-top: 5vh;
 }
 
+.card-content {
+    display:flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    margin: 3vw;
+    font-family: "Audiowide";
+    font-size: 20px;
+    color: #F4540F;
+}
 
+.card {
+    margin: 1vw;
+    border: none;
+}
+
+.card img {
+    border: 3px solid #F4540F;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 10px;
+}
 
 .title_panel_admin{
     text-align:center;
@@ -61,7 +79,11 @@ a.text-forgot {
     text-align: center;
     display: flex;
 }
-
+.title-option-admin{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-family: "Audiowide", cursive;
+}
 @media only screen and (max-width: 600px) {
     .panel_admin {
         display: flex;
@@ -100,6 +122,17 @@ a.text-forgot {
     width: 9rem;
     margin-left: 2rem;
 }
+.text_login{
+    color:white;
+    text-decoration:none;
+}
+.img-user{
+    width:50px;
+    height:50px;
+    border-radius:50px;
+    margin-right:1vw;
+
+}
 
 .copiright {
     padding-top: 2vh;
@@ -116,20 +149,36 @@ a.text-forgot {
 }
 
 .img_admin {
-    width: 7vw;
-    height: 15vh;
+    width: 150px;
+    height: 150px;
     border-radius: 100px;
     background-image: url(https://trello.com/1/cards/63218e5381220f006137b952/attachments/6321f8b716a664034740dc68/download/defecto.png);
     background-size: contain;
     background-position: center;
     margin: 4rem;
-    min-width: 150px;
 }
 .container_img_admin {
     display: flex;
     flex-direction: column;
     text-align: center;
     padding: 2rem;
+}
+.btn_select_file {
+    text-decoration: none;
+}
+button.btn.btn-editar {
+    background-color: rgb(1, 153, 170);
+    border-radius: 15px;
+    width: 5rem;
+}
+button.btn.btn-eliminar {
+    background-color: rgb(170, 1, 1);
+    border-radius: 15px;
+    width: 5rem;
+}
+.container-edit-delete {
+    display: flex;
+    justify-content: space-between;
 }
 
 .container-video {
@@ -153,6 +202,22 @@ button.btn {
 img.lupa {
     width: 2vw;
 }
+
+.title-add-resources {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-family: "Audiowide", cursive;
+}
+
+.form-login{
+    height:auto;
+}
+.buttons-container{
+  display:flex;
+  justify-content:space-evenly;
+}
+
+
 
 /*
 ! tailwindcss v3.1.8 | MIT License | https://tailwindcss.com
@@ -1549,5 +1614,4 @@ select {
     padding-right: 2rem;
   }
 }
-
 
