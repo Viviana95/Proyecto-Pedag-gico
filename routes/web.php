@@ -3,8 +3,9 @@
 use App\Http\Controllers\AdminHomeController;
 use App\Http\Controllers\MeanController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\UserHomeController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -27,8 +28,8 @@ Route::get('/panel_admin', function () {
 Route::get('/lenguaje_view', function () {
     return view('lenguaje_view');
 });
-Route::get('/info_admin', function () {
-    return view('info_admin');
+Route::get('/info', function () {
+    return view('info');
 });
 Route::get('/add_resource', function () {
     return view('add_resource');
@@ -38,7 +39,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::get('/home_admin', [MeanController::class, 'show'])->name('means.show'); 
+Route::get('/home', [MeanController::class, 'show'])->name('means.show'); 
 
 require __DIR__.'/auth.php';
 
@@ -60,5 +61,4 @@ Route::name('users')->middleware(['auth','admin'])->group(function(){
     Route::put('/users/{id}', [UserController::class, 'update'])->name('.update');
 });
 
-Route::get('/home', [UserHomeController::class,'index']);
 

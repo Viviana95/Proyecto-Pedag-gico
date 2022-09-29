@@ -16,10 +16,9 @@ class CreateMeansTable extends Migration
         Schema::create('means', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            // $table->string('image');
             $table->string('lenguage');
             $table->string('format');
-            $table->string('file');
+            $table->string('file')->nullable();
             $table->timestamps();
         });
     }
