@@ -1,11 +1,13 @@
 .form_create {
-    width: 40vw;
+    border:2px solid #F4540F;
+    width: 30vw;
     height: auto;
     background-image: url(https://trello.com/1/cards/63218e5381220f006137b952/attachments/63218e751af52500dfc50b44/download/fondo.png);
     background-size: contain;
     border-radius: 10px;
     min-width:359px;
 }
+
 .text-form{
     color:white;
 }
@@ -20,6 +22,7 @@ button.btn_orange {
     text-decoration: none;
     width: 10vw;
     height:4vh;
+    min-width:80px;
     color: aliceblue;
     border-radius:20px;
 }
