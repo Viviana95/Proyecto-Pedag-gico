@@ -35,8 +35,8 @@ Route::get('/add_resource', function () {
     return view('add_resource');
 });
 Route::get('/format_view', function () {
-    return view('format_view');
-});
+    return view('format_view');})->name('format_view');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
