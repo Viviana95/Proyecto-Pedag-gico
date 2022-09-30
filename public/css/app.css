@@ -87,10 +87,12 @@ a.text-forgot {
     display: flex;
 }
 .subtitle{
-    font-size: 1.5rem;
+    /*font-size: 1.5rem;*/
     margin-bottom: 1rem;
     font-family: "Audiowide", cursive;
+    color: #F4540F;
 }
+
 @media only screen and (max-width: 600px) {
     .panel_admin {
         display: flex;
@@ -104,6 +106,10 @@ a.text-forgot {
     min-width: 280px;
 }
 
+.imagen_panel{
+    border: 1px solid  #F4540F;
+    border-radius: 10px;
+}
 .home_admin_container {
     text-align: center;
 }
