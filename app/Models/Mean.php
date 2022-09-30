@@ -9,8 +9,14 @@ class Mean extends Model
 {
     use HasFactory;
     protected $fillable = ['title','image','lenguage', 'format', 'file'];
+    
     public function users(){
         return $this->belongsToMany(User::class);
+
+    }
+
+    public function formats(){
+        return $this->belongsToMany(Format::class);
 
     }
 }
