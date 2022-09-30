@@ -13,8 +13,7 @@
         <div class="option-admin" href="">
             <h3 class="subtitle">Documento</h3>
 
-            <a href="#" class="ml-6 text-sl font-bold text_login"><img class="imagen_panel"
-                    src="{{ asset('./assets/usuario.png')}}"></a>
+            <a href="#"><img class="imagen_panel" src="{{ asset('./assets/usuario.png')}}"></a>
 
         </div>
     </div>
