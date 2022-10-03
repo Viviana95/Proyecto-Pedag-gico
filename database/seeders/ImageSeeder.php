@@ -29,18 +29,18 @@ class ImageSeeder extends Seeder
 
         $imagelink = new Image();
         $imagelink->image = './assets/enlace.png';
+        $imagelink->format_id = $formatlink->id;
         $imagelink->save();
 
         $imagefile = new Image();
         $imagefile->image = './assets/archivo.png';
+        $imagefile->format_id = $formatfile->id;
         $imagefile->save();
 
         $imagevideo = new Image();
         $imagevideo->image = './assets/play.png';
+        $imagevideo->format_id = $formatvideo->id;
         $imagevideo->save();
 
-        // $imagelink->formats()->sync([ $formatlink->id = '1']);
-        // $imagefile->formats()->sync([ $formatfile->id = '2']);
-        // $imagevideo->formats()->sync([ $formatvideo->id = '3']);
     }
 }
