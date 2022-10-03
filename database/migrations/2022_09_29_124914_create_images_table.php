@@ -17,6 +17,8 @@ class CreateImagesTable extends Migration
             $table->id();
             $table->string('image');
             $table->foreignId('format_id')->references('id')->on('formats')->onDelete('cascade');
+
+            $table->timestamps();
         });
     }
 
