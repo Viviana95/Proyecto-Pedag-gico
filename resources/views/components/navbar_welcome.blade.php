@@ -5,7 +5,7 @@
         @if (Route::has('login'))
         <div class="px-6 py-4 sm:block">
             @auth
-            <a href="{{ url('/info_admin') }}" class="ml-6 text-sl
+            <a href="{{ url('/home') }}" class="ml-6 text-sl
             text-white-900 font-bold text_login">Home</a>
             @else
             <a href="{{ route('login') }}" class="ml-6 text-sl
