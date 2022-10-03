@@ -25,4 +25,8 @@
     border:1px solid white;
 
 } 
+a.text_login:hover
+{
+    color:black;
+}
 

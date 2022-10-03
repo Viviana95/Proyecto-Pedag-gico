@@ -14,11 +14,7 @@
         <div class="option-admin">
             <h3 class="subtitle">Nuevo usuario</h3>
          @if (Route::has('register'))
-<<<<<<< HEAD
-            <a href="{{ route('register') }}" ><img class="imagen_panel" src="{{ asset('./assets/usuario.png')}}"></a>
-=======
             <a href="{{ route('register') }}"><img class="imagen_panel" src="{{ asset('./assets/usuario.png')}}"></a>
->>>>>>> tania3
         @endif
         </div>
     </div>
