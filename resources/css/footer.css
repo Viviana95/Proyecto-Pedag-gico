@@ -7,8 +7,8 @@
     background-color: #f4540f;
     justify-content: center;
     font-family: "Audiowide";
-    /*position: absolute;
-    bottom: 0;*/
+    position: absolute;
+    bottom: 0;  
 }
 
 p{
