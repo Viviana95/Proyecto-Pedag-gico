@@ -1,3 +1,4 @@
+<h2 class="title">Añadir Recurso</h2>
 <div class="flex mt-5">
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="p-6 form_create mt-2">
@@ -24,8 +25,8 @@
 
                     </div>
                     <div class="btn_container">
-                        <button class="btn btn_orange" type="submit" href="{{route('means.index')}}">Añadir</button>
-                        <button class="btn btn_orange" href="{{route('means.index')}}">Cancelar</button>
+                        <button class="btn_orange" type="submit" href="{{route('means.index')}}">Añadir</button>
+                        <button class="btn_orange" href="{{route('means.index')}}">Cancelar</button>
                     </div>
                 </div>
             </form>
