@@ -2,7 +2,6 @@
     width: 150px;
     height: 150px;
     border-radius: 100px;
-    background-image: url(https://trello.com/1/cards/63218e5381220f006137b952/attachments/6321f8b716a664034740dc68/download/defecto.png);
     background-size: contain;
     background-position: center;
     margin: 4rem;
@@ -29,4 +28,10 @@ button.btn.btn-eliminar {
 .container-edit-delete {
     display: flex;
     justify-content: space-between;
+}
+
+.text-login {
+    color:black;
+    font-family: "Audiowide", cursive;
+    text-decoration: none;
 }
