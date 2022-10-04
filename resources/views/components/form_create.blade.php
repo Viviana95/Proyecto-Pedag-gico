@@ -21,7 +21,7 @@
                     </div>
                     <p class="text-form">Añade Archivo o Enlace</p>
                     <div class="form-floating mb-3">
-                        <input type="text" name="file" class="form-control" id="floatingInput" placeholder="">
+                        <input type="file" name="file" class="form-control" id="floatingInput" placeholder="">
 
                     </div>
                     <div class="btn_container">

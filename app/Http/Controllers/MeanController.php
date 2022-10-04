@@ -36,27 +36,26 @@ class MeanController extends Controller
      */
     public function store(Request $request)
     {
-        $pathfile = $request->file('file')->storeAs('', $request->file('file')->getClientOriginalName());
-        $path = $request->file('image')->storeAs('', $request->file('image')->getClientOriginalName());
+        $pathfile = $request->file('file')->storeAs('files', $request->file('file')->getClientOriginalName());
 
         $request->validate([
-            'image' => 'mimes:jpg,png|max:2048',
+            // 'image' => 'mimes:jpg,png|max:2048',
             'title' => 'required',
             'lenguage' => 'required',
-            'format' =>'required',
+            // 'format' =>'required',
             'file' =>'mimes:ppt,pdf,docx|max:2048',
         ]);
 
         $mean = Mean::create([
             'title'=>$request->title,
-            'image'=>$path,
+            // 'image'=>$request->image,
             'lenguage'=>$request->lenguage,
-            'format'=>$request->format,
+            // 'format'=>$request->format,
             'file'=>$pathfile,
         ]);
 
         $mean->save();
-        return redirect()->route('means.index');
+        return redirect()->route('means.index','home');
     }
 
     /**

@@ -148,7 +148,6 @@ a.text_login:hover
     background-color: #f4540f;
     justify-content: center;
     font-family: "Audiowide";
-    position: absolute;
     bottom: 0;
 }
 
@@ -191,8 +190,11 @@ button.btn.btn-eliminar {
 }
 
 .container-video{
-    
     border:5px solid red;
+}
+
+.video-box {
+    width: 100%;
 }
 
 .title-add-resources {
