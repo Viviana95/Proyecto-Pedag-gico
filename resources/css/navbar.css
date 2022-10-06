@@ -15,12 +15,21 @@
     color: white;
     text-decoration: none;
 }
-.img-user {
-    width: 50px;
-    height: 50px;
-    border-radius: 50px;
-    margin-right: 1vw;
+.img-user{
+    width:40px;
+    height:40px;
+    border-radius:50px;
+    margin-right:1vw;
+
 }
-a.text_login:hover {
-    color: black;
+
+ form div .search_input{
+    width: 30vh;
+    height: 1vh;
+    border:1px solid white;
+
+}
+a.text_login:hover
+{
+    color:black;
 }

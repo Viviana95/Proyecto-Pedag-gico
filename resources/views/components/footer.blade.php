@@ -1,4 +1,4 @@
-<div class="copiright">
-   <h3>ROMPEMOS LOS CÓDIGOS</h3>
+<div class="copiright mt-5">
+   <p>ROMPEMOS LOS CÓDIGOS</p>
    <p>Todos los derechos reservados 2022</p>
 </div>

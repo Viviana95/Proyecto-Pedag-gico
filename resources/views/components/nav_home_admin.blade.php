@@ -7,7 +7,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            
+
             <ul class="navbar-nav me-auto  mb-lg-0 ">
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-white ms-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -66,11 +66,10 @@
 
               </div>
               <form class="d-flex" role="search">
-              {{--  <button class="btn" type="submit"></button>
-                <input class="form-control me-2 rounded-3 mt-5" type="search"  aria-label="Search"> --}}
-                <div class="input-group">
-                  <button class="" type="submit" id="button-addon1"><i class="bi bi-search lupa"></i></button>
-                  <input type="search" class="form-control rounded-3  border-light" style="height: 5px;" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                <div class="d-flex mb-2">
+                  <button type="submit" id="button-addon1"><i class="bi bi-search"></i></button>
+                  <input type="search" class="form-control rounded-3 ms-2 mt-1 search_input"
+                  aria-label="Search">
                 </div>
               </form>
             </div>
