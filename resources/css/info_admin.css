@@ -1,18 +1,14 @@
-
 .container_img_admin {
     display: flex;
     text-align: center;
     padding: 2rem;
-    align-items:center;
-    justify-content:space-evenly;
+    align-items: center;
+    justify-content: space-evenly;
 }
-.btn_select_file {
-    margin-top:18vh;
-    text-decoration: none;
-    border: none;
+input.btn_select_file {
 }
-div.progress-bar{
-    background-color:#F4540F;
+div.progress-bar {
+    background-color: #f4540f;
 }
 button.btn.btn-editar {
     background-color: rgb(1, 153, 170);
@@ -30,7 +26,12 @@ button.btn.btn-eliminar {
 }
 
 .text-login {
-    color:black;
+    color: black;
     font-family: "Audiowide", cursive;
     text-decoration: none;
+}
+.select-file {
+    border-radius: 10px;
+    border: 2px solid #f4540f;
+    color: #f4540f;
 }
