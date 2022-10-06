@@ -1,19 +1,20 @@
 .img_admin {
     width: 150px;
     height: 150px;
-    border-radius: 100px;
+    /*border-radius: 100px;*/
     background-size: contain;
     background-position: center;
-    margin: 4rem;
+    margin: 1rem;
 }
 .container_img_admin {
     display: flex;
     flex-direction: column;
-    text-align: center;
-    padding: 2rem;
+    /* text-align: center; */
+    padding: 1rem;
 }
 .btn_select_file {
     text-decoration: none;
+    margin-left: 1rem;
 }
 button.btn.btn-editar {
     background-color: rgb(1, 153, 170);
@@ -30,8 +31,21 @@ button.btn.btn-eliminar {
     justify-content: space-between;
 }
 
-.text-login {
+.text-name {
     color:black;
     font-family: "Audiowide", cursive;
-    text-decoration: none;
+    /* text-decoration: none; */
+}
+
+.card{
+    width: 25%;
+    margin-right: 3rem;
+}
+
+.my_resources{
+    width: 100%;
+}
+
+.profile_container{
+    margin: 3rem;
 }
