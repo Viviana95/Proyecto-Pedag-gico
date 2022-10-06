@@ -72,8 +72,8 @@ a.text-forgot {
     border-radius: 10px;
 }
 
-.title{
-    text-align:center;
+.title {
+    text-align: center;
     color: black;
     padding-top: 2vh;
     font-size: 2rem;
@@ -85,11 +85,11 @@ a.text-forgot {
     text-align: center;
     display: flex;
 }
-.subtitle{
+.subtitle {
     /*font-size: 1.5rem;*/
     margin-bottom: 1rem;
     font-family: "Audiowide", cursive;
-    color: #F4540F;
+    color: #f4540f;
 }
 
 @media only screen and (max-width: 600px) {
@@ -105,10 +105,14 @@ a.text-forgot {
     min-width: 280px;
 }
 
-.imagen_panel{
-    border: 1px solid  #F4540F;
+.imagen_panel {
+    border: 1px solid #f4540f;
     border-radius: 10px;
 }
+div.resources_container {
+    width: 80%;
+}
+
 .home_admin_container {
     text-align: center;
 }
@@ -183,8 +187,14 @@ p{
 }
 input.btn_select_file {
 }
+.progress{
+    border:1px solid black;
+    width: 300px
+
+}
 div.progress-bar {
     background-color: #f4540f;
+
 }
 button.btn.btn-editar {
     background-color: rgb(1, 153, 170);
@@ -263,12 +273,12 @@ button.btn.btn-eliminar {
 
 .option-admin {
     padding: 2rem;
-    width: 30%;
+    width: 20%;
     min-width: 280px;
 }
 
 .imagen_panel {
-    border: 3px solid #F4540F;
+    border: 3px solid #f4540f;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 10px;
 }
@@ -1046,6 +1056,9 @@ select {
 .m-9 {
   margin: 2.25rem;
 }
+.m-5 {
+  margin: 1.25rem;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -1111,11 +1124,11 @@ select {
 .mb-5 {
   margin-bottom: 1.25rem;
 }
-.-mr-2 {
-  margin-right: -0.5rem;
-}
 .mb-1 {
   margin-bottom: 0.25rem;
+}
+.-mr-2 {
+  margin-right: -0.5rem;
 }
 .block {
   display: block;
@@ -1335,11 +1348,11 @@ select {
 .p-6 {
   padding: 1.5rem;
 }
-.p-2 {
-  padding: 0.5rem;
-}
 .p-1 {
   padding: 0.25rem;
+}
+.p-2 {
+  padding: 0.5rem;
 }
 .px-4 {
   padding-left: 1rem;

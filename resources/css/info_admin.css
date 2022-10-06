@@ -7,8 +7,14 @@
 }
 input.btn_select_file {
 }
+.progress{
+    border:1px solid black;
+    width: 300px
+
+}
 div.progress-bar {
     background-color: #f4540f;
+
 }
 button.btn.btn-editar {
     background-color: rgb(1, 153, 170);
