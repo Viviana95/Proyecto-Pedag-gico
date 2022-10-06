@@ -1,25 +1,26 @@
 .navbar {
-    background-color: #F4540F;
+    background-color: #f4540f;
     color: rgb(255, 255, 255);
     font-family: "Audiowide", cursive;
+    font-size:calc(0.5vw + 0.6vh);
+    display:flex;
+    justify-content:flex-end;
 }
 .logo_factoria {
-    width: 9rem;
-    margin-left: 2rem;
+    width: calc(4vw + 5vh);
+    height: calc(3vw + 4vh);
+    min-width: 90px;
 }
-.text_login{
-    color:white;
-    text-decoration:none;
+.text_login {
+    color: white;
+    text-decoration: none;
 }
-.img-user{
-    width:50px;
-    height:50px;
-    border-radius:50px;
-    margin-right:1vw;
-
+.img-user {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    margin-right: 1vw;
 }
-a.text_login:hover
-{
-    color:black;
+a.text_login:hover {
+    color: black;
 }
-

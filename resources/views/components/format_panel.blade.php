@@ -16,5 +16,6 @@
                     src="{{ asset('./assets/archivo.png')}}"></a>
 
         </div>
+        
     </div>
 </div>

@@ -7,9 +7,10 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            
             <ul class="navbar-nav me-auto  mb-lg-0 ">
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-white mt-5 ms-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle text-white ms-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   LENGUAJES
                 </a>
                 <ul class="dropdown-menu">
@@ -19,14 +20,14 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white mt-5 ms-5" href="{{route('format_view')}}">AÑADIR RECURSOS</a>
+                <a class="nav-link text-white ms-5" href="{{route('format_view')}}">AÑADIR RECURSOS</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white mt-5 ms-5" href="#">FORO</a>
+                <a class="nav-link text-white ms-5" href="#">FORO</a>
               </li>
               @if(Auth::user()->id == 1)
               <li class="nav-item">
-                <a class="nav-link text-white mt-5 ms-5" href="{{route('admin')}}">ADMIN</a>
+                <a class="nav-link text-white ms-5" href="{{route('admin')}}">ADMIN</a>
               </li>
               @endif
             </ul>
@@ -68,7 +69,7 @@
               {{--  <button class="btn" type="submit"></button>
                 <input class="form-control me-2 rounded-3 mt-5" type="search"  aria-label="Search"> --}}
                 <div class="input-group">
-                  <button class="me-3" type="submit" id="button-addon1"><i class="bi bi-search lupa"></i></button>
+                  <button class="" type="submit" id="button-addon1"><i class="bi bi-search lupa"></i></button>
                   <input type="search" class="form-control rounded-3  border-light" style="height: 5px;" aria-label="Example text with button addon" aria-describedby="button-addon1">
                 </div>
               </form>
