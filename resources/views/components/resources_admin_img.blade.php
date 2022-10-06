@@ -9,8 +9,8 @@
       <h5 class="card-header text-name">{{ Auth::user()->name }}</h5>
       <div>
         <img class="img_admin rounded-circle" src="{{ Auth::user()->avatar }}" alt="User Profile Picture">
-        {{-- <input class="btn_select_file" name="image" type='file'> --}}
-        <input type="file" name="file" class="form-control btn_select_file" id="floatingInput" placeholder="">
+        <input class="mb-3 btn_select_file" name="image" type='file'>
+        {{-- <input type="file" name="file" class="form-control btn_select_file" id="floatingInput" placeholder=""> --}}
         
       </div>
     </div>
