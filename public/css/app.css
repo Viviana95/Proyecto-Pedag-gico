@@ -159,16 +159,22 @@ a.text_login:hover
     background-image: url(https://trello.com/1/cards/63218e5381220f006137b952/attachments/6321f8b716a664034740dc68/download/defecto.png);
     background-size: contain;
     background-position: center;
-    margin: 4rem;
+    margin: 2rem;
 }
 .container_img_admin {
     display: flex;
-    flex-direction: column;
     text-align: center;
     padding: 2rem;
+    align-items:center;
+    justify-content:space-evenly;
 }
 .btn_select_file {
+    margin-top:18vh;
     text-decoration: none;
+    border: none;
+}
+div.progress-bar{
+    background-color:#F4540F;
 }
 button.btn.btn-editar {
     background-color: rgb(1, 153, 170);
@@ -184,6 +190,8 @@ button.btn.btn-eliminar {
     display: flex;
     justify-content: space-between;
 }
+
+
 
 .container-video{
     
@@ -1024,6 +1032,9 @@ select {
 .-ml-px {
   margin-left: -1px;
 }
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
 .mb-4 {
   margin-bottom: 1rem;
 }
@@ -1044,9 +1055,6 @@ select {
 }
 .ml-2 {
   margin-left: 0.5rem;
-}
-.mb-3 {
-  margin-bottom: 0.75rem;
 }
 .mt-5 {
   margin-top: 1.25rem;
@@ -1074,6 +1082,9 @@ select {
 }
 .-mr-2 {
   margin-right: -0.5rem;
+}
+.mb-0 {
+  margin-bottom: 0px;
 }
 .block {
   display: block;
@@ -1293,6 +1304,9 @@ select {
 .p-2 {
   padding: 0.5rem;
 }
+.p-5 {
+  padding: 1.25rem;
+}
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1305,6 +1319,10 @@ select {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -1312,10 +1330,6 @@ select {
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
-}
-.py-12 {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
 }
 .py-1 {
   padding-top: 0.25rem;
@@ -1332,6 +1346,10 @@ select {
 .px-1 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
+}
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 .pt-8 {
   padding-top: 2rem;
