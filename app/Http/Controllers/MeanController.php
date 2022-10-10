@@ -55,7 +55,7 @@ class MeanController extends Controller
         ]);
 
         $mean->save();
-        return redirect()->route('means.index','home');
+        return redirect()->route('means.index');
     }
 
     /**
@@ -95,11 +95,11 @@ class MeanController extends Controller
     public function update(Request $request, $id, Mean $mean)
     {
         $request->validate([
-            'image' => 'required|mimes:jpg,png|max:2048',
-            'title' => 'required',
-            'lenguage' => 'required',
-            'format' =>'required',
-            'file' =>'required|mimes:ppt,pdf,docx|max:2048',
+            'image' => 'mimes:jpg,png|max:2048',
+            'title',
+            'lenguage',
+            'format',
+            'file' =>'mimes:ppt,pdf,docx|max:2048',
         ]);
 
         $path = $request->file('image')->storeAs('images', $request->file('image')->getClientOriginalName());
@@ -121,7 +121,7 @@ class MeanController extends Controller
      * @param  \App\Models\Mean  $mean
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id,Mean $mean)
+    public function destroy($id, Mean $mean)
     {
       Mean::destroy($id);
       return redirect()->route('means.index');
