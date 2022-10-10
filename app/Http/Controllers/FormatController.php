@@ -7,8 +7,9 @@ use Illuminate\Http\Request;
 
 class FormatController extends Controller
 {
-    public function index(Format $format)
+    public function index()
     {
+        $format = Format::all();
         return view('format_view', compact('format'));
     }
 }
