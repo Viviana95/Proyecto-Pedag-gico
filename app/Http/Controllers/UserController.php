@@ -43,13 +43,13 @@ class UserController extends Controller
             'password' => ['required', 'confirmed'],
         ]);
         
-        $mean = User::create([
+        $user = User::create([
             'name'=>$request->name,
             'email'=>$request->email,
             'password'=>Hash::make($request->password),
         ]);
 
-        $mean->save();
+        $user->save();
         return redirect()->route('panel_admin');
     }
 
@@ -86,20 +86,19 @@ class UserController extends Controller
      */
     
 
-    public function update(Request $request, $id, User $user)
+    public function update(Request $request, $id, User $users)
     {
         $request->validate([
-            'name' => 'required',
-            'email' => 'required',
+            'name',
+            'email',
         ]);
 
-        $user = User::find($id);
-        $user->name = $request->name;
-        $user->email = $request->email;
-       
-        $user->update();
-        return redirect()->route('user.users');
+        $users = User::find($id);
+        $users->name = $request->name;
+        $users->email = $request->email;
 
+        $users->update();
+        return redirect()->route('user.users');
     }
 
     /**
