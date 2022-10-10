@@ -2,7 +2,7 @@
 <div class="flex mt-5">
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="p-6 form_create mt-2">
-            <form action="{{route('means.store')}}" method="POST" enctype="multipart/form-data">
+            <form action="{{route('means.store', 'means.create', ['id'=>$format->id])}}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div>
                     <p class="text-form">Título</p>
@@ -19,11 +19,18 @@
                             <option value="Javascript">Javascript</option>
                         </select>
                     </div>
-                    <p class="text-form">Añade Archivo o Enlace</p>
+                    @if (['id'=>$format->id = 2] || ['id'=>$format->id = 3])
+                    <p class="text-form">Añade Archivo</p>
                     <div class="form-floating mb-3">
                         <input type="file" name="file" class="form-control" id="floatingInput" placeholder="">
 
                     </div>
+                    @else
+                    <p class="text-form">Añade Enlace</p>
+                    <div class="form-floating mb-3">
+                        <input type="text" name="file" class="form-control" id="floatingInput" placeholder="">
+                    </div>
+                    @endif
                     <div class="btn_container">
                         <button class="btn_orange" type="submit">Añadir</button>
                         <button class="btn_orange" href="{{route('means.index')}}">Cancelar</button>

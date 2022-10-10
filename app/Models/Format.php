@@ -16,11 +16,12 @@ class Format extends Model
 
         public function images(): BelongsTo
         {
-            return $this->belongsTo(Format::class);
+            return $this->belongsTo(Image::class);
         }
 
         public function means($id , Mean $mean){
             Format::find($id)->means()->sync([ $mean->id]);
             return $this->belongsToMany(Mean::class);
         }
+
     }

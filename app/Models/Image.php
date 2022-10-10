@@ -16,6 +16,6 @@ class Image extends Model
 
         public function formats(): HasOne
         {
-            return $this->hasOne(Image::class);
+            return $this->hasOne(Format::class);
         }
     }

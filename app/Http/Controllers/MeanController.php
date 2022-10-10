@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Format;
 use App\Models\Mean;
 use Illuminate\Http\Request;
 
@@ -25,7 +26,7 @@ class MeanController extends Controller
      */
     public function create()
     {
-        return view('mean.create');
+        return view('mean.create', compact('format'));
     }
 
     /**
@@ -53,7 +54,7 @@ class MeanController extends Controller
             // 'format'=>$request->format,
             'file'=>$pathfile,
         ]);
-
+        
         $mean->save();
         return redirect()->route('means.index');
     }
