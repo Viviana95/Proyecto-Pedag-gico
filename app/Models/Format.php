@@ -12,7 +12,6 @@ class Format extends Model
 
     protected $fillable = [
         'format',
-        'file',
     ];
 
         public function images(): BelongsTo
@@ -20,8 +19,8 @@ class Format extends Model
             return $this->belongsTo(Format::class);
         }
 
-        public function means(){
+        public function means($id , Mean $mean){
+            Format::find($id)->means()->sync([ $mean->id]);
             return $this->belongsToMany(Mean::class);
-    
         }
     }

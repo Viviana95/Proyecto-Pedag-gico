@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminHomeController;
+use App\Http\Controllers\FormatController;
 use App\Http\Controllers\MeanController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeController;
@@ -34,8 +35,11 @@ Route::get('/info', function () {
 Route::get('/add_resource', function () {
     return view('add_resource');
 });
-Route::get('/format_view', function () {
+Route::get('/format_view', [FormatController::class, 'index'] , function () {
     return view('format_view');})->name('format_view');
+
+    // Route::get('/format_view', [FormatController::class, 'link'] , function () {
+    //     return view('means.create');})->name('link');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -48,7 +52,7 @@ require __DIR__.'/auth.php';
 Route::name('means')->middleware(['auth'])->group(function(){
 
     Route::get('/means', [MeanController::class, 'index'])->name('.index');
-    Route::get('/means/create', [MeanController::class, 'create'])->name('.create');
+    Route::get('/means/create', [MeanController::class,'create'],[FormatController::class])->name('.create');
     Route::post('/means', [MeanController::class, 'store'])->name('.store');
     Route::delete('/means{id}', [MeanController::class, 'destroy'])->name('.destroy');
     Route::get('/means{id}/edit', [MeanController::class,'edit'])->name('.edit');
