@@ -1,8 +1,8 @@
-<div>
-    <div class="py-12">
+<h2 class="title">Editar Usuario</h2>
+    <div class="flex mt-5">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 bg-white border-b border-gray-200">
+
+                <div class="form_edit p-6">
                     <form action="{{route('users.update', ['id'=>$user->id])}}" method="POST" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
@@ -16,8 +16,8 @@
                             <label for="floatingInput">E-MAIL</label>
                          </div>
                          <div class="btn_container">
-                            <button type="submit" class="btn btn-modificar">Modificar</button>
-                            <button class="btn btn-cancelar"><a  href="{{route('users.users')}}">Cancelar</a></button>
+                            <button type="submit" class="btn_orange">Modificar</button>
+                            <button class="btn_orange"><a  href="{{route('users.users')}}">Cancelar</a></button>
                          </div>
 
                         </div>
