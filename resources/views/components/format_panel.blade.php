@@ -4,7 +4,9 @@
     <div class="d-flex justify-content-center panel_admin">
         <div class="option-admin">
             <h3 class="subtitle">Vídeo</h3>
-            <a href="{{ route('means.create') }}"><img class="imagen_panel" src="{{ asset('./assets/play.png')}}"></a>
+            {{-- <a href="{{ route('means.create') }}"><img class="imagen_panel" src="{{ asset('./assets/play.png')}}"></a> --}}
+            
+             <a href="{{ url('/means/create'.$format->id) }}"> 
         </div>
         <div class="option-admin">
             <h3 class="subtitle">Link</h3>
