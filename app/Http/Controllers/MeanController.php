@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Format;
 use App\Models\Mean;
 use Illuminate\Http\Request;
 
@@ -23,9 +24,13 @@ class MeanController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        return view('mean.create');
+        $format = Format::find($id);
+        $image = $format->images;
+      
+       
+        return view('mean.create', ['format' =>$format, 'image' => $image]);
     }
 
     /**
@@ -42,7 +47,7 @@ class MeanController extends Controller
             // 'image' => 'mimes:jpg,png|max:2048',
             'title' => 'required',
             'lenguage' => 'required',
-            // 'format' =>'required',
+            'format' =>'required',
             'file' =>'mimes:ppt,pdf,docx|max:2048',
         ]);
 
@@ -50,7 +55,7 @@ class MeanController extends Controller
             'title'=>$request->title,
             // 'image'=>$request->image,
             'lenguage'=>$request->lenguage,
-            // 'format'=>$request->format,
+            //'format'=>$request->format,
             'file'=>$pathfile,
         ]);
 
