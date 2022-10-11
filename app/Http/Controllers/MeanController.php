@@ -16,7 +16,8 @@ class MeanController extends Controller
     public function index()
     {
         $means = Mean::latest()->paginate(12);
-        return view('mean.index', compact('means'));
+        $format = Format::all();
+        return view('mean.index', compact('means','format'));
     }
 
     /**
@@ -47,7 +48,7 @@ class MeanController extends Controller
             // 'image' => 'mimes:jpg,png|max:2048',
             'title' => 'required',
             'lenguage' => 'required',
-            'format' =>'required',
+            // 'format' =>'required',
             'file' =>'mimes:ppt,pdf,docx|max:2048',
         ]);
 
@@ -58,7 +59,7 @@ class MeanController extends Controller
             //'format'=>$request->format,
             'file'=>$pathfile,
         ]);
-        
+
         $mean->save();
         return redirect()->route('means.index');
     }
@@ -69,7 +70,7 @@ class MeanController extends Controller
      * @param  \App\Models\Mean  $mean
      * @return \Illuminate\Http\Response
      */
-    public function show(Mean $mean)
+    public function show()
     {
         $means = Mean::latest()->paginate(12);
         return view('home' , compact('means'));

@@ -16,11 +16,11 @@ class ImageSeeder extends Seeder
     public function run()
     {
         $formatlink = new Format();
-        $formatlink->format = 'link';
+        $formatlink->format = 'enlace';
         $formatlink->save();
 
         $formatfile = new Format();
-        $formatfile->format = 'file';
+        $formatfile->format = 'archivo';
         $formatfile->save();
 
         $formatvideo = new Format();
