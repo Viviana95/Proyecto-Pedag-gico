@@ -24,4 +24,5 @@ class Format extends Model
             Format::find($id)->means()->sync([ $mean->id]);
             return $this->belongsToMany(Mean::class);
         }
+
     }

@@ -52,8 +52,8 @@ require __DIR__.'/auth.php';
 Route::name('means')->middleware(['auth'])->group(function(){
 
     Route::get('/means', [MeanController::class, 'index'])->name('.index');
-    Route::get('/means/create/{id}', [MeanController::class,'create'],[FormatController::class, 'add'])->name('.create');
-    Route::post('/means', [MeanController::class, 'store'], [FormatController::class, 'add'])->name('.store');
+    Route::get('/means/create/{id}', [MeanController::class,'create'])->name('.create');
+    Route::post('/means', [MeanController::class, 'store'])->name('.store');
     Route::delete('/means{id}', [MeanController::class, 'destroy'])->name('.destroy');
     Route::get('/means{id}/edit', [MeanController::class,'edit'])->name('.edit');
     Route::put('/means{id}', [MeanController::class, 'update'])->name('.update');

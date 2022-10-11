@@ -12,10 +12,4 @@ class FormatController extends Controller
         $format = Format::all();
         return view('format_view', compact('format'));
     }
-
-    public function add($id , Format $format) {
-        $format = Format::find($id);
-        return route('means.create', ['id' => $format->id]);
-    }
-
 }

@@ -8,6 +8,20 @@
     min-width:359px;
 }
 
+.container-create {
+    display: flex;
+    justify-content:center;
+    flex-flow: row wrap;
+}
+
+.container-image-default {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3vw;
+    min-width:359px;
+}
+
 .text-form{
     color:white;
 }
@@ -27,6 +41,18 @@ button.btn_orange {
     border-radius:20px;
 }
 
+.image-default-format {
+    width: 30vw;
+    border: 3px solid #F4540F;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 10px;
+}
+
+.container-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .form-login {
     display: flex;
     flex-direction: column;
@@ -1066,9 +1092,12 @@ select {
 .m-9 {
   margin: 2.25rem;
 }
+<<<<<<< HEAD
 .m-5 {
   margin: 1.25rem;
 }
+=======
+>>>>>>> develop
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -1084,12 +1113,15 @@ select {
   margin-left: -1px;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 .mb-3 {
   margin-bottom: 0.75rem;
 }
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> develop
 .mt-5 {
   margin-top: 1.25rem;
 }
@@ -1105,7 +1137,6 @@ select {
 .ml-1 {
   margin-left: 0.25rem;
 }
->>>>>>> 3bd851ea5177d9e88ae606a5dbfa12e92a0c8a13
 .ml-6 {
   margin-left: 1.5rem;
 }
@@ -1132,6 +1163,7 @@ select {
   margin-left: 0.5rem;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 .mb-3 {
@@ -1155,6 +1187,8 @@ select {
 =======
 >>>>>>> 3bd851ea5177d9e88ae606a5dbfa12e92a0c8a13
 >>>>>>> vivi
+=======
+>>>>>>> develop
 .mr-2 {
   margin-right: 0.5rem;
 }
@@ -1204,6 +1238,7 @@ select {
   height: 1.25rem;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1212,6 +1247,11 @@ select {
 }
 >>>>>>> 3bd851ea5177d9e88ae606a5dbfa12e92a0c8a13
 >>>>>>> vivi
+=======
+.h-4 {
+  height: 1rem;
+}
+>>>>>>> develop
 .h-20 {
   height: 5rem;
 }
@@ -1223,9 +1263,6 @@ select {
 }
 .h-16 {
   height: 4rem;
-}
-.h-4 {
-  height: 1rem;
 }
 .h-10 {
   height: 2.5rem;
@@ -1263,23 +1300,26 @@ select {
   width: 12rem;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 .w-4 {
   width: 1rem;
 }
 =======
 >>>>>>> 3bd851ea5177d9e88ae606a5dbfa12e92a0c8a13
 >>>>>>> vivi
+=======
+>>>>>>> develop
 .w-6 {
   width: 1.5rem;
+}
+.max-w-7xl {
+  max-width: 80rem;
 }
 .max-w-xl {
   max-width: 36rem;
 }
 .max-w-6xl {
   max-width: 72rem;
-}
-.max-w-7xl {
-  max-width: 80rem;
 }
 .flex-1 {
   flex: 1 1 0%;
@@ -1339,9 +1379,6 @@ select {
 .justify-between {
   justify-content: space-between;
 }
-.justify-evenly {
-  justify-content: space-evenly;
-}
 .space-x-8 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(2rem * var(--tw-space-x-reverse));
@@ -1354,9 +1391,6 @@ select {
 }
 .overflow-hidden {
   overflow: hidden;
-}
-.break-all {
-  word-break: break-all;
 }
 .rounded-md {
   border-radius: 0.375rem;
@@ -1378,17 +1412,14 @@ select {
 .border {
   border-width: 1px;
 }
-.border-l-4 {
-  border-left-width: 4px;
+.border-b {
+  border-bottom-width: 1px;
 }
 .border-t {
   border-top-width: 1px;
 }
 .border-r {
   border-right-width: 1px;
-}
-.border-b {
-  border-bottom-width: 1px;
 }
 .border-b-2 {
   border-bottom-width: 2px;
@@ -1400,6 +1431,7 @@ select {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 .border-gray-200 {
   --tw-border-opacity: 1;
@@ -1420,12 +1452,12 @@ select {
 }
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> develop
 .border-gray-200 {
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
 }
-<<<<<<< HEAD
-=======
 .border-indigo-400 {
   --tw-border-opacity: 1;
   border-color: rgb(129 140 248 / var(--tw-border-opacity));
@@ -1433,7 +1465,6 @@ select {
 .border-transparent {
   border-color: transparent;
 }
->>>>>>> 3bd851ea5177d9e88ae606a5dbfa12e92a0c8a13
 .border-gray-400 {
   --tw-border-opacity: 1;
   border-color: rgb(156 163 175 / var(--tw-border-opacity));
@@ -1496,6 +1527,7 @@ select {
   padding-bottom: 1rem;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -1519,15 +1551,12 @@ select {
 .pl-3 {
   padding-left: 0.75rem;
 }
+=======
+>>>>>>> develop
 .pr-4 {
   padding-right: 1rem;
 >>>>>>> vivi
 }
-=======
-.pr-4 {
-  padding-right: 1rem;
-}
->>>>>>> 3bd851ea5177d9e88ae606a5dbfa12e92a0c8a13
 .pt-8 {
   padding-top: 2rem;
 }
@@ -1572,15 +1601,17 @@ select {
   line-height: 1.5rem;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
 =======
 >>>>>>> vivi
+=======
+>>>>>>> develop
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
->>>>>>> 3bd851ea5177d9e88ae606a5dbfa12e92a0c8a13
 }
 .text-xl {
   font-size: 1.25rem;
@@ -1614,9 +1645,6 @@ select {
 .tracking-wider {
   letter-spacing: 0.05em;
 }
-.tracking-widest {
-  letter-spacing: 0.1em;
-}
 .text-gray-500 {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
@@ -1625,6 +1653,7 @@ select {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 .text-gray-900 {
   --tw-text-opacity: 1;
@@ -1642,6 +1671,8 @@ select {
 =======
 >>>>>>> 3bd851ea5177d9e88ae606a5dbfa12e92a0c8a13
 >>>>>>> vivi
+=======
+>>>>>>> develop
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -1779,7 +1810,15 @@ body{
 }
 =======
 
+<<<<<<< HEAD
 >>>>>>> vivi
+=======
+.hover\:text-gray-700:hover {
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity));
+}
+
+>>>>>>> develop
 .hover\:text-gray-800:hover {
   --tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity));
@@ -1791,12 +1830,15 @@ body{
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 .hover\:text-gray-700:hover {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
 }
 
 >>>>>>> vivi
+=======
+>>>>>>> develop
 .focus\:z-10:focus {
   z-index: 10;
 }
@@ -1806,7 +1848,7 @@ body{
 }
 .focus\:border-gray-300:focus {
   --tw-border-opacity: 1;
-  border-color: rgb(165 180 252 / var(--tw-border-opacity));
+  border-color: rgb(209 213 219 / var(--tw-border-opacity));
 }
 .focus\:border-indigo-700:focus {
   --tw-border-opacity: 1;
@@ -1814,7 +1856,7 @@ body{
 }
 .focus\:border-indigo-300:focus {
   --tw-border-opacity: 1;
-  border-color: rgb(209 213 219 / var(--tw-border-opacity));
+  border-color: rgb(165 180 252 / var(--tw-border-opacity));
 }
 .focus\:bg-gray-100:focus {
   --tw-bg-opacity: 1;
@@ -1843,12 +1885,15 @@ body{
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 .focus\:text-gray-700:focus {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
 }
 
 >>>>>>> vivi
+=======
+>>>>>>> develop
 .focus\:text-gray-500:focus {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
@@ -1884,21 +1929,19 @@ body{
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 .disabled\:opacity-25:disabled {
   opacity: 0.25;
 }
 
 >>>>>>> vivi
+=======
+>>>>>>> develop
 @media (prefers-color-scheme: dark) {
 
   .dark\:bg-gray-900 {
     --tw-bg-opacity: 1;
     background-color: rgb(17 24 39 / var(--tw-bg-opacity));
-  }
-
-  .dark\:text-gray-500 {
-    --tw-text-opacity: 1;
-    color: rgb(107 114 128 / var(--tw-text-opacity));
   }
 }
 @media (min-width: 640px) {
