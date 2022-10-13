@@ -58,6 +58,7 @@ class MeanController extends Controller
             'lenguage'=>$request->lenguage,
             //'format'=>$request->format,
             'file'=>$pathfile,
+            
         ]);
 
         $mean->save();
@@ -74,6 +75,11 @@ class MeanController extends Controller
     {
         $means = Mean::latest()->paginate(12);
         return view('home' , compact('means'));
+    }
+
+    public function view($id, Mean $mean){
+        $mean= Mean::find($id);
+        return view('probar', ['mean' =>$mean]);
     }
 
 
