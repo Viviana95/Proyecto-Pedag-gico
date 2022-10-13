@@ -9,7 +9,7 @@
     @foreach ($means as $mean)
     <div class="card" style="width: 18rem;">
         <h5 class="card-title">{{$mean->title}}</h5>
-        <img src="{{ asset('')}}" alt="...">
+        <img src="{{ asset('./assets/fondo.png')}}" alt="...">
       </div>
       @endforeach
     </div>
