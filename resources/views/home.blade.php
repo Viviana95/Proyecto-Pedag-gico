@@ -8,9 +8,11 @@
     <div class="card-content">
     @foreach ($means as $mean)
     <div class="card" style="width: 18rem;">
-        <h5 class="card-title">{{$mean->title}}</h5>
-        <img src="{{ asset('./assets/fondo.png')}}" alt="...">
-      </div>
+      <a href="{{url('/detail', $mean->id)}}">
+      <h5 class="card-title">{{$mean->title}}</h5>
+      <img src="{{ asset('./assets/fondo.png')}}" alt="...">
+      </a>
+    </div>
       @endforeach
     </div>
     <x-footer></x-footer>
