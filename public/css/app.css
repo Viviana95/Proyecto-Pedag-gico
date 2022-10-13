@@ -1088,12 +1088,6 @@ select {
 .m-9 {
   margin: 2.25rem;
 }
-<<<<<<< HEAD
-.m-5 {
-  margin: 1.25rem;
-}
-=======
->>>>>>> develop
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -1108,16 +1102,11 @@ select {
 .-ml-px {
   margin-left: -1px;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 .mb-3 {
   margin-bottom: 0.75rem;
 }
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> develop
+
 .mt-5 {
   margin-top: 1.25rem;
 }
@@ -1136,7 +1125,7 @@ select {
 .ml-6 {
   margin-left: 1.5rem;
 }
->>>>>>> vivi
+
 .mb-4 {
   margin-bottom: 1rem;
 }
@@ -1158,33 +1147,21 @@ select {
 .ml-2 {
   margin-left: 0.5rem;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 .mb-3 {
   margin-bottom: 0.75rem;
 }
 .mt-5 {
   margin-top: 1.25rem;
 }
->>>>>>> vivi
 .mt-2 {
   margin-top: 0.5rem;
 }
 .ml-1 {
   margin-left: 0.25rem;
 }
-<<<<<<< HEAD
-=======
 .mt-2 {
   margin-top: 0.5rem;
 }
-=======
->>>>>>> 3bd851ea5177d9e88ae606a5dbfa12e92a0c8a13
->>>>>>> vivi
-=======
->>>>>>> develop
 .mr-2 {
   margin-right: 0.5rem;
 }
@@ -1233,21 +1210,12 @@ select {
 .h-5 {
   height: 1.25rem;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 .h-4 {
   height: 1rem;
 }
->>>>>>> 3bd851ea5177d9e88ae606a5dbfa12e92a0c8a13
->>>>>>> vivi
-=======
 .h-4 {
   height: 1rem;
 }
->>>>>>> develop
 .h-20 {
   height: 5rem;
 }
@@ -1290,21 +1258,12 @@ select {
 .w-auto {
   width: auto;
 }
-<<<<<<< HEAD
-=======
 .w-48 {
   width: 12rem;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 .w-4 {
   width: 1rem;
 }
-=======
->>>>>>> 3bd851ea5177d9e88ae606a5dbfa12e92a0c8a13
->>>>>>> vivi
-=======
->>>>>>> develop
 .w-6 {
   width: 1.5rem;
 }
@@ -1427,8 +1386,6 @@ select {
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 .border-gray-200 {
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
@@ -1437,8 +1394,6 @@ select {
   --tw-border-opacity: 1;
   border-color: rgb(156 163 175 / var(--tw-border-opacity));
 }
-=======
->>>>>>> vivi
 .border-indigo-400 {
   --tw-border-opacity: 1;
   border-color: rgb(129 140 248 / var(--tw-border-opacity));
@@ -1446,10 +1401,6 @@ select {
 .border-transparent {
   border-color: transparent;
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> develop
 .border-gray-200 {
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
@@ -1465,7 +1416,6 @@ select {
   --tw-border-opacity: 1;
   border-color: rgb(156 163 175 / var(--tw-border-opacity));
 }
->>>>>>> vivi
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -1522,13 +1472,10 @@ select {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-=======
-<<<<<<< HEAD
+}
 .py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
@@ -1536,22 +1483,16 @@ select {
 .py-12 {
   padding-top: 3rem;
   padding-bottom: 3rem;
->>>>>>> vivi
 }
 .px-1 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
-<<<<<<< HEAD
-=======
 }
 .pl-3 {
   padding-left: 0.75rem;
 }
-=======
->>>>>>> develop
 .pr-4 {
   padding-right: 1rem;
->>>>>>> vivi
 }
 .pt-8 {
   padding-top: 2rem;
@@ -1590,21 +1531,14 @@ select {
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
-<<<<<<< HEAD
-=======
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-=======
->>>>>>> vivi
-=======
->>>>>>> develop
+}
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -1649,26 +1583,14 @@ select {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 .text-gray-900 {
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
 }
-=======
-<<<<<<< HEAD
->>>>>>> vivi
 .text-green-600 {
   --tw-text-opacity: 1;
   color: rgb(22 163 74 / var(--tw-text-opacity));
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 3bd851ea5177d9e88ae606a5dbfa12e92a0c8a13
->>>>>>> vivi
-=======
->>>>>>> develop
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -1804,17 +1726,10 @@ body{
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
 }
-=======
-
-<<<<<<< HEAD
->>>>>>> vivi
-=======
 .hover\:text-gray-700:hover {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
 }
-
->>>>>>> develop
 .hover\:text-gray-800:hover {
   --tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity));
@@ -1823,18 +1738,10 @@ body{
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
 }
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
 .hover\:text-gray-700:hover {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
 }
-
->>>>>>> vivi
-=======
->>>>>>> develop
 .focus\:z-10:focus {
   z-index: 10;
 }
@@ -1878,18 +1785,10 @@ body{
   --tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity));
 }
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
 .focus\:text-gray-700:focus {
   --tw-text-opacity: 1;
   color: rgb(55 65 81 / var(--tw-text-opacity));
 }
-
->>>>>>> vivi
-=======
->>>>>>> develop
 .focus\:text-gray-500:focus {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
@@ -1922,17 +1821,9 @@ body{
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
 }
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
 .disabled\:opacity-25:disabled {
   opacity: 0.25;
 }
-
->>>>>>> vivi
-=======
->>>>>>> develop
 @media (prefers-color-scheme: dark) {
 
   .dark\:bg-gray-900 {
