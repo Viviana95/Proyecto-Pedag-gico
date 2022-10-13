@@ -8,10 +8,21 @@
     justify-content: center;
     font-family: "Audiowide";
     bottom: 0;
+    position: absolute;
 }
 
 p{
     font-size: small;
 }
 
+
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+body {
+    margin: 0;
+    margin-bottom: 40px;
+}
 
