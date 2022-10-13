@@ -12,8 +12,8 @@
             <a href="{{ route('users.users') }}"><img class="imagen_panel" src="{{ asset('./assets/grupo.png')}}"></a>
         </div>
         <div class="option-admin" href="">
-            <h3 class="subtitle">Registrar nuevo usuario</h3>         
-            <a href="{{ route('register') }}"><img class="imagen_panel" src="{{ asset('./assets/usuario.png')}}"></a>       
+            <h3 class="subtitle">Registrar nuevo usuario</h3>
+            <a href="{{ route('register') }}"><img class="imagen_panel" src="{{ asset('./assets/usuario.png')}}"></a>
         </div>
     </div>
 </div>

@@ -15,7 +15,7 @@
                           <th scope="col">Title</th>
                           {{-- <th scope="col">Image</th> --}}
                           <th scope="col">Language</th>
-                          <th scope="col">Format</th>
+                          {{-- <th scope="col">Format</th> --}}
                           {{-- <th scope="col">File</th> --}}
                           <th scope="col">Action</th>
                         </tr>

@@ -1,5 +1,5 @@
-.title{
-    text-align:center;
+.title {
+    text-align: center;
     color: black;
     padding-top: 2vh;
     font-size: 2rem;
@@ -12,11 +12,13 @@
     text-align: center;
     display: flex;
 }
-.subtitle{
-    font-size: 1.5rem;
+.subtitle {
+    /*font-size: 1.5rem;*/
     margin-bottom: 1rem;
     font-family: "Audiowide", cursive;
+    color: #f4540f;
 }
+
 @media only screen and (max-width: 600px) {
     .panel_admin {
         display: flex;
@@ -28,4 +30,12 @@
     padding: 2rem;
     width: 30%;
     min-width: 280px;
+}
+
+.imagen_panel {
+    border: 1px solid #f4540f;
+    border-radius: 10px;
+}
+div.resources_container {
+    width: 80%;
 }

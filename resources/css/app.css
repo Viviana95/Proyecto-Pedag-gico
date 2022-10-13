@@ -13,9 +13,14 @@
 @import "means.css";
 @import "form-register";
 @import "format_panel";
+@import "form_edit";
 
 * {
     box-sizing: border-box;
     margin:0;
     padding:0;
 }
+body{
+
+}
+
