@@ -4,7 +4,7 @@
     font-family: "Audiowide", cursive;
     font-size: calc(0.5vw + 0.6vh);
     display: flex;
-    justify-content: flex-end;
+    
 }
 .logo_factoria {
     width: calc(4vw + 5vh);
