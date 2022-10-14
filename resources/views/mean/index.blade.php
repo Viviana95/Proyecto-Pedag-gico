@@ -15,7 +15,7 @@
                           <th scope="col">Title</th>
                           {{-- <th scope="col">Image</th> --}}
                           <th scope="col">Language</th>
-                          <th scope="col">Format</th>
+                          {{-- <th scope="col">Format</th> --}}
                           {{-- <th scope="col">File</th> --}}
                           <th scope="col">Action</th>
                         </tr>
@@ -24,9 +24,9 @@
                        @foreach ($means as $mean)
                          <tr>
                           <td>{{$mean->title}}</td>
-                          {{-- <td><img src="{{ asset('storage/'.$mean->image)}}" alt="..."></td> --}}
+                          {{-- <td><img src="{{ asset($image->image)}}" alt="..."></td> --}}
                           <td>{{$mean->lenguage}}</td>
-                          <td>{{$mean->format}}</td>
+                          <td></td>
                           {{-- <td>{{$mean->file}}</td> --}}
                           <td>
                           {{-- <a type="button" class="btn btn-warning" href="{{route('means.edit', $mean->id)}}">Editar</a> --}}

@@ -42,7 +42,7 @@ class UserController extends Controller
             'email' => 'required',
             'password' => ['required', 'confirmed'],
         ]);
-        
+
         $user = User::create([
             'name'=>$request->name,
             'email'=>$request->email,
@@ -61,7 +61,7 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        
+
     }
 
 
@@ -84,7 +84,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    
+
 
     public function update(Request $request, $id, User $users)
     {
@@ -98,7 +98,7 @@ class UserController extends Controller
         $users->email = $request->email;
 
         $users->update();
-        return redirect()->route('user.users');
+        return redirect()->route('users.users');
     }
 
     /**

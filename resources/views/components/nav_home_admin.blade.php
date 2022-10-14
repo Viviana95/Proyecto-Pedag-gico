@@ -7,9 +7,10 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
             <ul class="navbar-nav me-auto  mb-lg-0 ">
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-white mt-5 ms-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <a class="nav-link dropdown-toggle text-white ms-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   LENGUAJES
                 </a>
                 <ul class="dropdown-menu">
@@ -19,14 +20,14 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white mt-5 ms-4" href="{{route('format_view')}}">AÑADIR RECURSOS</a>
+                <a class="nav-link text-white ms-5" href="{{route('format_view')}}">AÑADIR RECURSOS</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white mt-5 ms-4" href="#">FORO</a>
+                <a class="nav-link text-white ms-5" href="#">FORO</a>
               </li>
               @if(Auth::user()->id == 1)
               <li class="nav-item">
-                <a class="nav-link text-white mt-5 ms-4" href="{{route('admin')}}">ADMIN</a>
+                <a class="nav-link text-white ms-5" href="{{route('admin')}}">ADMIN</a>
               </li>
               @endif
             </ul>
@@ -67,7 +68,7 @@
               <form class="d-flex" role="search">
                 <div class="d-flex mb-2">
                   <button type="submit" id="button-addon1"><i class="bi bi-search"></i></button>
-                  <input type="search" class="form-control rounded-3 ms-2 mt-1 search_input" 
+                  <input type="search" class="form-control rounded-3 ms-2 mt-1 search_input"
                   aria-label="Search">
                 </div>
               </form>

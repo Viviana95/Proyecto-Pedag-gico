@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Format;
 use App\Models\Mean;
 use Illuminate\Http\Request;
 
@@ -15,7 +16,8 @@ class MeanController extends Controller
     public function index()
     {
         $means = Mean::latest()->paginate(12);
-        return view('mean.index', compact('means'));
+        $format = Format::all();
+        return view('mean.index', compact('means','format'));
     }
 
     /**
@@ -23,9 +25,13 @@ class MeanController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        return view('mean.create');
+        $format = Format::find($id);
+        $image = $format->images;
+      
+       
+        return view('mean.create', ['format' =>$format, 'image' => $image]);
     }
 
     /**
@@ -50,8 +56,9 @@ class MeanController extends Controller
             'title'=>$request->title,
             // 'image'=>$request->image,
             'lenguage'=>$request->lenguage,
-            // 'format'=>$request->format,
+            //'format'=>$request->format,
             'file'=>$pathfile,
+            
         ]);
 
         $mean->save();
@@ -64,10 +71,15 @@ class MeanController extends Controller
      * @param  \App\Models\Mean  $mean
      * @return \Illuminate\Http\Response
      */
-    public function show(Mean $mean)
+    public function show()
     {
         $means = Mean::latest()->paginate(12);
         return view('home' , compact('means'));
+    }
+
+    public function view($id, Mean $mean){
+        $mean= Mean::find($id);
+        return view('probar', ['mean' =>$mean]);
     }
 
 
