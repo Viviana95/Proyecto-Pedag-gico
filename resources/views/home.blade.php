@@ -15,6 +15,6 @@
     </div>
       @endforeach
     </div>
-    <x-footer></x-footer>
+    {{-- <x-footer></x-footer> --}}
   </div>
 </x-slot></x-app-layout>
