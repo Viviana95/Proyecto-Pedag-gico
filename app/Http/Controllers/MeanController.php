@@ -29,8 +29,8 @@ class MeanController extends Controller
     {
         $format = Format::find($id);
         $image = $format->images;
-      
-       
+
+
         return view('mean.create', ['format' =>$format, 'image' => $image]);
     }
 
@@ -58,7 +58,7 @@ class MeanController extends Controller
             'lenguage'=>$request->lenguage,
             //'format'=>$request->format,
             'file'=>$pathfile,
-            
+
         ]);
 
         $mean->save();

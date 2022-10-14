@@ -42,8 +42,8 @@ button.btn_orange {
 }
 
 .image-default-format {
-    width: 30vw;
-    border: 3px solid #f4540f;
+    width: 25vw;
+
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 10px;
 }
@@ -107,33 +107,38 @@ a.text-forgot {
     font-family: "Audiowide", cursive;
 }
 .panel_admin {
+    display: grid;
     align-items: center;
     margin-top: 4rem;
     text-align: center;
-    display: flex;
 }
 .subtitle {
-    /*font-size: 1.5rem;*/
+    font-size: calc(0.5vw + 0.6vh);
     margin-bottom: 1rem;
     font-family: "Audiowide", cursive;
     color: #f4540f;
 }
+.subtitle-container {
+    display: flex;
+    justify-content: center;
 
-@media only screen and (max-width: 600px) {
+}
+@media only screen and (max-width: 800px) {
     .panel_admin {
         display: flex;
         flex-wrap: wrap;
     }
+
 }
 
 .option-admin {
     padding: 2rem;
     width: 30%;
     min-width: 280px;
+    position:relative;
 }
 
 .imagen_panel {
-    border: 1px solid #f4540f;
     border-radius: 10px;
 }
 div.resources_container {
@@ -162,9 +167,9 @@ div.resources_container {
     background-color: #f4540f;
     color: rgb(255, 255, 255);
     font-family: "Audiowide", cursive;
-    font-size:calc(0.5vw + 0.6vh);
-    display:flex;
-    justify-content:flex-end;
+    font-size: calc(0.5vw + 0.6vh);
+    display: flex;
+    justify-content: flex-end;
 }
 .logo_factoria {
     width: calc(4vw + 5vh);
@@ -175,22 +180,20 @@ div.resources_container {
     color: white;
     text-decoration: none;
 }
-.img-user{
-    width:40px;
-    height:40px;
-    border-radius:50px;
-    margin-right:1vw;
-
+.img-user {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    margin-right: 1vw;
 }
 
- form div .search_input{
+form div .search_input {
     width: 20vh;
-    height:3vh;
-    border:1px solid white;
+    height: 3vh;
+    border: 1px solid white;
 }
-a.text_login:hover
-{
-    color:black;
+a.text_login:hover {
+    color: black;
 }
 
 .copiright {
@@ -267,10 +270,6 @@ button.btn.btn-eliminar {
     color: #f4540f;
 }
 
-.container-video{
-    border:5px solid red;
-}
-
 .video-box {
     width: 100%;
 }
@@ -323,7 +322,6 @@ button.btn.btn-eliminar {
 }
 
 .imagen_panel {
-    border: 3px solid #f4540f;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 10px;
 }
@@ -1175,28 +1173,14 @@ select {
 .-mt-px {
   margin-top: -1px;
 }
-<<<<<<< HEAD
-=======
-.mt-5 {
-  margin-top: 1.25rem;
-}
-<<<<<<< HEAD
-.mb-2 {
-  margin-bottom: 0.5rem;
-=======
->>>>>>> develop
 .mb-5 {
   margin-bottom: 1.25rem;
 }
 .mb-1 {
   margin-bottom: 0.25rem;
->>>>>>> develop
 }
 .-mr-2 {
   margin-right: -0.5rem;
-}
-.mb-5 {
-  margin-bottom: 1.25rem;
 }
 .block {
   display: block;
@@ -1454,37 +1438,14 @@ select {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
-<<<<<<< HEAD
-=======
-.py-1 {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-}
-<<<<<<< HEAD
-=======
->>>>>>> develop
 .py-12 {
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
->>>>>>> develop
 .px-1 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-.py-6 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-=======
-.pr-4 {
-  padding-right: 1rem;
-i
->>>>>>> develop
-}
->>>>>>> develop
 .pt-8 {
   padding-top: 2rem;
 }
@@ -1496,9 +1457,6 @@ i
 }
 .pr-4 {
   padding-right: 1rem;
-}
-.pt-1 {
-  padding-top: 0.25rem;
 }
 .pt-2 {
   padding-top: 0.5rem;

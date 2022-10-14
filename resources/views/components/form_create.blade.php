@@ -43,8 +43,8 @@
                                 </div>
                         @endif
                         <div class="btn_container">
-                            <button class="btn_orange" type="submit">Añadir</button>
                             <button class="btn_orange" href="{{route('means.index')}}">Cancelar</button>
+                            <button class="btn_orange" type="submit">Añadir</button>
                         </div>
                     </div>
                 </form>
