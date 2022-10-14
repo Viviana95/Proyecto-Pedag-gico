@@ -24,10 +24,9 @@
 }
 
  form div .search_input{
-    width: 30vh;
-    height: 1vh;
+    width: 20vh;
+    height:3vh;
     border:1px solid white;
-
 }
 a.text_login:hover
 {

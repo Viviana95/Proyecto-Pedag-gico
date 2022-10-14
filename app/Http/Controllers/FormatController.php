@@ -12,4 +12,5 @@ class FormatController extends Controller
         $format = Format::all();
         return view('format_view', compact('format'));
     }
+    
 }
