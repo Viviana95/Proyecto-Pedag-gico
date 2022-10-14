@@ -10,6 +10,7 @@
     align-items: center;
     margin-top: 4rem;
     text-align: center;
+
 }
 .subtitle {
     font-size: calc(0.5vw + 0.6vh);
@@ -21,20 +22,18 @@
     display: flex;
     justify-content: center;
 
-}
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 900px) {
     .panel_admin {
         display: flex;
         flex-wrap: wrap;
     }
-
 }
 
 .option-admin {
     padding: 2rem;
     width: 30%;
     min-width: 280px;
-    position:relative;
+    font-family: "Audiowide", cursive;
 }
 
 .imagen_panel {
@@ -42,4 +41,9 @@
 }
 div.resources_container {
     width: 80%;
+}
+
+.card-header{
+    border: none;
+    background-color: white;
 }
