@@ -8,13 +8,8 @@
     background-color: #f4540f;
     justify-content: center;
     font-family: "Audiowide";
-<<<<<<< HEAD
-    bottom: 0;
-    position: absolute;
-=======
     font-size:calc(0.5vw + 0.6vh);
 
->>>>>>> develop
 }
 
 p{
