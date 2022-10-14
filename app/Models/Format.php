@@ -22,7 +22,7 @@ class Format extends Model
 
         public function means($id , Mean $mean){
             Format::find($id)->means()->sync([ $mean->id]);
-            return $this->belongsToMany(Mean::class);
+            return $this->belongsToMany(Mean::class)->withPivot('format_id');
         }
 
     }
