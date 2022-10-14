@@ -5,7 +5,7 @@
     <div class="d-flex justify-content-center panel_admin">
         <div class="option-admin">
              <h3 class="subtitle">Recursos subidos</h3>
-             <a href="{{ route('means.index') }}"><img class="imagen_panel" src="{{ asset('./assets/archivo.png')}}"></a>
+             <a href="{{ route('means.index') }}"><img class="imagen_panel" src="{{ asset('./assets/recurso.png')}}"></a>
         </div>
         <div class="option-admin">
             <h3 class="subtitle">Usuarios</h3>
