@@ -28,6 +28,6 @@ class CreateFormatMeansTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('format_means');
+        Schema::dropIfExists('format_mean');
     }
 }
