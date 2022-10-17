@@ -14,6 +14,7 @@
 @import "form-register";
 @import "format_panel";
 @import "form_edit";
+@import "users.css";
 
 * {
     box-sizing: border-box;

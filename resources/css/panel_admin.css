@@ -55,3 +55,7 @@ div.resources_container {
 div.resources_container {
     width: 80%;
 }
+
+.card {
+    border: none;
+}

@@ -5,11 +5,10 @@
     align-items: center;
     justify-content: space-evenly;
 }
-input.btn_select_file {
-}
+
 .progress{
     border:1px solid black;
-    width: 300px
+    margin: 1vw 1vw;
 
 }
 div.progress-bar {
