@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Format;
+use App\Models\FormatMean;
 use App\Models\Mean;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class MeanController extends Controller
 {
@@ -40,9 +43,9 @@ class MeanController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request , Format $format)
+    public function store(Request $request, Format $format)
     {
-        if ($format->id > 1) {
+     if ($format->id = 2) {
         $pathfile = $request->file('file')->storeAs('files', $request->file('file')->getClientOriginalName());
 
         $request->validate([
@@ -59,21 +62,22 @@ class MeanController extends Controller
         ]);
     }
 
-    else {
+    /* if ($format->id = 1) {
 
         $request->validate([
             'title' => 'required',
             'lenguage' => 'required',
-            'file' =>'required',
+            'link' =>'required',
         ]);
 
         $mean = Mean::create([
             'title'=>$request->title,
             'lenguage'=>$request->lenguage,
-            'file'=>$request->file,
-
+            'file'=>$request->link,
         ]);
-    }
+    } */
+        $mean->formats()->attach($format->id);
+        $mean->users()->attach(Auth::user()->id);
         $mean->save();
         return redirect()->route('means.index');
     }
@@ -87,7 +91,8 @@ class MeanController extends Controller
     public function show()
     {
         $means = Mean::latest()->paginate(12);
-        return view('home' , compact('means'));
+        $format = FormatMean::all();
+        return view('home' , ['means' => $means,'format' => $format]);
     }
 
     public function view($id, Mean $mean){
@@ -120,21 +125,19 @@ class MeanController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'image' => 'mimes:jpg,png|max:2048',
             'title',
             'lenguage',
             'format',
             'file' =>'mimes:ppt,pdf,docx|max:2048',
         ]);
 
-        $path = $request->file('image')->storeAs('images', $request->file('image')->getClientOriginalName());
+        $pathfile = $request->file('file')->storeAs('files', $request->file('file')->getClientOriginalName());
 
         $mean = Mean::find($id);
         $mean->title = $request->title;
-        $mean->image = $path;
         $mean->lenguage = $request->lenguage;
         $mean->format = $request->format;
-        $mean->file = $request->file;
+        $mean->file = $pathfile;
 
         $mean->update();
         return redirect()->route('means.index');

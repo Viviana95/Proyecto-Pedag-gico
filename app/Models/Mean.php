@@ -15,8 +15,7 @@ class Mean extends Model
         
     }
 
-    public function formats($id, Format $format){
-        Mean::find($id)->formats()->sync([ $format->id]);
+    public function formats(){
         return $this->belongsToMany(Format::class);
 
     }

@@ -25,10 +25,10 @@
                                     <option value="Java">Java</option>
                                     <option value="Php">Php</option>
                                     <option value="Javascript">Javascript</option>
-                                    <option value="Javascript">SQL</option>
-                                    <option value="Javascript">HTML</option>
-                                    <option value="Javascript">CSS</option>
-                                    <option value="Javascript">Otros</option>
+                                    <option value="SQL">SQL</option>
+                                    <option value="HTML">HTML</option>
+                                    <option value="CSS">CSS</option>
+                                    <option value="Otros">Otros</option>
                                 </select>
                             </div>
                         @if ($format->id > 1)
@@ -39,7 +39,7 @@
                         @elseif ($format->id = 1)
                             <p class="text-form">Añade Enlace</p>
                                  <div class="form-floating mb-3">
-                                    <input type="text" name="file" class="form-control" id="floatingInput" placeholder="">
+                                    <input type="text" name="link" class="form-control" id="floatingInput" placeholder="">
                                 </div>
                         @endif
                         <div class="btn_container">
