@@ -29,8 +29,8 @@ class MeanController extends Controller
     {
         $format = Format::find($id);
         $image = $format->images;
-      
-       
+
+
         return view('mean.create', ['format' =>$format, 'image' => $image]);
     }
 
@@ -57,6 +57,7 @@ class MeanController extends Controller
             'lenguage'=>$request->lenguage,
             //'format'=>$request->format,
             'file'=>$pathfile,
+
         ]);
         $mean->save();
         return redirect()->route('means.index');
@@ -72,6 +73,11 @@ class MeanController extends Controller
     {
         $means = Mean::latest()->paginate(12);
         return view('home' , compact('means'));
+    }
+
+    public function view($id, Mean $mean){
+        $mean= Mean::find($id);
+        return view('probar', ['mean' =>$mean]);
     }
 
 

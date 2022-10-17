@@ -2,9 +2,9 @@
     background-color: #f4540f;
     color: rgb(255, 255, 255);
     font-family: "Audiowide", cursive;
-    font-size:calc(0.5vw + 0.6vh);
-    display:flex;
-    justify-content:flex-end;
+    font-size: calc(0.5vw + 0.6vh);
+    display: flex;
+    
 }
 .logo_factoria {
     width: calc(4vw + 5vh);
@@ -15,21 +15,18 @@
     color: white;
     text-decoration: none;
 }
-.img-user{
-    width:40px;
-    height:40px;
-    border-radius:50px;
-    margin-right:1vw;
-
+.img-user {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    margin-right: 1vw;
 }
 
- form div .search_input{
-    width: 30vh;
-    height: 1vh;
-    border:1px solid white;
-
+form div .search_input {
+    width: 20vh;
+    height: 3vh;
+    border: 1px solid white;
 }
-a.text_login:hover
-{
-    color:black;
+a.text_login:hover {
+    color: black;
 }

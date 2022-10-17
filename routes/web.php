@@ -54,6 +54,7 @@ Route::name('means')->middleware(['auth'])->group(function(){
     Route::get('/means', [MeanController::class, 'index'])->name('.index');
     Route::get('/means/create/{id}', [MeanController::class,'create'])->name('.create');
     Route::post('/means', [MeanController::class, 'store'])->name('.store');
+    Route::get('/detail/{id}', [MeanController::class, 'view'])->name('.view');
     Route::delete('/means{id}', [MeanController::class, 'destroy'])->name('.destroy');
     Route::get('/means{id}/edit', [MeanController::class,'edit'])->name('.edit');
     Route::put('/means{id}', [MeanController::class, 'update'])->name('.update');

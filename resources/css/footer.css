@@ -1,5 +1,4 @@
 .copiright {
-    
     width: 100%;
     height: 8vh;
     padding-top: 1vh;
@@ -16,4 +15,14 @@ p{
     font-size: small;
 }
 
+
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+body {
+    margin: 0;
+    margin-bottom: 40px;
+}
 

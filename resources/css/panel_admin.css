@@ -6,20 +6,23 @@
     font-family: "Audiowide", cursive;
 }
 .panel_admin {
-    display: flex;
+    display: grid;
     align-items: center;
     margin-top: 4rem;
     text-align: center;
-    display: flex;
+
 }
 .subtitle {
-    /*font-size: 1.5rem;*/
+    font-size: calc(0.5vw + 0.6vh);
     margin-bottom: 1rem;
     font-family: "Audiowide", cursive;
     color: #f4540f;
 }
-
-@media only screen and (max-width: 600px) {
+.subtitle-container {
+    display: flex;
+    justify-content: center;
+}
+@media only screen and (max-width: 900px) {
     .panel_admin {
         display: flex;
         flex-wrap: wrap;
@@ -30,6 +33,19 @@
     padding: 2rem;
     width: 30%;
     min-width: 280px;
+    font-family: "Audiowide", cursive;
+}
+
+.imagen_panel {
+    border-radius: 10px;
+}
+div.resources_container {
+    width: 80%;
+}
+
+.card-header{
+    border: none;
+    background-color: white;
 }
 
 .imagen_panel {
