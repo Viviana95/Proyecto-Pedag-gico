@@ -29,9 +29,9 @@ Route::get('/panel_admin', function () {
 Route::get('/lenguaje_view', function () {
     return view('lenguaje_view');
 });
-Route::get('/info', function () {
+Route::get('/info', [UserController::class, 'show'] , function () {
     return view('info');
-});
+})->middleware(['auth']);
 Route::get('/add_resource', function () {
     return view('add_resource');
 });

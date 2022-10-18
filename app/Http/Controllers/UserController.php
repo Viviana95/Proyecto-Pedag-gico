@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\MeanUser;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -59,9 +60,10 @@ class UserController extends Controller
      * @param  \App\Models\User  $mean
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user)
+    public function show()
     {
-
+        $means = MeanUser::all();
+        return view('info' , ['means' => $means]);
     }
 
 
