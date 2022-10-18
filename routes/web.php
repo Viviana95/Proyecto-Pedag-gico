@@ -45,7 +45,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::get('/home', [MeanController::class, 'show'])->name('means.show');
+Route::get('/home', [MeanController::class, 'show'])->name('home');
 
 require __DIR__.'/auth.php';
 

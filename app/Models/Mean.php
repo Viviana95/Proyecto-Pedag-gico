@@ -8,15 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Mean extends Model
 {
     use HasFactory;
-    protected $fillable = ['title','image','lenguage', 'format', 'file'];
+    protected $fillable = ['title','image','lenguage', 'file'];
     
     public function users(){
         return $this->belongsToMany(User::class);
-
+        
     }
 
-    public function formats($id, Format $format){
-        Mean::find($id)->formats()->sync([ $format->id]);
+    public function formats(){
         return $this->belongsToMany(Format::class);
 
     }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Mean;
 use App\Models\Role;
 use App\Models\User;
 use App\Providers\RouteServiceProvider;
@@ -48,9 +49,6 @@ class RegisteredUserController extends Controller
         ]);
 
         $user->roles()->attach(Role::where('name', 'user')->first());
-      
-
-        event(new Registered($user));
 
         Auth::login($user);
 

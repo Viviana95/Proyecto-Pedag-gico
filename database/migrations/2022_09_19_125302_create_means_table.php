@@ -17,7 +17,6 @@ class CreateMeansTable extends Migration
             $table->id();
             $table->string('title');
             $table->string('lenguage');
-            // $table->string('format');
             $table->string('file')->nullable();
             $table->timestamps();
         });

@@ -19,5 +19,6 @@
                     src="{{ asset('./assets/play.png')}}"></a>
 
         </div>
+        
     </div>
 </div>

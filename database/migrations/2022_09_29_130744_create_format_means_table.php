@@ -13,7 +13,7 @@ class CreateFormatMeansTable extends Migration
      */
     public function up()
     {
-        Schema::create('format_means', function (Blueprint $table) {
+        Schema::create('format_mean', function (Blueprint $table) {
             $table->id();
             $table->foreignId('format_id')->references('id')->on('formats')->onDelete('cascade');
             $table->foreignId('mean_id')->references('id')->on('means')->onDelete('cascade');
@@ -28,6 +28,6 @@ class CreateFormatMeansTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('format_means');
+        Schema::dropIfExists('format_mean');
     }
 }
