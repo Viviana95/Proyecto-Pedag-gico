@@ -20,8 +20,9 @@
         @endif
       </a>
     </div>
-      @endforeach
+    @endforeach
     </div>
+    <div>{{ $means->links() }}</div>
     {{-- <x-footer></x-footer> --}}
   </div>
 </x-slot></x-app-layout>
