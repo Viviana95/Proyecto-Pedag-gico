@@ -21,15 +21,14 @@
               <tr>
                 <th scope="col">Título</th>
                 <th scope="col">Lenguaje</th>
-                <th scope="col">Formato</th>
                 <th scope="col">Acción</th>
               </tr>
             </thead>
             <tbody>
+              @foreach (Auth::user()->means as $mean)
                 <tr>
-                 <td></td>
-                 <td></td>
-                 <td></td>
+                 <td>{{$mean->title}}</td>
+                 <td>{{$mean->lenguage}}</td>
                  <td></td>
                  <td>
                    <div class="btn_container">
@@ -49,6 +48,7 @@
                  </form>
                </div>
                </tr>
+               @endforeach
              </tbody>
       </table>
     </div>
