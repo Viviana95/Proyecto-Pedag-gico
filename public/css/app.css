@@ -349,8 +349,19 @@ button.btn.btn-eliminar {
     border-radius: 50px;
     margin-right: 1vw;
 }
+.foro_container{
+   /*  background-image: url(public\assets\foro.jpeg);
+    background-color: pink;
+} */
+}
+
 .foro_image{
     opacity: 0.5;
+    position:absolute;
+}
+
+.foro_text{
+    background-color: aquamarine;
 }
 /*
 ! tailwindcss v3.1.8 | MIT License | https://tailwindcss.com
