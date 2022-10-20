@@ -33,7 +33,7 @@
             </ul>
             <div>
               <div class="d-flex ms-5 mb-2 ">
-                <a class="mt-2" href="{{ url('/info') }}"><img class="img-user" src="{{ Auth::user()->avatar }}" alt="User Profile Picture"></a>
+                <a class="mt-2" href="{{ url('/info') }}"><img class="img-user" src="{{url('storage/'.Auth::user()->avatar)}}" alt="User Profile Picture"></a>
                 <div class="hidden sm:flex sm:items-center sm:mr-6">
                     <x-dropdown align="right" width="48">
                         <x-slot name="trigger">

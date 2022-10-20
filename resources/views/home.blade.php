@@ -4,7 +4,7 @@
     <x-nav_home_admin :language="$language"></x-nav_home_admin>
     <h1 class="masRecientes">MÁS RECIENTES</h1>
     {{-- @php
-        dd($format)
+        dd($user)
     @endphp --}}
     <div class="card-content">
     @foreach ($means as $mean)

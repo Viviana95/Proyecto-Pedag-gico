@@ -1,4 +1,4 @@
-<h2 class="title">Editar Recurso</h2>
+<h2 class="title">Editar Recurso en formato</h2>
 <div class="flex mt-5">
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="form_edit p-6">
@@ -8,8 +8,8 @@
                 <div>
                     <h3 class="text-form">Título</h3>
                     <div class="form-floating mb-3">
-                        <input type="text" name="title" value="{{$mean->title ?? old('language')}}" class="form-control"
-                            id="floatingInput" placeholder="name@example.com">
+                        <input type="text" name="title" value="{{$mean->title ?? old('lenguage')}}" class="form-control"
+                            id="floatingInput" placeholder="Título Nuevo">
 
                     </div>
                     <h3 class="text-form">Lenguaje</h3>
@@ -54,9 +54,6 @@
                     </div>
                     <h3 class="text-form">Archivo</h3>
                     <div class="form-floating mb-3">
-                        <input type="file" name="file" value="{{$mean->file ?? old('file')}}" class="form-control"
-                            id="floatingInput" placeholder="name@example.com">
-
                         <input type="file" id="inputarchivo" name="file" value="{{$mean->file ?? old('image')}}"
                             style="display: none;" required><br>
                         <button><label for="inputarchivo" class="form-control" id="labelarchivo">Selecciona un
@@ -66,9 +63,8 @@
                     </div>
 
                     <div class="btn_container">
-                        <button type="submit" class="btn_orange">Modificar</button>
-
                         <button class="btn_orange"><a href="{{route('means.index')}}">Cancelar</a></button>
+                        <button type="submit" class="btn_orange">Modificar</button>
                     </div>
 
                 </div>

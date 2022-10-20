@@ -7,6 +7,7 @@ use App\Models\FormatMean;
 use App\Models\Language;
 use App\Models\LanguageMean;
 use App\Models\Mean;
+use App\Models\MeanUser;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -97,8 +98,8 @@ class MeanController extends Controller
         $means = Mean::latest()->paginate(12);
         $format = FormatMean::all();
         $language = Language::all();       
-        
-        return view('home' , ['means' => $means,'format' => $format, 'language' => $language]);
+        $user = MeanUser::all();
+        return view('home' , ['means' => $means,'format' => $format, 'user' => $user, 'language' => $language]);
     }
 
      public function language( $language){
