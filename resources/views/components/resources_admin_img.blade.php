@@ -2,7 +2,7 @@
     <div class="card">
         <h5 class="card-header text-center subtitle">{{ Auth::user()->name }}</h5>
         <div class="text-center">
-            <img class="img_admin rounded-circle" src="./storage , {{ Auth::user()->avatar }}" alt="User Profile Picture">
+            <img class="img_admin rounded-circle" src="{{url('storage/'.Auth::user()->avatar)}}" alt="User Profile Picture">
 
             <form action="{{ route('users.edit', Auth::user()->id) }}" method="post">
               @csrf

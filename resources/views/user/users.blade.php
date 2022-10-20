@@ -17,7 +17,7 @@
                           <tbody>
                            @foreach ($users as $user)
                              <tr>
-                              <td><img class="img-avatar" src="{{ asset($user->avatar)}}" ></td>
+                              <td><img class="img-avatar" src="{{ url('storage/'.$user->avatar)}}" ></td>
                               <td>{{$user->name}}</td>
                               <td>{{$user->email}}</td>
                               <td>

@@ -21,8 +21,8 @@
                             <label for="floatingInput">AVATAR</label>
                          </div>
                          <div class="btn_container">
-                            <button type="submit" class="btn_orange">Modificar</button>
                             <button class="btn_orange"><a href="{{route('users.users')}}">Cancelar</a></button>
+                             <button type="submit" class="btn_orange">Modificar</button>
                          </div>
                         </div>
                     </form>
