@@ -36,9 +36,6 @@
     font-family: "Audiowide", cursive;
 }
 
-.imagen_panel {
-    border-radius: 10px;
-}
 div.resources_container {
     width: 80%;
 }
@@ -49,7 +46,6 @@ div.resources_container {
 }
 
 .imagen_panel {
-    border: 1px solid #f4540f;
     border-radius: 10px;
 }
 div.resources_container {
