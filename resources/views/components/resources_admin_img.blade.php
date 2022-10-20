@@ -11,7 +11,7 @@
                 <br>
                 </form>
             </div>
-            <x-progressbar></x-progressbar>
+            {{-- <x-progressbar></x-progressbar> --}}
         </div>
 
         <div class="resources_container m-5">
