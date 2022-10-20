@@ -11,12 +11,13 @@ class Mean extends Model
     protected $fillable = ['title','image','lenguage', 'file'];
     
     public function users(){
-        return $this->belongsToMany(User::class);
-        
+        return $this->belongsToMany(User::class);        
     }
 
     public function formats(){
         return $this->belongsToMany(Format::class);
-
+    }
+    public function lenguages(){
+        return $this->belongsToMany(Lenguage::class);
     }
 }
