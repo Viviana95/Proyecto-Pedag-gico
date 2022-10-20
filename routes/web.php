@@ -69,4 +69,8 @@ Route::name('users')->middleware(['auth','admin'])->group(function(){
    
 });
 
+Route::get('/foro', function () {
+    return view('foro');
+});
+
 
