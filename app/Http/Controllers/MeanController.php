@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Format;
 use App\Models\FormatMean;
+use App\Models\Lenguage;
 use App\Models\Mean;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -20,7 +21,8 @@ class MeanController extends Controller
     {
         $means = Mean::latest()->paginate(12);
         $format = Format::all();
-        return view('mean.index', compact('means','format'));
+        $lenguage = Lenguage::all();
+        return view('mean.index', compact('means','format', 'lenguage'));
     }
 
     /**
@@ -32,9 +34,10 @@ class MeanController extends Controller
     {
         $format = Format::find($id);
         $image = $format->images;
+        $lenguage = Lenguage::find($id);
 
 
-        return view('mean.create', ['format' =>$format, 'image' => $image]);
+        return view('mean.create', ['format' =>$format, 'image' => $image, 'lenguage' => $lenguage]);
     }
 
     /**
@@ -93,7 +96,8 @@ class MeanController extends Controller
     {
         $means = Mean::latest()->paginate(12);
         $format = FormatMean::all();
-        return view('home' , ['means' => $means,'format' => $format]);
+        $lenguage = Lenguage::all();
+        return view('home' , ['means' => $means,'format' => $format, 'lenguage' => $lenguage]);
     }
 
     public function view($id, Mean $mean){
