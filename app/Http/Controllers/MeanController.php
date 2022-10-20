@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Format;
 use App\Models\FormatMean;
 use App\Models\Mean;
+use App\Models\MeanUser;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -43,9 +44,9 @@ class MeanController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, Format $format)
-    {
-/*      if ($format->id = 2) {
+    public function store(Request $request, Format $format, Mean $mean)
+    {   
+        if ($format->id = 2) {
         $pathfile = $request->file('file')->storeAs('files', $request->file('file')->getClientOriginalName());
 
         $request->validate([
@@ -60,10 +61,9 @@ class MeanController extends Controller
             'file'=>$pathfile,
 
         ]);
-    } */
+    }
 
     if ($format->id = 1) {
-
         $request->validate([
             'title' => 'required',
             'lenguage' => 'required',
@@ -92,7 +92,8 @@ class MeanController extends Controller
     {
         $means = Mean::latest()->paginate(12);
         $format = FormatMean::all();
-        return view('home' , ['means' => $means,'format' => $format]);
+        $user = MeanUser::all();
+        return view('home' , ['means' => $means,'format' => $format, 'user' => $user]);
     }
 
     public function view($id, Mean $mean){

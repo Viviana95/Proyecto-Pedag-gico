@@ -93,11 +93,13 @@ class UserController extends Controller
         $request->validate([
             'name',
             'email',
+            'avatar',
         ]);
-
+        $path = $request->file('avatar')->storeAs('avatar', $request->file('avatar')->getClientOriginalName());
         $users = User::find($id);
         $users->name = $request->name;
         $users->email = $request->email;
+        $users->avatar = $path;
 
         $users->update();
         return redirect()->route('users.users');

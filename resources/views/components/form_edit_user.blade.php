@@ -15,11 +15,15 @@
                             <input type="text" name="email" value="{{$user->email ?? old('email')}}" class="form-control" id="floatingInput" placeholder="name@example.com">
                             <label for="floatingInput">E-MAIL</label>
                          </div>
+                         <div class="form-floating mb-3">
+                            <input type="file" name="avatar" value="{{$user->avatar ?? old('avatar')}}"
+                            class="form-control" id="floatingInput" placeholder="Cambia Foto Perfil">
+                            <label for="floatingInput">AVATAR</label>
+                         </div>
                          <div class="btn_container">
                             <button type="submit" class="btn_orange">Modificar</button>
-                            <button class="btn_orange"><a  href="{{route('users.users')}}">Cancelar</a></button>
+                            <button class="btn_orange"><a href="{{route('users.users')}}">Cancelar</a></button>
                          </div>
-
                         </div>
                     </form>
 

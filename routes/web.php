@@ -1,10 +1,8 @@
 <?php
 
-use App\Http\Controllers\AdminHomeController;
 use App\Http\Controllers\FormatController;
 use App\Http\Controllers\MeanController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -38,8 +36,6 @@ Route::get('/add_resource', function () {
 Route::get('/format_view', [FormatController::class, 'index'] , function () {
     return view('format_view');})->name('format_view');
 
-    // Route::get('/format_view', [FormatController::class, 'link'] , function () {
-    //     return view('means.create');})->name('link');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
