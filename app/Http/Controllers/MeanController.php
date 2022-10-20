@@ -43,9 +43,10 @@ class MeanController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, Format $format)
+    public function store(Request $request, $id)
     {
-/*      if ($format->id = 2) {
+
+     if ($id == 2) {
         $pathfile = $request->file('file')->storeAs('files', $request->file('file')->getClientOriginalName());
 
         $request->validate([
@@ -60,9 +61,9 @@ class MeanController extends Controller
             'file'=>$pathfile,
 
         ]);
-    } */
+    } 
 
-    if ($format->id = 1) {
+    else if ($id == 1) {
 
         $request->validate([
             'title' => 'required',
@@ -76,7 +77,7 @@ class MeanController extends Controller
             'file'=>$request->link,
         ]);
     }
-        $mean->formats()->attach($format->id);
+        $mean->formats()->attach($id);
         $mean->users()->attach(Auth::user()->id);
         $mean->save();
         return redirect()->route('home');
