@@ -5,6 +5,7 @@ use App\Http\Controllers\FormatController;
 use App\Http\Controllers\MeanController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\HomeController;
+use App\Models\Language;
 use Illuminate\Support\Facades\Route;
 
 
@@ -24,7 +25,8 @@ Route::get('/', function () {
 });
 
 Route::get('/panel_admin', function () {
-    return view('panel_admin');})->middleware(['auth','admin'])->name('admin');
+    $language = Language::all();
+    return view('panel_admin', compact('language'));})->middleware(['auth','admin'])->name('admin');
 
 Route::get('/lenguaje_view', function () {
     return view('lenguaje_view');
@@ -52,6 +54,7 @@ require __DIR__.'/auth.php';
 Route::name('means')->middleware(['auth'])->group(function(){
 
     Route::get('/means', [MeanController::class, 'index'])->name('.index');
+    Route::get('/means/language/{name}', [MeanController::class, 'language'])->name('.language');
     Route::get('/means/create/{id}', [MeanController::class,'create'])->name('.create');
     Route::post('/means/create/{id}', [MeanController::class, 'store'])->name('.store');
     Route::get('/detail/{id}', [MeanController::class, 'view'])->name('.view');

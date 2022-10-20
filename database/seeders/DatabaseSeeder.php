@@ -15,6 +15,6 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(RoleSeeder::class);
         $this->call(ImageSeeder::class);
-        $this->call(LenguageSeeder::class);
+        $this->call(languageSeeder::class);
     }
 }

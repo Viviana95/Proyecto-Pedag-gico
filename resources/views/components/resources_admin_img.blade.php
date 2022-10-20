@@ -28,7 +28,7 @@
               @foreach (Auth::user()->means as $mean)
                 <tr>
                  <td>{{$mean->title}}</td>
-                 <td>{{$mean->lenguage}}</td>
+                 <td>{{$mean->language}}</td>
                  <td></td>
                  <td>
                    <div class="btn_container">

@@ -1,7 +1,7 @@
 <x-app-layout>
   <x-slot name="header">
 <div class="home_admin_container">
-    <x-nav_home_admin></x-nav_home_admin>
+    <x-nav_home_admin :language="$language"></x-nav_home_admin>
     <h1 class="masRecientes">MÁS RECIENTES</h1>
     {{-- @php
         dd($format)
@@ -11,6 +11,8 @@
     <div class="card" style="width: 18rem;">
       
       <h5 class="card-title">{{$mean->title}}</h5>
+      <h5 class="card-title">{{$mean->language}}</h5>
+      
         @if ($mean->formats->contains($format->id = 1))
         <a href="{{url($mean->file)}}">
           <img src="{{ asset('./assets/enlace.png')}}" alt="enlace"></a>

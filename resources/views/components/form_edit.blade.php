@@ -8,19 +8,19 @@
                 <div>
                     <h3 class="text-form">Título</h3>
                     <div class="form-floating mb-3">
-                        <input type="text" name="title" value="{{$mean->title ?? old('lenguage')}}" class="form-control"
+                        <input type="text" name="title" value="{{$mean->title ?? old('language')}}" class="form-control"
                             id="floatingInput" placeholder="name@example.com">
 
                     </div>
                     <h3 class="text-form">Lenguaje</h3>
                     <div class="form-floating mb-3">
-                        <select name="lenguage" value="{{$mean->lenguage ?? old('lenguage')}}" class="form-select"
+                        <select name="language" value="{{$mean->language ?? old('language')}}" class="form-select"
                             aria-label="Default select example">
 
                             <option selected>Open this select menu </option>
-                            <option value="Java" {{$mean->lenguage == "Java" ? 'selected' : ''}}>Java</option>
-                            <option value="Php" {{$mean->lenguage == "Php" ? 'selected' : ''}}>Php</option>
-                            <option value="Javascript" {{$mean->lenguage == "Javascript" ? 'selected' :
+                            <option value="Java" {{$mean->language == "Java" ? 'selected' : ''}}>Java</option>
+                            <option value="Php" {{$mean->language == "Php" ? 'selected' : ''}}>Php</option>
+                            <option value="Javascript" {{$mean->language == "Javascript" ? 'selected' :
                                 ''}}>Javascript</option>
                         </select>
 

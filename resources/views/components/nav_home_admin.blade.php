@@ -14,13 +14,10 @@
                   LENGUAJES
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Java</a></li>
-                  <li><a class="dropdown-item" href="#">JavaScript</a></li>
-                  <li><a class="dropdown-item" href="#">Php</a></li>
-                  <li><a class="dropdown-item" href="#">HTML</a></li>
-                  <li><a class="dropdown-item" href="#">CSS</a></li>
-                  <li><a class="dropdown-item" href="#">Otros</a></li>
-                </ul>
+                 @foreach ($language as $language)
+                  <li><a class="dropdown-item"  href="{{route('means.language', $language->name)}}">{{$language->name}} </a></li>                                       
+                 @endforeach
+                </ul>                
               </li>
               <li class="nav-item">
                 <a class="nav-link text-white ms-5" href="{{route('format_view')}}">AÑADIR RECURSOS</a>

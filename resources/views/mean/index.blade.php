@@ -2,7 +2,7 @@
 <x-app-layout>
     <x-slot name="header">
 <div class="">
-  <x-nav_home_admin></x-nav_home_admin>
+  <x-nav_home_admin :language="$language"></x-nav_home_admin>
       <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <h2 class="title">Recursos subidos</h2>
             <div class="p-6 bg-white border-b border-gray-200">
@@ -28,7 +28,7 @@
                        @foreach ($means as $mean)
                          <tr>
                           <td>{{$mean->title}}</td>
-                          <td>{{$mean->lenguage}}</td>
+                          <td>{{$mean->language}}</td>
                           <td>
                               <form action="{{ route('means.edit', $mean->id) }}" method="post">
                                 @csrf

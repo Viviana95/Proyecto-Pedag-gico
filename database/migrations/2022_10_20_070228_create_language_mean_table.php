@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateLenguageMeanTable extends Migration
+class CreateLanguageMeanTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateLenguageMeanTable extends Migration
      */
     public function up()
     {
-        Schema::create('lenguage_mean', function (Blueprint $table) {
+        Schema::create('language_mean', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('lenguage_id');
+            $table->unsignedBigInteger('language_id');
             $table->unsignedBigInteger('mean_id');
             
-            $table->foreign('lenguage_id')->references('id')->on('lenguages')->onDelete('cascade');
+            $table->foreign('language_id')->references('id')->on('languages')->onDelete('cascade');
             $table->foreign('mean_id')->references('id')->on('means')->onDelete('cascade');
 
             $table->timestamps();
@@ -32,6 +32,6 @@ class CreateLenguageMeanTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('lenguage_mean');
+        Schema::dropIfExists('language_mean');
     }
 }

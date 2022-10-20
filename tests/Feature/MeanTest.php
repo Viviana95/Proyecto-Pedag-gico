@@ -36,7 +36,7 @@ class MeanTest extends TestCase
     
     /* $mean=[
       'title' => "title",
-      'lenguage'=> "lenguage",
+      'language'=> "language",
       'format' => "format",
       'file'=> "file",
       'image'=>"image"

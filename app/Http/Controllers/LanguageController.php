@@ -2,17 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Format;
 use App\Models\Language;
 use Illuminate\Http\Request;
 
-class FormatController extends Controller
+class LanguageController extends Controller
 {
     public function index()
     {
-        $format = Format::all();
         $language = Language::all();
-        return view('format_view', compact('format', 'language'));
+        return view('mean.create', compact('language'));
     }
-    
 }

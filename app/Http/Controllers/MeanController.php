@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Format;
 use App\Models\FormatMean;
-use App\Models\Lenguage;
+use App\Models\Language;
+use App\Models\LanguageMean;
 use App\Models\Mean;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -17,12 +18,13 @@ class MeanController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $means = Mean::latest()->paginate(12);
         $format = Format::all();
-        $lenguage = Lenguage::all();
-        return view('mean.index', compact('means','format', 'lenguage'));
+        $language = Language::all();
+        
+        return view('mean.index', compact('means','format', 'language'));
     }
 
     /**
@@ -33,11 +35,9 @@ class MeanController extends Controller
     public function create($id)
     {
         $format = Format::find($id);
-        $image = $format->images;
-        $lenguage = Lenguage::find($id);
-
-
-        return view('mean.create', ['format' =>$format, 'image' => $image, 'lenguage' => $lenguage]);
+        $image = $format->images;      
+        $language = Language::all();
+        return view('mean.create', ['format' =>$format, 'image' => $image, 'language' =>$language ]);
     }
 
     /**
@@ -48,19 +48,18 @@ class MeanController extends Controller
      */
     public function store(Request $request, $id)
     {
-
      if ($id == 2) {
         $pathfile = $request->file('file')->storeAs('files', $request->file('file')->getClientOriginalName());
 
         $request->validate([
             'title' => 'required',
-            'lenguage' => 'required',
+            'language' => 'required',
             'file' =>'mimes:ppt,pdf,docx|max:2048',
         ]);
 
         $mean = Mean::create([
             'title'=>$request->title,
-            'lenguage'=>$request->lenguage,
+            'language'=>$request->language,
             'file'=>$pathfile,
 
         ]);
@@ -70,17 +69,18 @@ class MeanController extends Controller
 
         $request->validate([
             'title' => 'required',
-            'lenguage' => 'required',
+            'language' => 'required',
             'link' =>'required',
         ]);
 
         $mean = Mean::create([
             'title'=>$request->title,
-            'lenguage'=>$request->lenguage,
+            'language'=>$request->language,
             'file'=>$request->link,
         ]);
     }
         $mean->formats()->attach($id);
+        $mean->languages()->attach($id);
         $mean->users()->attach(Auth::user()->id);
         $mean->save();
         return redirect()->route('home');
@@ -96,9 +96,17 @@ class MeanController extends Controller
     {
         $means = Mean::latest()->paginate(12);
         $format = FormatMean::all();
-        $lenguage = Lenguage::all();
-        return view('home' , ['means' => $means,'format' => $format, 'lenguage' => $lenguage]);
+        $language = Language::all();       
+        
+        return view('home' , ['means' => $means,'format' => $format, 'language' => $language]);
     }
+
+     public function language( $language){
+             
+         $language = Language::where('name', '=', $language)->first();
+         $means = LanguageMean::where('language_id', '=', $language->id)->get();
+         dd($means);
+    } 
 
     public function view($id, Mean $mean){
         $mean= Mean::find($id);
@@ -131,7 +139,7 @@ class MeanController extends Controller
     {
         $request->validate([
             'title',
-            'lenguage',
+            'language',
             'format',
             'file' =>'mimes:ppt,pdf,docx|max:2048',
         ]);
@@ -140,7 +148,7 @@ class MeanController extends Controller
 
         $mean = Mean::find($id);
         $mean->title = $request->title;
-        $mean->lenguage = $request->lenguage;
+        $mean->language = $request->language;
         $mean->format = $request->format;
         $mean->file = $pathfile;
 
