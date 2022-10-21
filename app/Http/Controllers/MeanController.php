@@ -94,7 +94,7 @@ class MeanController extends Controller
     {
         $means = Mean::latest()->paginate(12);
         $format = FormatMean::all();
-        $user = MeanUser::all();
+        $user = User::all();
         return view('home' , ['means' => $means,'format' => $format, 'user' => $user]);
     }
 

@@ -8,7 +8,7 @@
                 <div>
                     <h3 class="text-form">Título</h3>
                     <div class="form-floating mb-3">
-                        <input type="text" name="title" value="{{$mean->title ?? old('lenguage')}}" class="form-control"
+                        <input type="text" name="title" value="{{$mean->title ?? old('title')}}" class="form-control"
                             id="floatingInput" placeholder="Título Nuevo">
 
                     </div>

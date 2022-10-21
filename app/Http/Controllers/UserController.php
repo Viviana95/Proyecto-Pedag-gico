@@ -111,7 +111,7 @@ class UserController extends Controller
      * @param  \App\Models\User  $mean
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id, User $user)
+    public function destroy($id)
     {
         User::destroy($id);
         return redirect()->route('user.users');
