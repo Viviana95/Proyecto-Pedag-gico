@@ -30,24 +30,26 @@ class HomeController extends Controller
         return view('home' , ['means' => $means,'format' => $format, 'user' => $user, 'languages' => $languages]);
     }
 
-    public function filterByLanguage($id){
-      
+    public function filterByLanguage(Request $request, $id){
+        $search = $request -> search;
         $format = FormatMean::all();      
         $language = Language::find($id);
         $user = MeanUser::all();
         $means = $language->means()->latest()->paginate(3);
-        return view('home' , ['means' => $means,'format' => $format, 'user' => $user,  'language' => $language]);  
+        return view('home' , ['means' => $means,'format' => $format, 'user' => $user,  'language' => $language, 'search' => $search]);  
     }
 
-    public function searchMeanByTitle(){
-        $means = Mean::query()->when(request('search'), function($query){
+    public function searchMeanByTitle(Request $request){
+        /*  $means = Mean::query()->when(request('search'), function($query){
             return $query->where('title', 'like', '%' . request('search') .  '%');
-        })
+        })  */
+        $search = $request -> search;
+         $means = Mean::where('title', 'like', '%' . $search .  '%')
         ->latest()->paginate(8);
         $format = FormatMean::all();
         $languages = Language::all();      
         $user = MeanUser::all();
-        return view('home' , ['means' => $means,'format' => $format, 'user' => $user, 'languages' => $languages]);
+        return view('home' , ['means' => $means,'format' => $format, 'user' => $user, 'languages' => $languages, 'search' => $search]);
     }
 
     public function meanDetail($id, Mean $mean)
