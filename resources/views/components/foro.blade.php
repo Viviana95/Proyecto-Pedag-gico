@@ -1,7 +1,7 @@
-<div class="foro_container">
-    <img class="foro_image" src="{{ asset('./assets/foro.jpeg')}}">
-    <div class="foro_text">
-        <h1>¡BIENVENIDOS AL FORO!</h1>
-        <button>Usuarios</button>
+<div class="foro_container d-flex">
+    <div class="welcome" >
+        <h1 class="foro_text">¡BIENVENIDOS AL FORO!</h1>
+        <button type="button" class="foro_btn p-2 rounded" >Ver Usuarios</button>
     </div>
+    <img class="foro_image" src="{{ asset('./assets/foro.jpeg')}}">
 </div>

@@ -73,4 +73,3 @@ Route::get('/foro', function () {
     return view('foro');
 });
 
-

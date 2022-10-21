@@ -349,20 +349,42 @@ button.btn.btn-eliminar {
     border-radius: 50px;
     margin-right: 1vw;
 }
-.foro_container{
-   /*  background-image: url(public\assets\foro.jpeg);
-    background-color: pink;
-} */
+/* .foro_container{
+    
+    /* background-image: url('{{ asset(../assets/foro.jpeg)}}'); */
+    /*background-color: pink; */
+   /*  position: relative;
+    display: inline-block;  
+} 
+ */
+
+.foro_btn{
+    background-color: black;
+    border: 1px solid orange;
+    font-size: medium;
+    margin-left: 30%;
+    margin-top: 20%;
+    font-family: "Audiowide", cursive;
+}
+
+.welcome{
+    width: 45%;
+    margin-top: 18%;
+    margin-left: 3%;
 }
 
 .foro_image{
-    opacity: 0.5;
-    position:absolute;
+    opacity: 0.6;
+    width: 68%;
+    height: 25%;
 }
 
-.foro_text{
-    background-color: aquamarine;
-}
+ .foro_text{
+     /* position: absolute;  */
+     font-size: x-large;
+     font-family: "Audiowide", cursive;
+} 
+
 /*
 ! tailwindcss v3.1.8 | MIT License | https://tailwindcss.com
 *//*
