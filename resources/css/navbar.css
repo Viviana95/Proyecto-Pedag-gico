@@ -23,9 +23,10 @@
 }
 
 form div .search_input {
-    width: 20vh;
-    height: 3vh;
+    width: 30vh;
+    height: 10vh;
     border: 1px solid white;
+    font-family: 'Times New Roman', Times, serif;
 }
 a.text_login:hover {
     color: black;

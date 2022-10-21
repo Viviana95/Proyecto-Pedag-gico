@@ -48,7 +48,8 @@
                </div>
                </tr>
                @endforeach
+              
              </tbody>
-      </table>
+            </table>
     </div>
 </div>

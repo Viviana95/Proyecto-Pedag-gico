@@ -2,9 +2,10 @@
 
 namespace App\View\Components;
 
+use App\Models\Language;
 use Illuminate\View\Component;
 
-class nav_home_admin extends Component
+class NavHomeAdmin extends Component
 {
     /**
      * Create a new component instance.
@@ -23,6 +24,7 @@ class nav_home_admin extends Component
      */
     public function render()
     {
-        return view('components.nav_home_admin');
+        $language = Language::all();
+        return view('components.nav_home_admin', ['language' => $language]);
     }
 }

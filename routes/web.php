@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\FormatController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MeanController;
 use App\Http\Controllers\UserController;
 use App\Models\Language;
@@ -30,7 +31,8 @@ Route::get('/lenguaje_view', function () {
     return view('lenguaje_view');
 });
 Route::get('/info', [UserController::class, 'show'] , function () {
-    return view('info');
+    $language = Language::all();
+    return view('info')->name('info');
 })->middleware(['auth']);
 Route::get('/add_resource', function () {
     return view('add_resource');
@@ -43,14 +45,14 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::get('/home', [MeanController::class, 'show'])->name('home');
+Route::get('/home', [HomeController::class, 'show'])->name('home');
 
 require __DIR__.'/auth.php';
 
 Route::name('means')->middleware(['auth'])->group(function(){
 
     Route::get('/means', [MeanController::class, 'index'])->name('.index');
-    Route::get('/means/language/{name}', [MeanController::class, 'language'])->name('.language');
+    Route::get('/means/language/{id}', [MeanController::class, 'language'])->name('.language');
     Route::get('/means/create/{id}', [MeanController::class,'create'])->name('.create');
     Route::post('/means/create/{id}', [MeanController::class, 'store'])->name('.store');
     Route::get('/detail/{id}', [MeanController::class, 'view'])->name('.view');

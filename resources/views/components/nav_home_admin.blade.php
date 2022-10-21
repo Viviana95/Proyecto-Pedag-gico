@@ -15,7 +15,7 @@
                 </a>
                 <ul class="dropdown-menu">
                  @foreach ($language as $language)
-                  <li><a class="dropdown-item"  href="{{route('means.language', $language->name)}}">{{$language->name}} </a></li>                                       
+                  <li><a class="dropdown-item"  href="{{route('means.language', $language->id)}}">{{$language->name}} </a></li>                                       
                  @endforeach
                 </ul>                
               </li>
@@ -65,11 +65,11 @@
 
 
               </div>
-              <form class="d-flex" role="search">
-                <div class="d-flex mb-2">
+              <form class="d-flex" role="search" method="GET">
+                <div class="d-flex ">
                   <button type="submit" id="button-addon1"><i class="bi bi-search"></i></button>
-                  <input type="search" class="form-control rounded-3 ms-2 mt-1 search_input"
-                  aria-label="Search">
+                  <input type="search" name="search" class="form-control rounded-3 ms-2 mt-1 search_input"
+                  aria-label="Search" placeholder="Search by Title">
                 </div>
               </form>
             </div>

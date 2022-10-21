@@ -47,20 +47,21 @@ class MeanController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, $id)
+    public function store(Request $request, $id, )
     {
+    
      if ($id == 2) {
         $pathfile = $request->file('file')->storeAs('files', $request->file('file')->getClientOriginalName());
 
         $request->validate([
             'title' => 'required',
-            'language' => 'required',
+          //  'language' => 'required',
             'file' =>'mimes:ppt,pdf,docx|max:2048',
         ]);
 
         $mean = Mean::create([
             'title'=>$request->title,
-            'language'=>$request->language,
+           'language'=>$request->language,
             'file'=>$pathfile,
 
         ]);
@@ -70,13 +71,13 @@ class MeanController extends Controller
 
         $request->validate([
             'title' => 'required',
-            'language' => 'required',
+          //  'language' => 'required',
             'link' =>'required',
         ]);
 
         $mean = Mean::create([
             'title'=>$request->title,
-            'language'=>$request->language,
+           'language'=>$request->language,
             'file'=>$request->link,
         ]);
     }
@@ -84,7 +85,7 @@ class MeanController extends Controller
         $mean->languages()->attach($id);
         $mean->users()->attach(Auth::user()->id);
         $mean->save();
-        return redirect()->route('home');
+        return redirect()->route('home')->with('sucess', 'Recurso añadido satisfactoriamente');
     }
 
     /**
@@ -95,18 +96,27 @@ class MeanController extends Controller
      */
     public function show()
     {
-        $means = Mean::latest()->paginate(12);
+
+        $means = Mean::query()->when(request('search'), function($query){
+            return $query->where('title', 'like', '%' . request('search') .  '%');
+        })
+        ->latest()->paginate(3);
+
         $format = FormatMean::all();
         $language = Language::all();       
         $user = MeanUser::all();
         return view('home' , ['means' => $means,'format' => $format, 'user' => $user, 'language' => $language]);
     }
 
-     public function language( $language){
-             
-         $language = Language::where('name', '=', $language)->first();
-         $means = LanguageMean::where('language_id', '=', $language->id)->get();
-         dd($means);
+     public function language( $id){
+      
+       $format = FormatMean::all();      
+       $languageOne = Language::find($id);
+       $user = MeanUser::all();
+       $means = $languageOne->means()->latest()->paginate(3);
+       return view('home' , ['means' => $means,'format' => $format, 'user' => $user,  'languageOne' => $languageOne]);
+      
+        
     } 
 
     public function view($id, Mean $mean){

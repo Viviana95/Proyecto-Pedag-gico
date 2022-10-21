@@ -10,7 +10,7 @@
     <div class="flex mt-5">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="p-6 form_create mt-2">
-               
+              
 
                 <form action="{{route('means.store',['id'=>$format->id, 'language'=>$language])}}" method="POST" enctype="multipart/form-data">
                     @csrf
@@ -24,9 +24,10 @@
                             <div class="form-floating mb-3">
                                 <select name="language" class="form-select" aria-label="Default select example">
                                     <option selected>Selecciona un lenguaje</option>
-                                    @foreach ($language as $language)
-                                    <option value="{{$language->id }}">{{$language->name }}</option>                                        
+                                     @foreach ($language as $language)
+                                    <option value="{{$language->id}}">{{$language->name }}</option>                                        
                                     @endforeach
+
                                 </select>
                             </div>
                         @if ($format->id > 1)
@@ -34,7 +35,7 @@
                                 <div class="form-floating mb-3">
                                     <input type="file" name="file" class="form-control" id="floatingInput" placeholder="">
                                 </div>
-                        @elseif ($format->id = 1)
+                        @elseif ($format->id == 1)
                             <p class="text-form">Añade Enlace</p>
                                  <div class="form-floating mb-3">
                                     <input type="text" name="link" class="form-control" id="floatingInput" placeholder="">
