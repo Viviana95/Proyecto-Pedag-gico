@@ -14,6 +14,10 @@ class Language extends Model
     ];
 
     public function means(){
-        return $this->belongsToMany(Mean::class);
+        return $this->hasMany(Mean::class);
     }
+
+    /* public function means(){
+        return $this->belongsToMany(Mean::class);
+    } */
 }

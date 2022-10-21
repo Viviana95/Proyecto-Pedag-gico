@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Mean extends Model
 {
     use HasFactory;
-    protected $fillable = ['title','image', 'file'];
+    protected $fillable = ['title','image', 'file', 'language_id'];
     
     public function users(){
         return $this->belongsToMany(User::class);        
@@ -18,6 +18,6 @@ class Mean extends Model
         return $this->belongsToMany(Format::class);
     }
     public function languages(){
-        return $this->belongsToMany(Language::class);
+        return $this->belongsTo(Language::class);
     }
 }

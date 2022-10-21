@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Format;
-use App\Models\FormatMean;
+
 use App\Models\Language;
 use App\Models\Mean;
-use App\Models\MeanUser;
+
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -60,7 +60,7 @@ class MeanController extends Controller
 
             $mean = Mean::create([
                 'title' => $request->title,
-                'language' => $request->language,
+                'language_id' => $request->language_id,
                 'file' => $pathfile,
 
             ]);
@@ -74,12 +74,12 @@ class MeanController extends Controller
 
             $mean = Mean::create([
                 'title' => $request->title,
-                'language' => $request->language,
+                'language_id' => $request->language_id,
                 'file' => $request->link,
             ]);
         }
         $mean->formats()->attach($id);
-        $mean->languages()->attach($id);
+       // $mean->languages()->attach($id);
         $mean->users()->attach(Auth::user()->id);
         $mean->save();
         return redirect()->route('home')->with('sucess', 'Recurso añadido satisfactoriamente');
