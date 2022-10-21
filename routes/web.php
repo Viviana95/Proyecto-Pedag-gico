@@ -32,17 +32,23 @@ Route::get('/lenguaje_view', function () {
 Route::get('/info', [UserController::class, 'show'] , function () {
     return view('info')->name('info');
 })->middleware(['auth']);
+
 Route::get('/add_resource', function () {
     return view('add_resource');
 });
 Route::get('/format_view', [FormatController::class, 'index'] , function () {
     return view('format_view');})->name('format_view');
 
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+
+Route::get('/foro', function () {
+    return view('foro');
+})->name('foro');
+
+Route::get('/home', [MeanController::class, 'show'])->name('home');
 
 require __DIR__.'/auth.php';
 
@@ -68,10 +74,6 @@ Route::name('users')->middleware(['auth','admin'])->group(function(){
     Route::get('/users/{id}/edit', [UserController::class,'edit'])->name('.edit');
     Route::put('/users/{id}', [UserController::class, 'update'])->name('.update');
    
-});
-
-Route::get('/foro', function () {
-    return view('foro');
 });
 
 

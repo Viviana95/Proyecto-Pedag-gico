@@ -23,7 +23,7 @@
                 <a class="nav-link text-white ms-5" href="{{route('format_view')}}">AÑADIR RECURSOS</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white ms-5" href="#">FORO</a>
+                <a class="nav-link text-white ms-5" href="{{url('/foro')}}">FORO</a>
               </li>
               @if(Auth::user()->id == 1)
               <li class="nav-item">
@@ -68,7 +68,7 @@
               <form class="d-flex" role="search" method="GET">
                 <div class="d-flex ">
                   <button type="submit" id="button-addon1"><i class="bi bi-search"></i></button>
-                  <input type="search" name="search" class="form-control rounded-3 ms-2 mt-1 search_input"
+                  <input type="search" name="search" class="form-control rounded-3 ms-2 mt-1 w-75 h-7"
                   aria-label="Search" placeholder="Search by Title">
                 </div>
               </form>
