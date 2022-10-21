@@ -12,7 +12,7 @@
             <div class="p-6 form_create mt-2">
               
 
-                <form action="{{route('means.store',['id'=>$format->id, 'language'=>$language])}}" method="POST" enctype="multipart/form-data">
+                <form action="{{route('means.store',['id'=>$format->id, 'languages'=>$languages])}}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div>
                         <p class="text-form">Título</p>
@@ -24,7 +24,7 @@
                             <div class="form-floating mb-3">
                                 <select name="language" class="form-select" aria-label="Default select example">
                                     <option selected>Selecciona un lenguaje</option>
-                                     @foreach ($language as $language)
+                                     @foreach ($languages as $language)
                                     <option value="{{$language->id}}">{{$language->name }}</option>                                        
                                     @endforeach
 

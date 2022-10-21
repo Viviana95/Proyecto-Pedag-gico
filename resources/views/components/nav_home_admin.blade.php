@@ -14,8 +14,8 @@
                   LENGUAJES
                 </a>
                 <ul class="dropdown-menu">
-                 @foreach ($language as $language)
-                  <li><a class="dropdown-item"  href="{{route('means.language', $language->id)}}">{{$language->name}} </a></li>                                       
+                 @foreach ($languages as $language)
+                  <li><a class="dropdown-item"  href="{{route('language', $language->id)}}">{{$language->name}} </a></li>                                       
                  @endforeach
                 </ul>                
               </li>

@@ -11,8 +11,8 @@ class FormatController extends Controller
     public function index()
     {
         $format = Format::all();
-        $language = Language::all();
-        return view('format_view', compact('format', 'language'));
+    
+        return view('format_view', compact('format'));
     }
     
 }

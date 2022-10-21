@@ -24,7 +24,7 @@ class NavHomeAdmin extends Component
      */
     public function render()
     {
-        $language = Language::all();
-        return view('components.nav_home_admin', ['language' => $language]);
+        $languages = Language::all();
+        return view('components.nav_home_admin', ['languages' => $languages]);
     }
 }

@@ -24,14 +24,12 @@ Route::get('/', function () {
 });
 
 Route::get('/panel_admin', function () {
-    $language = Language::all();
-    return view('panel_admin', compact('language'));})->middleware(['auth','admin'])->name('admin');
+    return view('panel_admin');})->middleware(['auth','admin'])->name('admin');
 
 Route::get('/lenguaje_view', function () {
     return view('lenguaje_view');
 });
 Route::get('/info', [UserController::class, 'show'] , function () {
-    $language = Language::all();
     return view('info')->name('info');
 })->middleware(['auth']);
 Route::get('/add_resource', function () {
@@ -45,21 +43,23 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::get('/home', [HomeController::class, 'show'])->name('home');
 
 require __DIR__.'/auth.php';
 
 Route::name('means')->middleware(['auth'])->group(function(){
-
+    
     Route::get('/means', [MeanController::class, 'index'])->name('.index');
-    Route::get('/means/language/{id}', [MeanController::class, 'language'])->name('.language');
     Route::get('/means/create/{id}', [MeanController::class,'create'])->name('.create');
     Route::post('/means/create/{id}', [MeanController::class, 'store'])->name('.store');
-    Route::get('/detail/{id}', [MeanController::class, 'view'])->name('.view');
     Route::delete('/means{id}', [MeanController::class, 'destroy'])->name('.destroy');
     Route::get('/means{id}/edit', [MeanController::class,'edit'])->name('.edit');
     Route::put('/means{id}', [MeanController::class, 'update'])->name('.update');
 });
+
+Route::get('/home', [HomeController::class, 'home'])->name('home');
+Route::get('/language/{id}', [HomeController::class, 'filterByLanguage'])->name('language');
+Route::get('/detail/{id}', [HomeController::class, 'meanDetail'])->name('detail');
+Route::get('/home', [HomeController::class, 'searchMeanByTitle'])->name('home');
 
 Route::name('users')->middleware(['auth','admin'])->group(function(){
 

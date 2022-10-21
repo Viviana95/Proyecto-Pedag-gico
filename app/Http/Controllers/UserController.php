@@ -18,8 +18,7 @@ class UserController extends Controller
     public function index()
     {
         $users = User::latest()->paginate(12);
-        $language = Language::all();
-        return view('user.users', compact('users', 'language'));
+        return view('user.users', compact('users'));
     }
 
     /**
@@ -64,10 +63,9 @@ class UserController extends Controller
      */
     public function show()
     {
-        $means = MeanUser::latest()->paginate(6);
-        $language = Language::all();
+        $means = MeanUser::latest()->paginate(6);    
 
-        return view('info' , ['means' => $means, 'language' => $language]);
+        return view('info' , ['means' => $means]);
     }
 
 
