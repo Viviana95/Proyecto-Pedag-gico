@@ -113,7 +113,8 @@ class MeanController extends Controller
     public function edit($id)
     {
         $mean = Mean::find($id);
-        return view('mean.edit', ['mean' =>$mean]);
+        $format = Format::find($id);
+        return view('mean.edit', ['mean' =>$mean, 'format'=> $format]);
     }
 
     /**
@@ -127,11 +128,13 @@ class MeanController extends Controller
 
     public function update(Request $request, $id)
     {
+
+        if ($id == 2) {
         $request->validate([
             'title',
             'lenguage',
-            'format',
             'file' =>'mimes:ppt,pdf,docx|max:2048',
+            'format',
         ]);
 
         $pathfile = $request->file('file')->storeAs('files', $request->file('file')->getClientOriginalName());
@@ -139,9 +142,28 @@ class MeanController extends Controller
         $mean = Mean::find($id);
         $mean->title = $request->title;
         $mean->lenguage = $request->lenguage;
-        $mean->format = $request->format;
         $mean->file = $pathfile;
 
+        $format = Format::find($id);
+        $format->format = $request->format;
+    }
+
+    else if ($id == 1) {
+        $request->validate([
+            'title',
+            'lenguage',
+            'link',
+            'format',
+        ]);
+
+        $mean = Mean::find($id);
+        $mean->title = $request->title;
+        $mean->lenguage = $request->lenguage;
+        $mean->file = $request->link;
+
+        $format= Format::find($id);
+        $format->format = $request->format;
+    }
         $mean->update();
         return redirect()->route('means.index');
     }
