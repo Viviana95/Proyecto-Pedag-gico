@@ -8,18 +8,18 @@
  */
 
 .foro_btn{
-    background-color: black;
     border: 1px solid orange;
-    font-size: medium;
-    margin-left: 30%;
-    margin-top: 20%;
+    font-size: 1.3vw;
+    margin-left: 35%; 
+    margin-top: 12%;
     font-family: "Audiowide", cursive;
+    
 }
 
 .welcome{
     width: 45%;
-    margin-top: 18%;
-    margin-left: 3%;
+    /* margin-top: 10%; */
+     margin-left: 2.5%; 
 }
 
 .foro_image{
@@ -29,7 +29,7 @@
 }
 
  .foro_text{
-     /* position: absolute;  */
-     font-size: x-large;
+     font-size: 2vw;
      font-family: "Audiowide", cursive;
+     margin-top: 20%;
 } 
