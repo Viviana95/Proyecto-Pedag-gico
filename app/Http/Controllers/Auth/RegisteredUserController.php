@@ -45,13 +45,13 @@ class RegisteredUserController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
-            'avatar' => 'assets/users/user.png',
+            'avatar' => '/avatar/user.png',
         ]);
 
         $user->roles()->attach(Role::where('name', 'user')->first());
 
-        Auth::login($user);
+        
 
-        return redirect(RouteServiceProvider::HOME);
+        return redirect()->route('users.users');
     }
 }

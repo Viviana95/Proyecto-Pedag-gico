@@ -15,7 +15,7 @@ class MeanFactory extends Factory
     {
         return [
             'title'=>$this->faker->name(),
-            'lenguage' => $this->faker->sentence(),
+            'language_id' => $this->faker->sentence(),
             'format' => $this->faker->sentence(1,100),            
             'file' => $this->faker->sentence(1,100),
             'image'=>$this->faker->imageUrl(640,480),

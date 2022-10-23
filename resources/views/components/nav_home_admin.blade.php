@@ -14,19 +14,16 @@
                   LENGUAJES
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Java</a></li>
-                  <li><a class="dropdown-item" href="#">JavaScript</a></li>
-                  <li><a class="dropdown-item" href="#">Php</a></li>
-                  <li><a class="dropdown-item" href="#">HTML</a></li>
-                  <li><a class="dropdown-item" href="#">CSS</a></li>
-                  <li><a class="dropdown-item" href="#">Otros</a></li>
-                </ul>
+                 @foreach ($languages as $language)
+                  <li><a class="dropdown-item"  href="{{route('language', $language->id)}}">{{$language->name}} </a></li>                                       
+                 @endforeach
+                </ul>                
               </li>
               <li class="nav-item">
                 <a class="nav-link text-white ms-5" href="{{route('format_view')}}">AÑADIR RECURSOS</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white ms-5" href="#">FORO</a>
+                <a class="nav-link text-white ms-5" href="{{url('/foro')}}">FORO</a>
               </li>
               @if(Auth::user()->id == 1)
               <li class="nav-item">
@@ -36,7 +33,7 @@
             </ul>
             <div>
               <div class="d-flex ms-5 mb-2 ">
-                <a class="mt-2" href="{{ url('/info') }}"><img class="img-user" src="{{ Auth::user()->avatar }}" alt="User Profile Picture"></a>
+                <a class="mt-2" href="{{ url('/info') }}"><img class="img-user" src="{{url('storage/'.Auth::user()->avatar)}}" alt="User Profile Picture"></a>
                 <div class="hidden sm:flex sm:items-center sm:mr-6">
                     <x-dropdown align="right" width="48">
                         <x-slot name="trigger">
@@ -68,11 +65,11 @@
 
 
               </div>
-              <form class="d-flex" role="search">
-                <div class="d-flex mb-2">
+              <form class="d-flex" role="search" method="GET">
+                <div class="d-flex ">
                   <button type="submit" id="button-addon1"><i class="bi bi-search"></i></button>
-                  <input type="search" class="form-control rounded-3 ms-2 mt-1 search_input"
-                  aria-label="Search">
+                  <input type="search" name="search" class="form-control rounded-3 ms-2 mt-1 w-75 h-7"
+                  aria-label="Search" placeholder="Search by Title">
                 </div>
               </form>
             </div>

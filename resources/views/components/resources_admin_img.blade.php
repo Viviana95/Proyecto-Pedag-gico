@@ -2,15 +2,14 @@
     <div class="card">
         <h5 class="card-header text-center subtitle">{{ Auth::user()->name }}</h5>
         <div class="text-center">
-            <img class="img_admin rounded-circle" src="{{ Auth::user()->avatar }}" alt="User Profile Picture">
+            <img class="img_admin rounded-circle" src="{{url('storage/'.Auth::user()->avatar)}}" alt="User Profile Picture">
 
-            {{-- <input type="file" name="file" class="form-control btn_select_file" id="floatingInput" placeholder=""> --}}
-            {{-- <form action="subirArchivo.php" method="post" enctype="multipart/form-data" class="center"> --}}
-                <input type="file" id="inputarchivo" name="file" style="display: none;" required><br>
-                <button><label for="inputarchivo" class="select-file p-1 mb-1" id="labelarchivo">Cambiar Perfil</label></button>
+            <form action="{{ route('users.edit', Auth::user()->id) }}" method="post">
+              @csrf
+              @method('GET')
+                <button class="select-file p-1 mb-1">Cambiar Perfil</button>
                 <br>
-
-                {{-- </form> --}}
+                </form>
             </div>
             {{-- <x-progressbar></x-progressbar> --}}
         </div>
@@ -28,7 +27,7 @@
               @foreach (Auth::user()->means as $mean)
                 <tr>
                  <td>{{$mean->title}}</td>
-                 <td>{{$mean->lenguage}}</td>
+                 <td>{{$mean->language}}</td>
                  <td></td>
                  <td>
                    <div class="btn_container">
@@ -49,7 +48,8 @@
                </div>
                </tr>
                @endforeach
+              
              </tbody>
-      </table>
+            </table>
     </div>
 </div>
