@@ -9,7 +9,6 @@
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                          <th scope="col">Usuario</th>
                           <th scope="col">Title</th>
                           <th scope="col">Language</th>                          
                           <th scope="col">Action</th>
@@ -18,9 +17,9 @@
                       <tbody>
                        @foreach ($means as $mean)
                          <tr>
-                          <td></td>
+                          
                           <td>{{$mean->title}}</td>
-                          <td>{{$mean->language}}</td>                         
+                          <td>{{$mean->language_id}}</td>                         
                           <td>
                               <form action="{{ route('means.edit', $mean->id) }}" method="post">
                                 @csrf

@@ -23,7 +23,7 @@ class MeanController extends Controller
         $means = Mean::latest()->paginate(12);
         $format = Format::all();
         $languages = Language::all();
-
+        
         return view('mean.index', compact('means', 'format', 'languages'));
     }
 
@@ -159,6 +159,7 @@ class MeanController extends Controller
     }
         $mean->update();
         return redirect()->route('means.index');
+       
     }
 
     /**
@@ -170,6 +171,6 @@ class MeanController extends Controller
     public function destroy($id)
     {
         Mean::destroy($id);
-        return redirect()->route('means.index');
+       return redirect()->back();
     }
 }
