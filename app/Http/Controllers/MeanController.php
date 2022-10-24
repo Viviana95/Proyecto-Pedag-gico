@@ -68,7 +68,7 @@ class MeanController extends Controller
 
             $request->validate([
                 'title' => 'required',
-                //  'language' => 'required',
+                 'language' => 'required',
                 'link' => 'required',
             ]);
 
@@ -106,7 +106,8 @@ class MeanController extends Controller
     {
         $mean = Mean::find($id);
         $format = Format::find($id);
-        return view('mean.edit', ['mean' =>$mean, 'format'=> $format]);
+        $languages = Language::all();
+        return view('mean.edit', ['mean' =>$mean, 'format'=> $format, 'languages' => $languages]);
     }
 
     /**
@@ -124,7 +125,7 @@ class MeanController extends Controller
         if ($id == 2) {
         $request->validate([
             'title',
-            'language',
+            'language_id',
             'format',
             'file' => 'mimes:ppt,pdf,docx|max:2048',
         ]);
@@ -133,7 +134,7 @@ class MeanController extends Controller
 
         $mean = Mean::find($id);
         $mean->title = $request->title;
-        $mean->language = $request->language;
+        $mean->language_id = $request->language;
         $mean->file = $pathfile;
 
         $format = Format::find($id);
@@ -143,14 +144,14 @@ class MeanController extends Controller
     else if ($id == 1) {
         $request->validate([
             'title',
-            'language',
+            'language_id',
             'link',
             'format',
         ]);
 
         $mean = Mean::find($id);
         $mean->title = $request->title;
-        $mean->language = $request->language;
+        $mean->language_id = $request->language;
         $mean->file = $request->link;
 
         $format= Format::find($id);

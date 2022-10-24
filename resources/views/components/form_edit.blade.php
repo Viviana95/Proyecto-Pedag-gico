@@ -14,11 +14,12 @@
                     </div>
                     <h3 class="text-form">Lenguaje</h3>
                     <div class="form-floating mb-3">
-                        <select name="language" value="{{$mean->language ?? old('language')}}" class="form-select"
+                        <select name="language" value="{{$mean->language_id ?? old('language')}}" class="form-select"
                             aria-label="Default select example">
                             <option selected>Open this select menu </option>
                             @foreach ($languages as $language)
-                            <option value="{{$mean->language == "$language->id" ? 'selected' : ''}}">{{$language->name }}</option>                                        
+                            <option value="{{$language->id}}" {{$language->id == "$language->id" ? 'selected' : '' }}">{{$language->name }}</option>
+                                                                   
                             @endforeach
                            
                         </select>
