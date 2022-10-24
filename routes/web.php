@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\FormatController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MeanController;
 use App\Http\Controllers\UserController;
+use App\Models\Language;
 use Illuminate\Support\Facades\Route;
 
 
@@ -28,7 +30,7 @@ Route::get('/lenguaje_view', function () {
     return view('lenguaje_view');
 });
 Route::get('/info', [UserController::class, 'show'] , function () {
-    return view('info');
+    return view('info')->name('info');
 })->middleware(['auth']);
 
 Route::get('/add_resource', function () {
@@ -51,15 +53,19 @@ Route::get('/home', [MeanController::class, 'show'])->name('home');
 require __DIR__.'/auth.php';
 
 Route::name('means')->middleware(['auth'])->group(function(){
-
+    
     Route::get('/means', [MeanController::class, 'index'])->name('.index');
     Route::get('/means/create/{id}', [MeanController::class,'create'])->name('.create');
     Route::post('/means/create/{id}', [MeanController::class, 'store'])->name('.store');
-    Route::get('/detail/{id}', [MeanController::class, 'view'])->name('.view');
     Route::delete('/means{id}', [MeanController::class, 'destroy'])->name('.destroy');
     Route::get('/means{id}/edit', [MeanController::class,'edit'])->name('.edit');
     Route::put('/means{id}', [MeanController::class, 'update'])->name('.update');
 });
+
+Route::get('/home', [HomeController::class, 'home'])->name('home');
+Route::get('/language/{id}', [HomeController::class, 'filterByLanguage'])->name('language');
+Route::get('/detail/{id}', [HomeController::class, 'meanDetail'])->name('detail');
+Route::get('/home', [HomeController::class, 'searchMeanByTitle'])->name('home');
 
 Route::name('users')->middleware(['auth','admin'])->group(function(){
 

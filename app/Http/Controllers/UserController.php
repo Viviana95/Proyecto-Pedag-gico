@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Language;
 use App\Models\MeanUser;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -62,7 +63,8 @@ class UserController extends Controller
      */
     public function show()
     {
-        $means = MeanUser::all();
+        $means = MeanUser::latest()->paginate(6);    
+
         return view('info' , ['means' => $means]);
     }
 
@@ -75,8 +77,9 @@ class UserController extends Controller
      */
     public function edit($id, User $user)
     {
+        $language = Language::all(); 
         $user = User::find($id);
-        return view('user.edit_users', ['user' =>$user]);
+        return view('user.edit_users', ['user' =>$user, 'language' => $language]);
     }
 
     /**
@@ -90,6 +93,9 @@ class UserController extends Controller
 
     public function update(Request $request, $id, User $users)
     {
+        $means = MeanUser::all();
+        $language = Language::all();
+        
         $request->validate([
             'name',
             'email',
@@ -102,7 +108,7 @@ class UserController extends Controller
         $users->avatar = $path;
 
         $users->update();
-        return redirect()->route('users.users');
+        return view('info',  ['means' => $means, 'language' => $language]);
     }
 
     /**
