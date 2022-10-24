@@ -1,3 +1,26 @@
-.foro_image{
-    opacity: 0.5;
+.foro_btn{
+    border: 1px solid orange;
+    font-size: 1.3vw;
+    margin-left: 35%; 
+    margin-top: 12%;
+    font-family: "Audiowide", cursive;
+    
 }
+
+.welcome{
+    width: 45%;
+    /* margin-top: 10%; */
+     margin-left: 2.5%; 
+}
+
+.foro_image{
+    opacity: 0.6;
+    width: 68%;
+    height: 25%;
+}
+
+ .foro_text{
+     font-size: 2vw;
+     font-family: "Audiowide", cursive;
+     margin-top: 20%;
+} 

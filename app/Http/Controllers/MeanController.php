@@ -10,6 +10,7 @@ use App\Models\Mean;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 
 class MeanController extends Controller
 {
@@ -158,7 +159,9 @@ class MeanController extends Controller
         $format->format = $request->format;
     }
         $mean->update();
-        return redirect()->route('means.index');
+       return redirect()->route('means.index');
+       
+     
        
     }
 

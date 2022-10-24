@@ -92,7 +92,7 @@ a.text-forgot {
     margin: 1vw;
     border: none;
 }
-.card:hover h1 {
+.card:hover h5 {
     color: #000000;
 }
 
@@ -163,7 +163,7 @@ div.resources_container {
 }
 .masRecientes {
     margin-top: 2vh;
-    font-size: xx-large;
+
     color: black;
     font-family: "Audiowide", cursive;
 }
@@ -180,7 +180,7 @@ div.resources_container {
     background-color: #f4540f;
     color: rgb(255, 255, 255);
     font-family: "Audiowide", cursive;
-    font-size: calc(0.5vw + 0.6vh);
+    font-size: calc(0.6vw + 0.8vh);
     display: flex;
     
 }
@@ -200,12 +200,6 @@ div.resources_container {
     margin-right: 1vw;
 }
 
-form div .search_input {
-    width: 30vh;
-    height: 10vh;
-    border: 1px solid white;
-    font-family: 'Times New Roman', Times, serif;
-}
 a.text_login:hover {
     color: black;
 }
@@ -284,6 +278,11 @@ button.btn.btn-eliminar {
 
 .video-box {
     width: 100%;
+    margin-top: 3%;
+}
+
+.welcome_body{
+    background-color: #f4540f;
 }
 
 .title-add-resources {
@@ -353,9 +352,32 @@ button.btn.btn-eliminar {
     border-radius: 50px;
     margin-right: 1vw;
 }
-.foro_image{
-    opacity: 0.5;
+.foro_btn{
+    border: 1px solid orange;
+    font-size: 1.3vw;
+    margin-left: 35%; 
+    margin-top: 12%;
+    font-family: "Audiowide", cursive;
+    
 }
+
+.welcome{
+    width: 45%;
+    /* margin-top: 10%; */
+     margin-left: 2.5%; 
+}
+
+.foro_image{
+    opacity: 0.6;
+    width: 68%;
+    height: 25%;
+}
+
+ .foro_text{
+     font-size: 2vw;
+     font-family: "Audiowide", cursive;
+     margin-top: 20%;
+} 
 /*
 ! tailwindcss v3.1.8 | MIT License | https://tailwindcss.com
 *//*
@@ -1161,6 +1183,9 @@ select {
 .h-4 {
   height: 1rem;
 }
+.h-7 {
+  height: 1.75rem;
+}
 .h-10 {
   height: 2.5rem;
 }
@@ -1282,6 +1307,9 @@ select {
 }
 .rounded-lg {
   border-radius: 0.5rem;
+}
+.rounded {
+  border-radius: 0.25rem;
 }
 .rounded-l-md {
   border-top-left-radius: 0.375rem;

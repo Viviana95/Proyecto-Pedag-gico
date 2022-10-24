@@ -69,7 +69,7 @@
                 <div class="d-flex ">
                   <button type="submit" id="button-addon1"><i class="bi bi-search"></i></button>
                   <input type="search" name="search" class="form-control rounded-3 ms-2 mt-1 w-75 h-7"
-                  aria-label="Search" placeholder="Search by Title">
+                  aria-label="Search" placeholder="Search by title">
                 </div>
               </form>
             </div>

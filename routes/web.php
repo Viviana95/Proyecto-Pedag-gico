@@ -26,29 +26,16 @@ Route::get('/', function () {
 Route::get('/panel_admin', function () {
     return view('panel_admin');})->middleware(['auth','admin'])->name('admin');
 
-Route::get('/lenguaje_view', function () {
-    return view('lenguaje_view');
-});
+
 Route::get('/info', [UserController::class, 'show'] , function () {
-    return view('info')->name('info');
+    return view('info');
 })->middleware(['auth']);
-
-Route::get('/add_resource', function () {
-    return view('add_resource');
-});
-Route::get('/format_view', [FormatController::class, 'index'] , function () {
-    return view('format_view');})->name('format_view');
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
-
 
 Route::get('/foro', function () {
     return view('foro');
-})->name('foro');
+})->middleware(['auth'])->name('foro');
 
-Route::get('/home', [MeanController::class, 'show'])->name('home');
+
 
 require __DIR__.'/auth.php';
 
@@ -62,10 +49,15 @@ Route::name('means')->middleware(['auth'])->group(function(){
     Route::put('/means{id}', [MeanController::class, 'update'])->name('.update');
 });
 
+Route::middleware(['auth'])->group(function(){
+
 Route::get('/home', [HomeController::class, 'home'])->name('home');
 Route::get('/language/{id}', [HomeController::class, 'filterByLanguage'])->name('language');
 Route::get('/detail/{id}', [HomeController::class, 'meanDetail'])->name('detail');
 Route::get('/home', [HomeController::class, 'searchMeanByTitle'])->name('home');
+Route::get('/info{id}/edit', [UserController::class,'edit'])->name('.edit');
+Route::get('/format_view', [FormatController::class, 'index'])->name('format_view');
+});
 
 Route::name('users')->middleware(['auth','admin'])->group(function(){
 

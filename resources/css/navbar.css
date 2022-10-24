@@ -2,7 +2,7 @@
     background-color: #f4540f;
     color: rgb(255, 255, 255);
     font-family: "Audiowide", cursive;
-    font-size: calc(0.5vw + 0.6vh);
+    font-size: calc(0.6vw + 0.8vh);
     display: flex;
     
 }
@@ -16,7 +16,7 @@
     text-decoration: none;
 }
 .img-user {
-    width: 30px;
+    width: 40px;
     height: 40px;
     border-radius: 50px;
     margin-right: 1vw;

@@ -1,3 +1,8 @@
 .video-box {
     width: 100%;
+    margin-top: 3%;
+}
+
+.welcome_body{
+    background-color: #f4540f;
 }
