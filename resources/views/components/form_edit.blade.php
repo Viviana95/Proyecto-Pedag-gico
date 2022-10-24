@@ -16,12 +16,11 @@
                     <div class="form-floating mb-3">
                         <select name="language" value="{{$mean->language ?? old('language')}}" class="form-select"
                             aria-label="Default select example">
-
                             <option selected>Open this select menu </option>
-                            <option value="Java" {{$mean->language == "Java" ? 'selected' : ''}}>Java</option>
-                            <option value="Php" {{$mean->language == "Php" ? 'selected' : ''}}>Php</option>
-                            <option value="Javascript" {{$mean->language == "Javascript" ? 'selected' :
-                                ''}}>Javascript</option>
+                            @foreach ($languages as $language)
+                            <option value="{{$mean->language == "$language->id" ? 'selected' : ''}}">{{$language->name }}</option>                                        
+                            @endforeach
+                           
                         </select>
 
                     </div>
@@ -31,7 +30,7 @@
                                 <div class="form-floating mb-3">
                                     <input type="file" name="file" class="form-control" id="floatingInput" placeholder="">
                                 </div>
-                        @elseif ($format->id = 1)
+                        @elseif ($format->id == 1)
                             <p class="text-form">Añade Enlace</p>
                                  <div class="form-floating mb-3">
                                     <input type="text" name="link" class="form-control" id="floatingInput" placeholder="">

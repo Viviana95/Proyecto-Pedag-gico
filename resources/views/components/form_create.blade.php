@@ -22,7 +22,7 @@
                             </div>
                         <p class="text-form">Lenguaje</p>
                             <div class="form-floating mb-3">
-                                <select name="language_id" class="form-select" aria-label="Default select example">
+                                <select name="language" class="form-select" aria-label="Default select example">
                                     <option selected>Selecciona un lenguaje</option>
                                      @foreach ($languages as $language)
                                     <option value="{{$language->id}}">{{$language->name }}</option>                                        
