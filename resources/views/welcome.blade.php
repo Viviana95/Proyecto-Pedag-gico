@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>STORE F5</title>
+    <title>Store Factoria F5</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,21 +19,14 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
 </head>
+<body class="welcome_body">
+<x-navbar_welcome></x-navbar_welcome>
 
-<body>
-    <div class="welcome_container">
+    <x-video></x-video>
+    <x-footer></x-footer>
 
-        <x-navbar_welcome></x-navbar_welcome>
-        <x-video></x-video>
-        <x-footer></x-footer>
-
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
-    </script>
-</body>
-
-
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
+</script>
+</body> 
 </html>

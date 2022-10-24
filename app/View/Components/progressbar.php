@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class nav_home_admin extends Component
+class progressbar extends Component
 {
     /**
      * Create a new component instance.
@@ -23,6 +23,6 @@ class nav_home_admin extends Component
      */
     public function render()
     {
-        return view('components.nav_home_admin');
+        return view('components.progressbar');
     }
 }

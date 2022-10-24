@@ -1,56 +1,51 @@
-<div>
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 form_edit">
+<h2 class="title">Editar Recurso en formato {{$format->format}}</h2>
+<div class="flex mt-5">
+    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <div class="form_edit p-6">
+            <form action="{{route('means.update', ['id'=>$mean->id, 'id'=>$format->id])}}" method="POST" enctype="multipart/form-data">
+                @csrf
+                @method('PUT')
+                <div>
+                    <h3 class="text-form">Título</h3>
+                    <div class="form-floating mb-3">
+                        <input type="text" name="title" value="{{$mean->title ?? old('title')}}" class="form-control"
+                            id="floatingInput" placeholder="Título Nuevo">
 
+                    </div>
+                    <h3 class="text-form">Lenguaje</h3>
+                    <div class="form-floating mb-3">
+                        <select name="language" value="{{$mean->language_id ?? old('language')}}" class="form-select"
+                            aria-label="Default select example">
+                            <option selected>Open this select menu </option>
+                            @foreach ($languages as $language)
+                            <option value="{{$language->id}}" {{$language->id == "$language->id" ? 'selected' : '' }}">{{$language->name }}</option>
+                                                                   
+                            @endforeach
+                           
+                        </select>
 
-                    <form action="{{route('means.update', ['id'=>$mean->id])}}" method="POST" enctype="multipart/form-data">
-                        @csrf
-                        @method('PUT')
-                        <div>
-                         <div class="form-floating mb-3">
-                            <input type="text" name="title" value="{{$mean->title ?? old('lenguage')}}" class="form-control" id="floatingInput" placeholder="name@example.com">
-                            <label for="floatingInput">TITLE</label>
-                         </div>
-                         <div class="form-floating mb-3">
-                            <select name="lenguage" value="{{$mean->lenguage ?? old('lenguage')}}" class="form-select" aria-label="Default select example">
+                    </div>
+                    <h3 class="text-form">Archivo</h3>
+                    @if ($format->id > 1)
+                            <p class="text-form">Añade Archivo</p>
+                                <div class="form-floating mb-3">
+                                    <input type="file" name="file" class="form-control" id="floatingInput" placeholder="">
+                                </div>
+                        @elseif ($format->id == 1)
+                            <p class="text-form">Añade Enlace</p>
+                                 <div class="form-floating mb-3">
+                                    <input type="text" name="link" class="form-control" id="floatingInput" placeholder="">
+                                </div>
+                        @endif
 
-                                <option selected>Open this select menu </option>
-                                <option value="Java" {{$mean->lenguage == "Java" ? 'selected' : ''}}>Java</option>
-                                <option value="Php" {{$mean->lenguage == "Php" ? 'selected' : ''}}>Php</option>
-                                <option value="Javascript" {{$mean->lenguage == "Javascript" ? 'selected' : ''}}>Javascript</option>
-                              </select>
-                            <label for="floatingInput">LENGUAGE</label>
-                         </div>
-                         <div class="form-floating mb-3">
-                            <input type="text" name="image" value="{{$mean->image ?? old('image')}}" class="form-control" id="floatingInput" placeholder="name@example.com">
-                            <label for="floatingInput">IMAGE</label>
-                         </div>
-                         <div class="form-floating mb-3">
-                            <select name="format" value="{{$mean->format ?? old('format')}}" class="form-select" aria-label="Default select example">
-
-                                <option selected >Open this select menu </option>
-                                <option value="Pdf"{{$mean->format == "Pdf" ? 'selected' : ''}}>Pdf</option>
-                                <option value="Video"{{$mean->format == "Video" ? 'selected' : ''}}>Video</option>
-                                <option value="Enlace"{{$mean->format == "Enlace" ? 'selected' : ''}}>Enlace</option>
-                              </select>
-                              <label for="floatingInput">FORMAT</label>
-
-                         </div>
-                         <div class="form-floating mb-3">
-                            <input type="text" name="file" value="{{$mean->file ?? old('file')}}" class="form-control" id="floatingInput" placeholder="name@example.com">
-                            <label for="floatingInput">FILE</label>
-                         </div>
-
-                         <div class="btn_container">
-                            <button type="submit" class="btn btn_modificar">Modificar</button>
-                            <button class="btn btn_modificar"><a  href="{{route('means.index')}}">Cancelar</a></button>
-                         </div>
-
-                        </div>
-                    </form>
+                    <div class="btn_container">
+                        <button class="btn_orange"><a href="{{route('means.index')}}">Cancelar</a></button>
+                        <button type="submit" class="btn_orange">Modificar</button>
+                    </div>
 
                 </div>
-            </div>
+            </form>
+
         </div>
     </div>
 

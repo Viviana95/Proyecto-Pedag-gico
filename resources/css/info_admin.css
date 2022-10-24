@@ -1,0 +1,42 @@
+.container_img_admin {
+    display: flex;
+    text-align: center;
+    padding: 2rem;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.progress{
+    border:1px solid black;
+    margin: 1vw 1vw;
+
+}
+div.progress-bar {
+    background-color: #f4540f;
+
+}
+button.btn.btn-editar {
+    background-color: rgb(1, 153, 170);
+    border-radius: 15px;
+    width: 5rem;
+}
+button.btn.btn-eliminar {
+    background-color: rgb(170, 1, 1);
+    border-radius: 15px;
+    width: 5rem;
+}
+.container-edit-delete {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-login {
+    color: black;
+    font-family: "Audiowide", cursive;
+    text-decoration: none;
+}
+.select-file {
+    border-radius: 10px;
+    border: 2px solid #f4540f;
+    color: #f4540f;
+}

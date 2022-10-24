@@ -1,0 +1,8 @@
+.form_edit{
+    border:2px solid #F4540F;
+    background-image: url(https://trello.com/1/cards/63218e5381220f006137b952/attachments/63218e751af52500dfc50b44/download/fondo.png);
+    background-size: contain;
+    border-radius: 10px;
+    min-width:359px;
+    width:40vw;
+}

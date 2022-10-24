@@ -3,10 +3,21 @@
     flex-direction: column;
     display: inline-block;
     padding: 6vh;
+    border-radius: 12px;
     width: 30vw;
-    height: auto;
+    height: 50vh;
     min-width: 400px;
     background-image: url(https://trello.com/1/cards/63218e5381220f006137b952/attachments/63218e751af52500dfc50b44/download/fondo.png);
     background-size: contain;
 }
-
+.text-login {
+    color:black;
+    font-family: "Audiowide", cursive;
+    text-decoration: none;
+}
+a.text-forgot {
+    color: white;
+}
+.buttons {
+    margin-top: 5vh;
+}

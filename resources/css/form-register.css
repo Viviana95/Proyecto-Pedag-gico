@@ -1,0 +1,9 @@
+.form-login{
+    height:auto;
+}
+.buttons-container{
+  display:flex;
+  justify-content:space-evenly;
+}
+
+

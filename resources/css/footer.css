@@ -1,13 +1,28 @@
 .copiright {
+    width: 100%;
+    height: 8vh;
     padding-top: 1vh;
     text-align: center;
     color: rgb(255, 255, 255);
-    background-color: F4540F;
+    background-color: #f4540f;
     justify-content: center;
-    align-items: center;
-    font-family: "Audiowide", cursive;
-    width: 100%;
-    height: 8vh;
-    position: fixed;
-    bottom: 0;
+    font-family: "Audiowide";
+    font-size:calc(0.5vw + 0.6vh);
+
 }
+
+p{
+    font-size: small;
+}
+
+
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+body {
+    margin: 0;
+    margin-bottom: 40px;
+}
+

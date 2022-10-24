@@ -1,36 +1,55 @@
 .form_create {
-    width: 40vw;
-    height:70vh;
+    border: 2px solid #f4540f;
+    width: 30vw;
+    height: auto;
     background-image: url(https://trello.com/1/cards/63218e5381220f006137b952/attachments/63218e751af52500dfc50b44/download/fondo.png);
     background-size: contain;
     border-radius: 10px;
+    min-width: 359px;
 }
-.text-form{
-    color:white;
-    font-family:"Audiowide", cursive;
-    letter-spacing:0.2vw;
+
+.container-create {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+.container-image-default {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3vw;
+    min-width: 359px;
+}
+
+.text-form {
+    color: white;
 }
 .btn_container {
     display: flex;
     justify-content: space-evenly;
-    margin-top:10vh;
-}
-.form-control{
-    height:30px;
-}
-button.btn_orange {
-    background-color:F4540F;
-    text-decoration: none;
-    width: 12vw;
-    height:4vh;
-    color: aliceblue;
-    border-radius:20px;
+    margin-top: 5vh;
 }
 
-.form_edit{
-    padding: 2vh;
-    width: 50vw;
-    background-image: url(https://trello.com/1/cards/63218e5381220f006137b952/attachments/63218e751af52500dfc50b44/download/fondo.png);
-    background-size: contain;
+button.btn_orange {
+    background-color: #f4540f;
+    text-decoration: none;
+    width: 10vw;
+    height: 4vh;
+    min-width: 80px;
+    color: aliceblue;
+    border-radius: 20px;
+}
+
+.image-default-format {
+    width: 25vw;
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-radius: 10px;
+}
+
+.container-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

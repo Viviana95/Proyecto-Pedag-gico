@@ -2,8 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Format;
+use App\Models\Language;
 use App\Models\Mean;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 
 class MeanController extends Controller
 {
@@ -12,10 +17,13 @@ class MeanController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $means = Mean::latest()->paginate(2);
-        return view('mean.index', compact('means'));
+        $means = Mean::latest()->paginate(12);
+        $format = Format::all();
+        $languages = Language::all();
+
+        return view('mean.index', compact('means', 'format', 'languages'));
     }
 
     /**
@@ -23,9 +31,12 @@ class MeanController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        
+        $format = Format::find($id);
+        $image = $format->images;
+        $languages = Language::all();
+        return view('mean.create', ['format' => $format, 'image' => $image, 'languages' => $languages]);
     }
 
     /**
@@ -34,54 +45,102 @@ class MeanController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $id,)
     {
-       //
-    }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Mean  $mean
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Mean $mean)
-    {
-        //
+        if ($id == 2) {
+            $pathfile = $request->file('file')->storeAs('files', $request->file('file')->getClientOriginalName());
+
+            $request->validate([
+                'title' => 'required',
+                'language' => 'required',
+                'file' => 'mimes:ppt,pdf,docx|max:2048',
+            ]);
+            $mean = Mean::create([
+                'title' => $request->title,
+                'language_id' => $request->language,
+                'file' => $pathfile,
+
+            ]);
+        } else if ($id == 1) {
+
+            $request->validate([
+                'title' => 'required',
+                'language' => 'required',
+                'link' => 'required',
+            ]);
+
+            $mean = Mean::create([
+                'title' => $request->title,
+                'language_id' => $request->language,
+                'file' => $request->link,
+            ]);
+        }
+        $mean->formats()->attach($id);
+        // $mean->languages()->attach($id);
+        $mean->users()->attach(Auth::user()->id);
+        $mean->save();
+        return redirect()->route('home');
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Mean  $mean
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id,Mean $mean)
+    public function edit($id)
     {
-       $mean = Mean::find($id);
-        return view('mean.edit', ['mean' =>$mean]);
+        $mean = Mean::find($id);
+        $format = Format::find($id);
+        $languages = Language::all();
+        return view('mean.edit', ['mean' => $mean, 'format' => $format, 'languages' => $languages]);
     }
-
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Mean  $mean
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update($id,Request $request, Mean $mean)
+    public function update(Request $request, $id)
     {
-        Mean::find($id);
-        $mean->title = $request->title;
-        $mean->image = $request->image;
-        $mean->lenguage = $request->lenguage;
-        $mean->format = $request->format;
-        $mean->file = $request->file;
-       
+
+        if ($id == 2) {
+            $request->validate([
+                'title',
+                'language_id',
+                'format',
+                'file' => 'mimes:ppt,pdf,docx|max:2048',
+            ]);
+
+            $pathfile = $request->file('file')->storeAs('files', $request->file('file')->getClientOriginalName());
+
+            $mean = Mean::find($id);
+            $mean->title = $request->title;
+            $mean->language_id = $request->language;
+            $mean->file = $pathfile;
+
+            $format = Format::find($id);
+            $format->format = $request->format;
+        } else if ($id == 1) {
+            $request->validate([
+                'title',
+                'language_id',
+                'link',
+                'format',
+            ]);
+
+            $mean = Mean::find($id);
+            $mean->title = $request->title;
+            $mean->language_id = $request->language;
+            $mean->file = $request->link;
+
+            $format = Format::find($id);
+            $format->format = $request->format;
+        }
         $mean->update();
         return redirect()->route('means.index');
-
-
     }
 
     /**
@@ -90,9 +149,9 @@ class MeanController extends Controller
      * @param  \App\Models\Mean  $mean
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id,Mean $mean)
+    public function destroy($id)
     {
-      Mean::destroy($id);
-      return redirect()->route('means.index');
+        Mean::destroy($id);
+        return redirect()->back();
     }
 }

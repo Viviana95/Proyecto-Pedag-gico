@@ -1,21 +1,27 @@
 .navbar {
-    background-color:F4540F;
+    background-color: #f4540f;
     color: rgb(255, 255, 255);
     font-family: "Audiowide", cursive;
-    display:flex;
-    height:12%;
-    width: 100%;
+    font-size: calc(0.6vw + 0.8vh);
+    display: flex;
+    
 }
 .logo_factoria {
-    width: 10rem;
-    margin-left: 2rem;
+    width: calc(4vw + 5vh);
+    height: calc(3vw + 4vh);
+    min-width: 90px;
 }
-.img_admin {
-    width: 150px;
-    height: 150px;
-    border-radius: 100px;
-    background-image: url(https://trello.com/1/cards/63218e5381220f006137b952/attachments/6321f8b716a664034740dc68/download/defecto.png);
-    background-size: contain;
-    background-position: center;
-    min-width: 150px;
+.text_login {
+    color: white;
+    text-decoration: none;
+}
+.img-user {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    margin-right: 1vw;
+}
+
+a.text_login:hover {
+    color: black;
 }

@@ -28,6 +28,7 @@ class RoleSeeder extends Seeder
         $useradmin= User::create([
             'name'      => 'admin',
             'email'     => 'admin@admin.com',
+            'avatar'     => '/avatar/admin.png',
             'password'  => Hash::make('admin'),
         ]);
 

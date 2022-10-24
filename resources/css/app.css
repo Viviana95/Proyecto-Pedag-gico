@@ -3,31 +3,24 @@
 @tailwind utilities;
 @import "form_create.css";
 @import "auth-card.css";
-@import"card.css";
-@import"footer.css";
-@import"home-admin";
-@import"info-admin";
-@import "div_panel_admin";
-@import "navbar.css";
+@import "card.css";
+@import"panel_admin";
+@import "home_admin";
+@import "navbar";
+@import "footer.css";
+@import "info_admin";
+@import "welcome.css";
+@import "means.css";
+@import "form-register";
+@import "format_panel";
+@import "form_edit";
+@import "users.css";
+@import "foro.css";
 
-.text_login {
-    color: rgb(255, 255, 255);
-    font-family: "Audiowide", cursive;
-    text-decoration: none;
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
 }
-.container-video {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.video-box {
-    width: 100%;
-    min-width: 1534px;
-}
-button.btn {
-    background-color: F4540F;
-}
-img.lupa {
-    width: 2vw;
-}
+
 
