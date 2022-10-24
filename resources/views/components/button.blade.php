@@ -1,8 +1,8 @@
 <div class="buttons-container">
-    <button
+   {{--  <button
         class='btn_orange'
         href="{{ url('/') }}">Cancel</button>
-    </button>
+    </button> --}}
 
     <button
         class="btn_orange "
