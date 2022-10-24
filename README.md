@@ -16,7 +16,7 @@
 
 ## 💠Introduction
 
-Store F5 es una plataforma interna que tiene como finalidad almacenar los recursos de los formadores en un mismo lugar.
+Store F5 es una plataforma interna que tiene como finalidad almacenar los recursos de formadores en un mismo lugar.
 
 Al mismo tiempo, el Store contiene un foro para interactuar y comentar todo lo relacionado dentro del mismo.
 
@@ -38,8 +38,6 @@ Al mismo tiempo, el Store contiene un foro para interactuar y comentar todo lo r
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" width="40" height="40"/>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" width="40" height="40"/>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain-wordmark.svg" width="40" height="40" />
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" width="40" height="40"/>
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" width="40" height="40"/>
                    
 </p>
 

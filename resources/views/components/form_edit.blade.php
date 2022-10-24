@@ -25,14 +25,13 @@
                         </select>
 
                     </div>
-                    <h3 class="text-form">Archivo</h3>
                     @if ($format->id > 1)
-                            <p class="text-form">Añade Archivo</p>
+                            <h3 class="text-form">Añade Archivo</h3>
                                 <div class="form-floating mb-3">
                                     <input type="file" name="file" class="form-control" id="floatingInput" placeholder="">
                                 </div>
                         @elseif ($format->id = 1)
-                            <p class="text-form">Añade Enlace</p>
+                            <h3 class="text-form">Añade Enlace</h3>
                                  <div class="form-floating mb-3">
                                     <input type="text" name="link" class="form-control" id="floatingInput" placeholder="">
                                 </div>
