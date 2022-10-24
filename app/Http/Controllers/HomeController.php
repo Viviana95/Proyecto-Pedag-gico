@@ -36,7 +36,7 @@ class HomeController extends Controller
         $language = Language::find($id);
         $user = MeanUser::all();
         $means = $language->means()->latest()->paginate(3);
-        return view('home' , ['means' => $means,'format' => $format, 'user' => $user,  'language' => $language, 'search' => $search]);  
+        return view('homeLanguage' , ['means' => $means,'format' => $format, 'user' => $user,  'language' => $language, 'search' => $search]);  
     }
 
     public function searchMeanByTitle(Request $request){
