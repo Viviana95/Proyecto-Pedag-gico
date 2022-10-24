@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Format;
 use App\Models\FormatMean;
 use App\Models\Mean;
-use App\Models\MeanUser;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
